@@ -37,12 +37,14 @@ import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.BaseAdapter;
+import android.widget.EditText;
 import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.ImageView;
@@ -560,6 +562,31 @@ public class AssistantActivity extends ThemableActivity
         changeFragment(mFragment);
         country = null;
         mCurrentFragment = AssistantFragmentsEnum.WELCOME;
+    }
+
+    // Function to hide keyboard on focus change
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        View view = getCurrentFocus();
+        if (view != null
+                && (ev.getAction() == MotionEvent.ACTION_UP
+                        || ev.getAction() == MotionEvent.ACTION_MOVE)
+                && view instanceof EditText
+                && !view.getClass().getName().startsWith("android.webkit.")) {
+            int scrcoords[] = new int[2];
+            view.getLocationOnScreen(scrcoords);
+            float x = ev.getRawX() + view.getLeft() - scrcoords[0];
+            float y = ev.getRawY() + view.getTop() - scrcoords[1];
+
+            if (x < view.getLeft()
+                    || x > view.getRight()
+                    || y < view.getTop()
+                    || y > view.getBottom())
+                ((InputMethodManager) this.getSystemService(Context.INPUT_METHOD_SERVICE))
+                        .hideSoftInputFromWindow(
+                                (this.getWindow().getDecorView().getApplicationWindowToken()), 0);
+        }
+        return super.dispatchTouchEvent(ev);
     }
 
     public void displayLoginGeneric() {
