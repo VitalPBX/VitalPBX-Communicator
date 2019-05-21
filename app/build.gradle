@@ -76,7 +76,7 @@ android {
         versionName "4.1"
         applicationId getPackageName()
         multiDexEnabled true
-        manifestPlaceholders = [linphone_address_mime_type:"vnd.android.cursor.item/vnd." + getPackageName() + ".provider.sip_address"]
+        manifestPlaceholders = [linphone_address_mime_type: "vnd.android.cursor.item/vnd." + getPackageName() + ".provider.sip_address"]
     }
 
     applicationVariants.all { variant ->
@@ -178,9 +178,10 @@ task generateContactsXml(type: Copy) {
     from 'contacts.xml'
     into "src/main/res/xml/"
     filter {
-        line -> line
-                .replaceAll('%%AUTO_GENERATED%%', 'This file has been automatically generated, do not edit or commit !')
-                .replaceAll('%%PACKAGE_NAME%%', getPackageName())
+        line ->
+            line
+                    .replaceAll('%%AUTO_GENERATED%%', 'This file has been automatically generated, do not edit or commit !')
+                    .replaceAll('%%PACKAGE_NAME%%', getPackageName())
 
     }
 }

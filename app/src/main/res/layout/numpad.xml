@@ -1,110 +1,290 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<TableLayout xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- TODO: commented areas contained two text views; one for digits and one for the number itself -->
+    <!-- currently, it uses the digit_style logic -->
+    <!-- TODO: find a way to assign textviews underneath the digit value -->
 
     <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:gravity="center">
+        android:gravity="center"
+        android:orientation="vertical">
+
 
         <org.linphone.views.Digit
             android:id="@+id/Digit1"
             style="@style/DialerDigit"
-            android:background="@drawable/numpad_one"
             android:soundEffectsEnabled="true"
-            android:text="1" />
+            android:background="@drawable/numeric_button"
+            android:text="1">
+
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="1"-->
+            <!--android:textAppearance="?android:attr/textAppearanceLarge" />-->
+
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text=""-->
+            <!--android:textAppearance="?android:attr/textAppearanceSmall" />-->
+        </org.linphone.views.Digit>
 
         <org.linphone.views.Digit
             android:id="@+id/Digit2"
             style="@style/DialerDigit"
-            android:background="@drawable/numpad_two"
+            android:background="@drawable/numeric_button"
             android:soundEffectsEnabled="true"
-            android:text="2" />
+            android:text="2">
+
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="2"-->
+            <!--android:textAppearance="?android:attr/textAppearanceLarge" />-->
+
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="ABC"-->
+            <!--android:textColor="@color/black_color"-->
+            <!--android:textAppearance="?android:attr/textAppearanceSmall" />-->
+        </org.linphone.views.Digit>
 
         <org.linphone.views.Digit
             android:id="@+id/Digit3"
             style="@style/DialerDigit"
-            android:background="@drawable/numpad_three"
+            android:background="@drawable/numeric_button"
             android:soundEffectsEnabled="true"
-            android:text="3" />
+            android:text="3">
+
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="3"-->
+                <!--android:textAppearance="?android:attr/textAppearanceLarge" />-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="DEF"-->
+                <!--android:textAppearance="?android:attr/textAppearanceSmall" />-->
+        </org.linphone.views.Digit>
+
+
     </TableRow>
 
+
     <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_weight="1"
         android:gravity="center">
 
         <org.linphone.views.Digit
             android:id="@+id/Digit4"
             style="@style/DialerDigit"
-            android:background="@drawable/numpad_four"
+            android:background="@drawable/numeric_button"
             android:soundEffectsEnabled="true"
-            android:text="4" />
+            android:text="4">
+
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="4"-->
+            <!--android:textAppearance="?android:attr/textAppearanceLarge" />-->
+
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="GHI"-->
+            <!--android:textAppearance="?android:attr/textAppearanceSmall" />-->
+        </org.linphone.views.Digit>
 
         <org.linphone.views.Digit
             android:id="@+id/Digit5"
             style="@style/DialerDigit"
-            android:background="@drawable/numpad_five"
+            android:background="@drawable/numeric_button"
             android:soundEffectsEnabled="true"
-            android:text="5" />
+            android:text="5">
+
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="5"-->
+            <!--android:textAppearance="?android:attr/textAppearanceLarge" />-->
+
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="JKL"-->
+            <!--android:textAppearance="?android:attr/textAppearanceSmall" />-->
+        </org.linphone.views.Digit>
 
         <org.linphone.views.Digit
             android:id="@+id/Digit6"
             style="@style/DialerDigit"
-            android:background="@drawable/numpad_six"
+            android:background="@drawable/numeric_button"
             android:soundEffectsEnabled="true"
-            android:text="6" />
+            android:text="6">
+
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="6"-->
+            <!--android:textAppearance="?android:attr/textAppearanceLarge" />-->
+
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="MNO"-->
+            <!--android:textAppearance="?android:attr/textAppearanceSmall" />-->
+        </org.linphone.views.Digit>
+
     </TableRow>
 
     <TableRow
         android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:gravity="center">
 
         <org.linphone.views.Digit
             android:id="@+id/Digit7"
             style="@style/DialerDigit"
-            android:background="@drawable/numpad_seven"
+            android:background="@drawable/numeric_button"
             android:soundEffectsEnabled="true"
-            android:text="7" />
+            android:text="7">
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="7"-->
+                <!--android:textAppearance="?android:attr/textAppearanceLarge" />-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="PQRS"-->
+                <!--android:textAppearance="?android:attr/textAppearanceSmall" />-->
+        </org.linphone.views.Digit>
 
         <org.linphone.views.Digit
             android:id="@+id/Digit8"
             style="@style/DialerDigit"
-            android:background="@drawable/numpad_eight"
+            android:background="@drawable/numeric_button"
             android:soundEffectsEnabled="true"
-            android:text="8" />
+            android:text="8">
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="8"-->
+                <!--android:textAppearance="?android:attr/textAppearanceLarge" />-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="TUV"-->
+                <!--android:textAppearance="?android:attr/textAppearanceSmall" />-->
+        </org.linphone.views.Digit>
 
         <org.linphone.views.Digit
             android:id="@+id/Digit9"
             style="@style/DialerDigit"
-            android:background="@drawable/numpad_nine"
+            android:background="@drawable/numeric_button"
             android:soundEffectsEnabled="true"
-            android:text="9" />
+            android:text="9">
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="9"-->
+                <!--android:textAppearance="?android:attr/textAppearanceLarge" />-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="WXYZ"-->
+                <!--android:textAppearance="?android:attr/textAppearanceSmall" />-->
+        </org.linphone.views.Digit>
+
+
     </TableRow>
 
     <TableRow
         android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:gravity="center">
 
         <org.linphone.views.Digit
-            android:id="@+id/DigitStar"
+            android:id="@+id/Digit_asterisk"
             style="@style/DialerDigit"
-            android:background="@drawable/numpad_star_digit"
+            android:background="@drawable/numeric_button"
             android:soundEffectsEnabled="true"
-            android:text="*" />
+            android:text="*">
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="*"-->
+                <!--android:textAppearance="?android:attr/textAppearanceLarge" />-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text=""-->
+                <!--android:textAppearance="?android:attr/textAppearanceSmall" />-->
+        </org.linphone.views.Digit>
 
         <org.linphone.views.Digit
-            android:id="@+id/Digit00"
+            android:id="@+id/Digit0"
             style="@style/DialerDigit"
-            android:background="@drawable/numpad_zero"
+            android:background="@drawable/numeric_button"
             android:soundEffectsEnabled="true"
-            android:text="0+" />
+            android:text="0">
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="0"-->
+                <!--android:textAppearance="?android:attr/textAppearanceLarge" />-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="+"-->
+                <!--android:textAppearance="?android:attr/textAppearanceSmall" />-->
+        </org.linphone.views.Digit>
 
         <org.linphone.views.Digit
-            android:id="@+id/DigitHash"
+            android:id="@+id/Digit_hashtag"
             style="@style/DialerDigit"
-            android:background="@drawable/numpad_sharp"
+            android:background="@drawable/numeric_button"
             android:soundEffectsEnabled="true"
-            android:text="#" />
+            android:text="#">
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="#"-->
+                <!--android:textAppearance="?android:attr/textAppearanceLarge" />-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text=""-->
+                <!--android:textAppearance="?android:attr/textAppearanceSmall" />-->
+        </org.linphone.views.Digit>
+
     </TableRow>
-
 </TableLayout>
