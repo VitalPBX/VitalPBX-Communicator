@@ -202,8 +202,6 @@ public class Digit extends Button implements AddressAware {
                 lc.stopDtmf();
             }
 
-            // TODO: this was changed
-            // before: if (id == R.id.Digit1 && lc.getCalls().length == 0)
             if (id == R.id.Digit1 && lc.getCalls().length == 0) {
                 String voiceMail = LinphonePreferences.instance().getVoiceMailUri();
                 mAddress.getEditableText().clear();

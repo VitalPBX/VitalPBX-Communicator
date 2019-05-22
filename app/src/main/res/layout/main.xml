@@ -19,7 +19,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent" >
 
             <LinearLayout
                 android:id="@+id/top_bar"
@@ -220,6 +220,7 @@
         <RelativeLayout
             android:id="@+id/side_menu_content"
             android:layout_width="match_parent"
+            android:clickable="true"
             android:layout_height="match_parent"
             android:layout_gravity="left">
 
