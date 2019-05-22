@@ -5,7 +5,7 @@
         <item name="android:layout_width">70dp</item>
         <item name="android:layout_height">70dp</item>
         <item name="android:background">@drawable/numeric_button</item>
-        <item name="android:textColor">@color/black_color</item>
+        <item name="android:textColor">@color/dark_grey_color</item>
         <item name="android:textSize">20sp</item>
         <item name="android:layout_margin">10dp</item>
     </style>

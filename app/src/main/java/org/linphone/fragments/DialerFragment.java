@@ -22,16 +22,17 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 import android.app.Fragment;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import org.linphone.LinphoneActivity;
 import org.linphone.LinphoneManager;
 import org.linphone.R;
 import org.linphone.core.Core;
+import org.linphone.views.AddContactButton;
 import org.linphone.views.AddressAware;
 import org.linphone.views.AddressText;
 import org.linphone.views.CallButton;
@@ -44,7 +45,7 @@ public class DialerFragment extends Fragment {
     private AddressAware mNumpad;
     private AddressText mAddress;
     private CallButton mCall;
-    private ImageView mAddContact;
+    private AddContactButton mAddContact;
     private OnClickListener mAddContactListener, mCancelListener, mTransferListener;
 
     /** @return null if not ready yet */
@@ -59,11 +60,12 @@ public class DialerFragment extends Fragment {
 
         mAddress = view.findViewById(R.id.address);
         mAddress.setDialerFragment(this);
+        mAddress.setGravity(Gravity.CENTER_HORIZONTAL);
 
-        EraseButton erase = view.findViewById(R.id.erase);
+        EraseButton erase = view.findViewById(R.id.backspace_btn);
         erase.setAddressWidget(mAddress);
 
-        mCall = view.findViewById(R.id.call);
+        mCall = view.findViewById(R.id.call_btn);
         mCall.setAddressWidget(mAddress);
         if (LinphoneActivity.isInstanciated()
                 && LinphoneManager.getLcIfManagerNotDestroyedOrNull() != null
@@ -89,11 +91,12 @@ public class DialerFragment extends Fragment {
             mNumpad.setAddressWidget(mAddress);
         }
 
-        mAddContact = view.findViewById(R.id.add_contact);
-        mAddContact.setEnabled(
-                !(LinphoneActivity.isInstanciated()
-                        && LinphoneManager.getLcIfManagerNotDestroyedOrNull() != null
-                        && LinphoneManager.getLc().getCallsNb() > 0));
+        mAddContact = view.findViewById(R.id.add_contact_btn);
+        mAddContact.setAddressWidget(mAddress);
+        //        mAddContact.setEnabled(
+        //                !(LinphoneActivity.isInstanciated()
+        //                        && LinphoneManager.getLcIfManagerNotDestroyedOrNull() != null
+        //                        && LinphoneManager.getLc().getCallsNb() > 0));
 
         mAddContactListener =
                 new OnClickListener() {
@@ -208,13 +211,15 @@ public class DialerFragment extends Fragment {
             if (LinphoneManager.getLc().getVideoActivationPolicy().getAutomaticallyInitiate()) {
                 mCall.setImageResource(R.drawable.call_video_start);
             } else {
-                mCall.setImageResource(R.drawable.call_audio_start);
+                mCall.setImageResource(R.drawable.call_start_default);
             }
             mAddContact.setEnabled(false);
-            mAddContact.setImageResource(R.drawable.contact_add);
+            mAddContact.setImageResource(R.drawable.add_contact_btn);
             mAddContact.setOnClickListener(mAddContactListener);
             enableDisableAddContact();
         }
+
+        numpadControlsHelper();
     }
 
     public void enableDisableAddContact() {
@@ -232,4 +237,6 @@ public class DialerFragment extends Fragment {
         displayTextInAddressBar(numberOrSipAddress);
         LinphoneManager.getInstance().newOutgoingCall(mAddress);
     }
+
+    public void numpadControlsHelper() {}
 }

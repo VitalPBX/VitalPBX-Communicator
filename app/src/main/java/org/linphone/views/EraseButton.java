@@ -73,5 +73,11 @@ public class EraseButton extends ImageView
     @Override
     public void afterTextChanged(Editable s) {
         setEnabled(s.length() > 0);
+
+        // set erasebutton visible and invisible accordingly
+        setVisibility(VISIBLE);
+        if (mAddress.length() == 0) {
+            setVisibility(INVISIBLE);
+        }
     }
 }
