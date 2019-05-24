@@ -20,7 +20,7 @@
         <org.linphone.views.Digit
             android:id="@+id/Digit1"
             style="@style/DialerDigit"
-            android:background="@drawable/numeric_button"
+            android:background="@drawable/digit_1"
             android:soundEffectsEnabled="true"
             android:text="1">
 
@@ -40,28 +40,14 @@
         <org.linphone.views.Digit
             android:id="@+id/Digit2"
             style="@style/DialerDigit"
-            android:background="@drawable/numeric_button"
+            android:background="@drawable/digit_2"
             android:soundEffectsEnabled="true"
-            android:text="2">
-
-            <!--<TextView-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="2"-->
-            <!--android:textAppearance="?android:attr/textAppearanceLarge" />-->
-
-            <!--<TextView-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="ABC"-->
-            <!--android:textColor="@color/black_color"-->
-            <!--android:textAppearance="?android:attr/textAppearanceSmall" />-->
-        </org.linphone.views.Digit>
+            android:text="2" />
 
         <org.linphone.views.Digit
             android:id="@+id/Digit3"
             style="@style/DialerDigit"
-            android:background="@drawable/numeric_button"
+            android:background="@drawable/digit_3"
             android:soundEffectsEnabled="true"
             android:text="3">
 
@@ -92,7 +78,7 @@
         <org.linphone.views.Digit
             android:id="@+id/Digit4"
             style="@style/DialerDigit"
-            android:background="@drawable/numeric_button"
+            android:background="@drawable/digit_4"
             android:soundEffectsEnabled="true"
             android:text="4">
 
@@ -112,7 +98,7 @@
         <org.linphone.views.Digit
             android:id="@+id/Digit5"
             style="@style/DialerDigit"
-            android:background="@drawable/numeric_button"
+            android:background="@drawable/digit_5"
             android:soundEffectsEnabled="true"
             android:text="5">
 
@@ -132,7 +118,7 @@
         <org.linphone.views.Digit
             android:id="@+id/Digit6"
             style="@style/DialerDigit"
-            android:background="@drawable/numeric_button"
+            android:background="@drawable/digit_6"
             android:soundEffectsEnabled="true"
             android:text="6">
 
@@ -160,7 +146,7 @@
         <org.linphone.views.Digit
             android:id="@+id/Digit7"
             style="@style/DialerDigit"
-            android:background="@drawable/numeric_button"
+            android:background="@drawable/digit_7"
             android:soundEffectsEnabled="true"
             android:text="7">
 
@@ -180,7 +166,7 @@
         <org.linphone.views.Digit
             android:id="@+id/Digit8"
             style="@style/DialerDigit"
-            android:background="@drawable/numeric_button"
+            android:background="@drawable/digit_8"
             android:soundEffectsEnabled="true"
             android:text="8">
 
@@ -200,7 +186,7 @@
         <org.linphone.views.Digit
             android:id="@+id/Digit9"
             style="@style/DialerDigit"
-            android:background="@drawable/numeric_button"
+            android:background="@drawable/digit_9"
             android:soundEffectsEnabled="true"
             android:text="9">
 
@@ -229,7 +215,7 @@
         <org.linphone.views.Digit
             android:id="@+id/Digit_asterisk"
             style="@style/DialerDigit"
-            android:background="@drawable/numeric_button"
+            android:background="@drawable/digit_asterisk"
             android:soundEffectsEnabled="true"
             android:text="*">
 
@@ -249,7 +235,7 @@
         <org.linphone.views.Digit
             android:id="@+id/Digit0"
             style="@style/DialerDigit"
-            android:background="@drawable/numeric_button"
+            android:background="@drawable/digit_zero"
             android:soundEffectsEnabled="true"
             android:text="0">
 
@@ -269,7 +255,7 @@
         <org.linphone.views.Digit
             android:id="@+id/Digit_hashtag"
             style="@style/DialerDigit"
-            android:background="@drawable/numeric_button"
+            android:background="@drawable/digit_hashtag"
             android:soundEffectsEnabled="true"
             android:text="#">
 
@@ -309,16 +295,17 @@
             android:focusable="false"
             android:focusableInTouchMode="true"
             style="@style/DialerDigit"
-            android:background="@drawable/call_btn_"
-            android:src="@drawable/call_start_default"/>
+            android:background="@drawable/call_button"
+            android:src="@drawable/call_button"/>
 
 
         <org.linphone.views.EraseButton
             android:id="@+id/backspace_btn"
-            android:layout_height="50dp"
-            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_width="40dp"
             android:src="@drawable/backspace_btn"
             android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
             android:visibility="invisible"
         />
 

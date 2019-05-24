@@ -20,34 +20,23 @@
         android:layout_alignParentTop="true"
         android:background="?attr/lighToolbarBackgroundColor">
 
-        <!--<org.linphone.views.EraseButton-->
-            <!--android:id="@+id/erase"-->
-            <!--android:layout_width="40dp"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_alignParentRight="true"-->
-            <!--android:layout_centerVertical="true"-->
-            <!--android:layout_marginLeft="10dp"-->
-            <!--android:layout_marginRight="10dp"-->
-            <!--android:visibility="invisible"-->
-            <!--android:contentDescription="@string/content_description_backspace"-->
-            <!--android:src="@drawable/backspace" />-->
-
         <org.linphone.views.AddressText
             android:id="@+id/address"
             style="@style/numpad_composed_number_font"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_centerVertical="true"
-            android:hint="@string/address_bar_hint"
+            android:layout_centerInParent="true"
             android:background="@color/white_color"
             android:backgroundTint="@color/white_color"
             android:ellipsize="start"
-            android:paddingTop="25dp"
             android:gravity="center"
+            android:hint="@string/address_bar_hint"
             android:inputType="textEmailAddress"
-            android:paddingLeft="20dp"
+            android:paddingLeft="5dp"
+            android:paddingTop="25dp"
             android:paddingRight="5dp"
-             />
+            android:textColor="@color/grey_color"
+            android:textSize="30sp" />
 
     </RelativeLayout>
 
@@ -58,7 +47,6 @@
         android:layout_below="@id/address_bar"
         android:layout_centerInParent="true"
         android:padding="10dp" />
-    <!--android:layout_above="@id/controls"--> <!-- this was under Numpad -->
 
     <!--<LinearLayout-->
         <!--android:id="@+id/controls"-->
