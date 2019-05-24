@@ -18,13 +18,13 @@
             android:layout_weight="0.2">
 
             <ImageView
-                android:id="@+id/all_contacts"
+                android:id="@+id/contacts"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="?attr/button_background_drawable"
                 android:contentDescription="@string/content_description_all_contacts"
-                android:padding="15dp"
-                android:src="@drawable/contacts_all" />
+                android:padding="5dp"
+                android:src="@drawable/contacts" />
 
             <View
                 android:id="@+id/all_contacts_select"
@@ -47,8 +47,8 @@
                 android:background="?attr/button_background_drawable"
                 android:contentDescription="@string/content_description_linphone_contacts"
                 android:gravity="center"
-                android:padding="15dp"
-                android:src="@drawable/contacts_sip" />
+                android:padding="5dp"
+                android:src="@drawable/sip_contacts" />
 
             <View
                 android:id="@+id/linphone_contacts_select"
@@ -71,8 +71,9 @@
             android:layout_weight="0.2"
             android:background="?attr/button_background_drawable"
             android:contentDescription="@string/content_description_new_contact"
-            android:padding="15dp"
-            android:src="@drawable/contact_add" />
+            android:padding="5dp"
+            android:tint="@color/dark_grey_color"
+            android:src="@drawable/contact" />
 
         <ImageView
             android:id="@+id/edit"
@@ -81,8 +82,8 @@
             android:layout_weight="0.2"
             android:background="?attr/button_background_drawable"
             android:contentDescription="@string/content_description_edit_list"
-            android:padding="15dp"
-            android:src="@drawable/delete" />
+            android:padding="5dp"
+            android:src="@drawable/trash_icon" />
 
     </LinearLayout>
 

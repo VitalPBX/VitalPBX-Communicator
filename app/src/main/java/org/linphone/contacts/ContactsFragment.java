@@ -95,7 +95,7 @@ public class ContactsFragment extends Fragment
         mNoContact = view.findViewById(R.id.noContact);
         mContactsList = view.findViewById(R.id.contactsList);
 
-        mAllContacts = view.findViewById(R.id.all_contacts);
+        mAllContacts = view.findViewById(R.id.contacts);
         mLinphoneContacts = view.findViewById(R.id.linphone_contacts);
         mAllContactsSelected = view.findViewById(R.id.all_contacts_select);
         mLinphoneContactsSelected = view.findViewById(R.id.linphone_contacts_select);
@@ -117,7 +117,7 @@ public class ContactsFragment extends Fragment
                     public void onClick(View v) {
                         mOnlyDisplayLinphoneContacts = false;
                         mAllContactsSelected.setVisibility(View.VISIBLE);
-                        mAllContacts.setEnabled(false);
+                        // mAllContacts.setEnabled(false);
                         mLinphoneContacts.setEnabled(true);
                         mLinphoneContactsSelected.setVisibility(View.INVISIBLE);
                         changeContactsAdapter();

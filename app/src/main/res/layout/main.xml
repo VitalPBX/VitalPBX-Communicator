@@ -132,8 +132,8 @@
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
                         android:contentDescription="@string/content_description_contacts"
-                        android:padding="15dp"
-                        android:src="@drawable/footer_contacts" />
+                        android:padding="5dp"
+                        android:src="@drawable/contact" />
 
                     <View
                         android:id="@+id/contacts_select"
