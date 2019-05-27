@@ -37,7 +37,7 @@
             android:layout_width="20dp"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:layout_toRightOf="@id/side_menu_button"
+            android:layout_toRightOf="@+id/call_quality"
             android:adjustViewBounds="true"
             android:paddingLeft="5dp"
             android:src="@drawable/led_disconnected" />

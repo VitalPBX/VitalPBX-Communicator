@@ -76,7 +76,8 @@
                 android:background="?attr/button_background_drawable"
                 android:contentDescription="@string/content_description_edit_list"
                 android:padding="15dp"
-                android:src="@drawable/delete" />
+                android:tint="@color/grey_color"
+                android:src="@drawable/trash_icon" />
 
         </LinearLayout>
 

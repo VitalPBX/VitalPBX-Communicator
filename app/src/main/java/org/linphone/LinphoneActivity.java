@@ -144,8 +144,12 @@ public class LinphoneActivity extends LinphoneGenericActivity
 
     private StatusFragment mStatusFragment;
     private TextView mMissedCalls, mMissedChats;
-    private RelativeLayout mContacts, mHistory, mDialer, mChat;
-    private View mContactsSelected, mHistorySelected, mDialerSelected, mChatSelected;
+    private RelativeLayout mContacts, mHistory, mDialer, mChat, mSettings;
+    private View mContactsSelected,
+            mHistorySelected,
+            mDialerSelected,
+            mChatSelected,
+            mSettingsSelected;
     private LinearLayout mTopBar;
     private TextView mTopBarTitle;
     private ImageView mCancel;
@@ -723,6 +727,7 @@ public class LinphoneActivity extends LinphoneGenericActivity
         mDialer = findViewById(R.id.dialer);
         mDialer.setOnClickListener(this);
         mChat = findViewById(R.id.chat);
+        mSettings = findViewById(R.id.settings_btn);
         mChat.setOnClickListener(this);
         if (getResources().getBoolean(R.bool.disable_chat)) {
             mChat.setVisibility(View.GONE);
@@ -732,6 +737,7 @@ public class LinphoneActivity extends LinphoneGenericActivity
         mContactsSelected = findViewById(R.id.contacts_select);
         mDialerSelected = findViewById(R.id.dialer_select);
         mChatSelected = findViewById(R.id.chat_select);
+        mSettingsSelected = findViewById(R.id.settings_select);
 
         mMissedCalls = findViewById(R.id.missed_calls);
         mMissedChats = findViewById(R.id.missed_chats);
@@ -1725,6 +1731,21 @@ public class LinphoneActivity extends LinphoneGenericActivity
                     @Override
                     public void onClick(View view) {
 
+                        if (mSideMenu.isDrawerVisible(Gravity.LEFT)) {
+                            mSideMenu.closeDrawer(mSideMenuContent);
+                        } else {
+                            mSideMenu.openDrawer(mSideMenuContent);
+                        }
+                    }
+                });
+
+        // TODO: there is probably a better way to do this
+        mSettings.setOnClickListener(
+                new OnClickListener() {
+
+                    // do exactly the same thing as the mMenu
+                    @Override
+                    public void onClick(View v) {
                         if (mSideMenu.isDrawerVisible(Gravity.LEFT)) {
                             mSideMenu.closeDrawer(mSideMenuContent);
                         } else {
