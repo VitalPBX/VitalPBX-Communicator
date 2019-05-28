@@ -78,7 +78,10 @@
                         android:layout_height="match_parent"
                         android:layout_below="@id/active_call_info"
                         android:layout_centerInParent="true"
-                        android:layout_margin="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="5dp"
                         android:gravity="center">
 
                         <include layout="@layout/contact_avatar_200" />
@@ -199,15 +202,20 @@
                     <RelativeLayout
                         android:layout_width="0dp"
                         android:layout_height="60dp"
+                        android:layout_marginBottom="15dp"
                         android:layout_weight="0.25">
 
                         <ImageView
                             android:id="@+id/video"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="?attr/button_background_drawable"
+                            android:layout_height="60dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_weight="0.25"
+                            android:background="@color/transparent_color"
+                            android:tint="@color/grey_color"
                             android:contentDescription="@string/content_description_switch_video"
-                            android:padding="20dp"
+                            android:padding="5dp"
                             android:src="@drawable/camera" />
 
                         <ProgressBar
@@ -226,9 +234,11 @@
                         android:layout_width="0dp"
                         android:layout_height="60dp"
                         android:layout_weight="0.25"
-                        android:background="?attr/button_background_drawable"
+                        android:background="@color/transparent_color"
+                        android:layout_marginBottom="15dp"
                         android:contentDescription="@string/content_description_toggle_micro"
                         android:padding="10dp"
+                        android:tint="@color/grey_color"
                         android:src="@drawable/micro" />
 
                     <RelativeLayout
@@ -241,8 +251,10 @@
                             android:layout_width="match_parent"
                             android:layout_height="60dp"
                             android:layout_alignParentBottom="true"
-                            android:background="?attr/button_background_drawable"
+                            android:layout_marginBottom="15dp"
+                            android:background="@color/transparent_color"
                             android:contentDescription="@string/content_description_toggle_speaker"
+                            android:tint="@color/grey_color"
                             android:padding="15dp"
                             android:src="@drawable/speaker" />
 
@@ -255,6 +267,7 @@
                             android:contentDescription="@string/content_description_audio_route"
                             android:padding="15dp"
                             android:src="@drawable/routes"
+                            android:tint="@color/grey_color"
                             android:visibility="gone" />
 
                         <ImageView
@@ -288,6 +301,7 @@
                             android:contentDescription="@string/content_description_toggle_speaker"
                             android:padding="15dp"
                             android:src="@drawable/route_speaker"
+                            android:tint="@color/grey_color"
                             android:visibility="gone" />
 
                     </RelativeLayout>
@@ -295,6 +309,7 @@
                     <RelativeLayout
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
+                        android:backgroundTint="@color/transparent_color"
                         android:layout_weight="0.25">
 
                         <ImageView
@@ -303,9 +318,12 @@
                             android:layout_height="60dp"
                             android:layout_alignParentBottom="true"
                             android:background="?attr/button_background_drawable"
+                            android:backgroundTint="@color/transparent_color"
                             android:contentDescription="@string/content_description_call_options"
+                            android:layout_marginBottom="15dp"
                             android:padding="15dp"
-                            android:src="@drawable/options" />
+                            android:src="@drawable/options"
+                            android:tint="@color/grey_color"/>
 
                         <ImageView
                             android:id="@+id/record_call"
@@ -313,9 +331,11 @@
                             android:layout_height="60dp"
                             android:layout_above="@id/options"
                             android:background="?attr/button_background_drawable"
+                            android:backgroundTint="@color/transparent_color"
                             android:contentDescription="@string/content_description_record_call"
                             android:padding="15dp"
                             android:src="@drawable/options_rec"
+                            android:tint="@color/grey_color"
                             android:visibility="gone" />
 
                         <ImageView
@@ -323,9 +343,11 @@
                             android:layout_width="match_parent"
                             android:layout_height="60dp"
                             android:layout_above="@id/record_call"
+                            android:backgroundTint="@color/transparent_color"
                             android:background="?attr/button_background_drawable"
                             android:contentDescription="@string/content_description_add_call"
                             android:padding="15dp"
+                            android:tint="@color/grey_color"
                             android:src="@drawable/options_add_call"
                             android:visibility="gone" />
 
@@ -334,9 +356,11 @@
                             android:layout_width="match_parent"
                             android:layout_height="60dp"
                             android:layout_above="@id/add_call"
+                            android:backgroundTint="@color/transparent_color"
                             android:background="?attr/button_background_drawable"
                             android:contentDescription="@string/content_description_transfer"
                             android:padding="15dp"
+                            android:tint="@color/grey_color"
                             android:src="@drawable/options_transfer_call"
                             android:visibility="gone" />
 
@@ -346,8 +370,10 @@
                             android:layout_height="60dp"
                             android:layout_above="@id/transfer"
                             android:background="?attr/button_background_drawable"
+                            android:backgroundTint="@color/transparent_color"
                             android:contentDescription="@string/content_description_conference"
                             android:padding="15dp"
+                            android:tint="@color/grey_color"
                             android:src="@drawable/options_start_conference"
                             android:visibility="gone" />
 
@@ -358,18 +384,19 @@
                 <LinearLayout
                     android:id="@+id/main_bar"
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
+                    android:layout_height="105dp"
                     android:layout_gravity="center"
                     android:orientation="horizontal">
 
                     <ImageView
                         android:id="@+id/dialer"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_weight="0.25"
-                        android:background="@color/dark_grey_color"
+                        android:background="@color/transparent_color"
                         android:contentDescription="@string/content_description_numpad"
-                        android:padding="15dp"
+                        android:padding="30dp"
+                        android:tint="@color/grey_color"
                         android:src="@drawable/footer_dialer" />
 
                     <ImageView
@@ -378,26 +405,28 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_weight="0.5"
-                        android:background="@drawable/hangup"
+                        android:background="@color/transparent_color"
                         android:contentDescription="@string/content_description_hang_up"
                         android:padding="12dp"
-                        android:src="@drawable/call_hangup" />
+                        android:src="@drawable/hangup_button" />
 
                     <RelativeLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.25"
-                        android:background="@drawable/footer_button">
+                        android:background="@drawable/footer_button"
+                        android:backgroundTint="@color/transparent_color">
 
                         <ImageView
                             android:id="@+id/chat"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:layout_centerInParent="true"
-                            android:background="@color/dark_grey_color"
+                            android:background="@color/transparent_color"
                             android:contentDescription="@string/content_description_chat_button"
-                            android:padding="15dp"
-                            android:src="@drawable/footer_chat" />
+                            android:padding="30dp"
+                            android:src="@drawable/footer_chat"
+                            android:tint="@color/grey_color"/>
 
                         <TextView
                             android:id="@+id/missed_chats"
@@ -418,7 +447,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginBottom="120dp">
+                android:layout_marginBottom="100dp">
 
                 <org.linphone.views.Numpad
                     android:id="@+id/numpad"

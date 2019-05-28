@@ -68,6 +68,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/contact_number"
+                android:background="@color/transparent_color"
+                android:backgroundTint="@color/transparent_color"
                 android:layout_margin="5dp"
                 android:gravity="center">
 
@@ -79,7 +81,8 @@
                 android:id="@+id/videoSurface"
                 android:layout_below="@id/contact_number"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/transparent_color"/>
 
         </RelativeLayout>
 
