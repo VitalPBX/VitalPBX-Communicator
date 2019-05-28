@@ -4,16 +4,23 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:background="@color/red_color"
+    android:background="@color/transparent_color"
     android:gravity="center"
-    android:padding="12dp"
+    android:padding="15dp"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <ImageView
-        android:src="@drawable/call_hangup"
+        android:src="@drawable/hangup_button"
+        android:visibility="visible"
         android:contentDescription="@string/content_description_decline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
+
+    <!--<ImageView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--style="@style/DialerDigit"-->
+        <!--android:src="@drawable/hangup_button"/>-->
 
     <LinearLayout
         android:id="@+id/declineUnlock"

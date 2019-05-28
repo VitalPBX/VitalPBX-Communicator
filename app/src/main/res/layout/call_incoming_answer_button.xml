@@ -4,9 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:background="@color/green_color"
+    android:background="@color/transparent_color"
     android:gravity="center"
-    android:padding="12dp"
+    android:padding="15dp"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <LinearLayout
@@ -37,11 +37,19 @@
 
     </LinearLayout>
 
+    <!--<ImageView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--style="@style/DialerDigit"-->
+        <!--android:src="@drawable/call_button"/>-->
+
     <ImageView
         android:id="@+id/acceptIcon"
-        android:src="@drawable/call_audio_start"
+        android:src="@drawable/call_button"
+        android:visibility="visible"
         android:contentDescription="@string/content_description_accept"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
+
 
 </LinearLayout>

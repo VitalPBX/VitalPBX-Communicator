@@ -88,8 +88,9 @@
     <LinearLayout
         android:id="@+id/menu"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="110dp"
         android:layout_alignParentBottom="true"
+        android:background="@color/transparent_color"
         android:orientation="horizontal">
 
         <org.linphone.views.CallIncomingDeclineButton
