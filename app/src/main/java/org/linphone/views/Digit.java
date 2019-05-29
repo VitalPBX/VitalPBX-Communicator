@@ -41,6 +41,7 @@ public class Digit extends Button implements AddressAware {
 
     private AddressText mAddress;
     private boolean mPlayDtmf;
+    private boolean isPressed = false;
 
     public Digit(Context context, AttributeSet attrs, int style) {
         super(context, attrs, style);
@@ -136,6 +137,51 @@ public class Digit extends Button implements AddressAware {
             }
         }
 
+        // this is used to set the background of each digit back to the original
+        // there is probably a better way of doing it but it works for the mean time
+        private void digitBackgroundHelper(View view) {
+            int id = view.getId();
+
+            switch (id) {
+                case R.id.Digit1:
+                    setBackgroundResource(R.drawable.digit_1);
+                    break;
+                case R.id.Digit2:
+                    setBackgroundResource(R.drawable.digit_2);
+                    break;
+                case R.id.Digit3:
+                    setBackgroundResource(R.drawable.digit_3);
+                    break;
+                case R.id.Digit4:
+                    setBackgroundResource(R.drawable.digit_4);
+                    break;
+                case R.id.Digit5:
+                    setBackgroundResource(R.drawable.digit_5);
+                    break;
+                case R.id.Digit6:
+                    setBackgroundResource(R.drawable.digit_6);
+                    break;
+                case R.id.Digit7:
+                    setBackgroundResource(R.drawable.digit_7);
+                    break;
+                case R.id.Digit8:
+                    setBackgroundResource(R.drawable.digit_8);
+                    break;
+                case R.id.Digit9:
+                    setBackgroundResource(R.drawable.digit_9);
+                    break;
+                case R.id.Digit0:
+                    setBackgroundResource(R.drawable.digit_zero);
+                    break;
+                case R.id.Digit_hashtag:
+                    setBackgroundResource(R.drawable.digit_hashtag);
+                    break;
+                case R.id.Digit_asterisk:
+                    setBackgroundResource(R.drawable.digit_asterisk);
+                    break;
+            }
+        }
+
         void displayDebugPopup() {
             AlertDialog.Builder alertDialog = new AlertDialog.Builder(getContext());
             alertDialog.setTitle(getContext().getString(R.string.debug_popup_title));
@@ -189,6 +235,15 @@ public class Digit extends Button implements AddressAware {
                     mIsDtmfStarted = false;
                 }
             }
+
+            boolean isPressed = event.getAction() == MotionEvent.ACTION_DOWN;
+            boolean isReleased = event.getAction() == MotionEvent.ACTION_UP;
+            if (isPressed) {
+                setBackgroundResource(R.drawable.pressed_numeric_button);
+            } else if (isReleased) {
+                digitBackgroundHelper(v);
+            }
+
             return false;
         }
 

@@ -5,10 +5,6 @@
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- TODO: commented areas contained two text views; one for digits and one for the number itself -->
-    <!-- currently, it uses the digit_style logic -->
-    <!-- TODO: find a way to assign textviews underneath the digit value -->
-
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -220,8 +220,6 @@ public class DialerFragment extends Fragment {
             mAddContact.setOnClickListener(mAddContactListener);
             enableDisableAddContact();
         }
-
-        numpadControlsHelper();
     }
 
     public void enableDisableAddContact() {
@@ -239,6 +237,4 @@ public class DialerFragment extends Fragment {
         displayTextInAddressBar(numberOrSipAddress);
         LinphoneManager.getInstance().newOutgoingCall(mAddress);
     }
-
-    public void numpadControlsHelper() {}
 }
