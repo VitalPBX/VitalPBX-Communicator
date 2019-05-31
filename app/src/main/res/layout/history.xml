@@ -27,8 +27,9 @@
                     android:layout_height="match_parent"
                     android:background="?attr/button_background_drawable"
                     android:contentDescription="@string/content_description_all_contacts"
-                    android:padding="15dp"
-                    android:src="@drawable/history_all" />
+                    android:padding="10dp"
+                    android:src="@drawable/all_calls_vector"
+                    android:tint="@color/black_color"/>
 
                 <View
                     android:id="@+id/all_calls_select"
@@ -51,8 +52,9 @@
                     android:background="?attr/button_background_drawable"
                     android:contentDescription="@string/content_description_linphone_contacts"
                     android:gravity="center"
-                    android:padding="15dp"
-                    android:src="@drawable/history_missed" />
+                    android:padding="14dp"
+                    android:src="@drawable/lost_calls"
+                    android:tint="@color/black_color"/>
 
                 <View
                     android:id="@+id/missed_calls_select"

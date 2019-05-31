@@ -49,7 +49,7 @@
                 android:contentDescription="@string/content_description_linphone_contacts"
                 android:gravity="center"
                 android:padding="17dp"
-                android:src="@drawable/sip_contacts"
+                android:src="@drawable/vitalpbx_users"
                 android:tint="@color/grey_color" />
 
             <View

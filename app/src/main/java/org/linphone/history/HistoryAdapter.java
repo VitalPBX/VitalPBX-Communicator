@@ -100,13 +100,13 @@ public class HistoryAdapter extends SelectableAdapter<HistoryViewHolder> {
         if (log.getDir() == Call.Dir.Incoming) {
             address = log.getFromAddress();
             if (log.getStatus() == Call.Status.Missed) {
-                holder.callDirection.setImageResource(R.drawable.call_status_missed);
+                holder.callDirection.setImageResource(R.drawable.lost_calls);
             } else {
-                holder.callDirection.setImageResource(R.drawable.call_status_incoming);
+                holder.callDirection.setImageResource(R.drawable.incoming_call);
             }
         } else {
             address = log.getToAddress();
-            holder.callDirection.setImageResource(R.drawable.call_status_outgoing);
+            holder.callDirection.setImageResource(R.drawable.outgoing_call);
         }
 
         LinphoneContact c = ContactsManager.getInstance().findContactFromAddress(address);

@@ -36,10 +36,10 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.2"
-                android:background="?attr/button_background_drawable"
                 android:contentDescription="@string/content_description_add_contact"
-                android:padding="15dp"
-                android:src="@drawable/contact_add" />
+                android:padding="5dp"
+                android:tint="@color/grey_color"
+                android:src="@drawable/add_contact_btn" />
 
             <ImageView
                 android:id="@+id/goto_contact"
@@ -98,7 +98,7 @@
                     android:layout_margin="10dp"
                     android:background="@drawable/round_orange_button_background"
                     android:contentDescription="@string/content_description_call"
-                    android:src="@drawable/call_start_default" />
+                    android:src="@drawable/call_button" />
 
                 <ImageView
                     android:id="@+id/chat"

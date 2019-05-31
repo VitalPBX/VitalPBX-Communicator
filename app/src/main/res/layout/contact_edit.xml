@@ -33,8 +33,8 @@
             android:layout_weight="0.2"
             android:background="?attr/button_background_drawable"
             android:contentDescription="@string/content_description_delete"
-            android:padding="15dp"
-            android:src="@drawable/delete" />
+            android:padding="10dp"
+            android:src="@drawable/trash_icon" />
 
         <ImageView
             android:id="@+id/ok"

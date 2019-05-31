@@ -188,9 +188,9 @@
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
                         android:contentDescription="@string/content_description_chat_button"
-                        android:padding="15dp"
+                        android:padding="10dp"
                         android:tint="@color/grey_color"
-                        android:src="@drawable/footer_chat" />
+                        android:src="@drawable/chat_bubble_logo" />
 
                     <View
                         android:id="@+id/chat_select"

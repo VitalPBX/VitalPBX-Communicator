@@ -1652,7 +1652,7 @@ public class LinphoneActivity extends LinphoneGenericActivity
             mSideMenuItems.add(
                     new MenuItem(
                             getResources().getString(R.string.menu_assistant),
-                            R.drawable.menu_assistant));
+                            R.drawable.assistant_logo));
         }
         if (!getResources().getBoolean(R.bool.hide_settings_from_side_menu)) {
             mSideMenuItems.add(

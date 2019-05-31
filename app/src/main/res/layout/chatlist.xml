@@ -24,7 +24,7 @@
                 android:background="?attr/button_background_drawable"
                 android:contentDescription="@string/content_description_new_discussion"
                 android:padding="15dp"
-                android:src="@drawable/chat_new" />
+                android:src="@drawable/user_message_logo" />
 
             <ImageView
                 android:id="@+id/new_group_discussion"

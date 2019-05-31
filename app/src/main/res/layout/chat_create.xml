@@ -75,7 +75,8 @@
                     android:background="?attr/button_background_drawable"
                     android:contentDescription="@string/content_description_all_contacts"
                     android:padding="15dp"
-                    android:src="@drawable/contacts_all" />
+                    android:tint="@color/grey_color"
+                    android:src="@drawable/contacts" />
 
                 <View
                     android:id="@+id/all_contacts_select"
@@ -100,7 +101,8 @@
                     android:contentDescription="@string/content_description_linphone_contacts"
                     android:gravity="center"
                     android:padding="15dp"
-                    android:src="@drawable/contacts_sip" />
+                    android:tint="@color/grey_color"
+                    android:src="@drawable/vitalpbx_users" />
 
                 <View
                     android:id="@+id/linphone_contacts_select"
