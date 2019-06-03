@@ -81,7 +81,8 @@
                 android:background="?attr/button_background_drawable"
                 android:contentDescription="@string/content_description_call"
                 android:padding="15dp"
-                android:src="@drawable/call_alt_start" />
+                android:src="@drawable/outgoing_call"
+                android:tint="@color/grey_color"/>
 
             <ImageView
                 android:id="@+id/group_infos"

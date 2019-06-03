@@ -9,8 +9,10 @@
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_alignParentLeft="true"
+        android:padding="10dp"
         android:adjustViewBounds="true"
-        android:src="@drawable/avatar" />
+        android:src="@drawable/contact"
+        android:tint="@color/dark_grey_color"/>
 
     <TextView
         android:id="@+id/generated_avatar"
