@@ -30,7 +30,8 @@
             android:background="?attr/button_background_drawable"
             android:contentDescription="@string/content_description_back"
             android:padding="18dp"
-            android:src="@drawable/back" />
+            android:src="@drawable/back_arrow"
+            android:tint="@color/grey_color"/>
 
         <TextView
             style="@style/accent_colored_title_font"

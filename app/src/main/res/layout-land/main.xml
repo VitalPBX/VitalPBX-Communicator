@@ -37,7 +37,8 @@
                     android:background="?attr/button_background_drawable"
                     android:contentDescription="@string/content_description_dialer_back"
                     android:padding="18dp"
-                    android:src="@drawable/back" />
+                    android:src="@drawable/back_arrow"
+                    android:tint="@color/grey_color"/>
 
                 <TextView
                     android:id="@+id/top_bar_title"
