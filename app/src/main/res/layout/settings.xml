@@ -78,6 +78,12 @@
             android:layout_height="wrap_content"
             linphone:title="@string/pref_advanced_title"/>
 
+        <org.linphone.settings.widget.BasicSetting
+            android:id="@+id/pref_phonebook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            linphone:title="@string/pref_remote_phonebook"/>
+
     </LinearLayout>
 
 </ScrollView>

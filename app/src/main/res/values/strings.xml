@@ -497,6 +497,7 @@
     <string name="pref_primary_account_title">Primary account</string>
     <string name="pref_display_name_title">Display name</string>
     <string name="pref_user_name_title">Username</string>
+    <string name="pref_remote_phonebook">Remote Phonebook</string>
 
     <!-- Audio hack settings -->
     <string name="pref_audio_hacks_title">Audio hacks</string>

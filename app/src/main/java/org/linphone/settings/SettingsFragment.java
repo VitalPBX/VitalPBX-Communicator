@@ -40,7 +40,7 @@ import org.linphone.utils.LinphoneUtils;
 
 public class SettingsFragment extends Fragment {
     protected View mRootView;
-    private BasicSetting mTunnel, mAudio, mVideo, mCall, mChat, mNetwork, mAdvanced;
+    private BasicSetting mTunnel, mAudio, mVideo, mCall, mChat, mNetwork, mAdvanced, mPhonebook;
     private LinearLayout mAccounts;
     private TextView mAccountsHeader;
 
@@ -84,6 +84,8 @@ public class SettingsFragment extends Fragment {
         mNetwork = mRootView.findViewById(R.id.pref_network);
 
         mAdvanced = mRootView.findViewById(R.id.pref_advanced);
+
+        mPhonebook = mRootView.findViewById(R.id.pref_phonebook);
     }
 
     protected void setListeners() {
@@ -143,6 +145,15 @@ public class SettingsFragment extends Fragment {
                     public void onClicked() {
                         LinphoneActivity.instance()
                                 .displaySubSettings(new AdvancedSettingsFragment());
+                    }
+                });
+
+        mPhonebook.setListener(
+                new SettingListenerBase() {
+                    @Override
+                    public void onClicked() {
+                        LinphoneActivity.instance()
+                                .displaySubSettings(new RemotePhonebookSettingsFragment());
                     }
                 });
     }
