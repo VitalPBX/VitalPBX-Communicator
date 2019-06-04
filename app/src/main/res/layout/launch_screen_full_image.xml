@@ -2,13 +2,13 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/dark_grey_color">
+    android:background="@color/white_color">
 
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:src="@drawable/splashscreen" />
+        android:src="@drawable/splashscreen_logo" />
 
     <ProgressBar
         android:layout_width="wrap_content"
@@ -17,10 +17,10 @@
         android:indeterminateTint="@color/primary_color"
         android:layout_marginBottom="20dp" />
 
-    <View
-        android:layout_width="100dp"
-        android:layout_height="10dp"
-        android:layout_gravity="center_horizontal|bottom"
-        android:background="@color/primary_color" />
+    <!--<View-->
+        <!--android:layout_width="100dp"-->
+        <!--android:layout_height="10dp"-->
+        <!--android:layout_gravity="center_horizontal|bottom"-->
+        <!--android:background="@color/primary_color" />-->
 
 </FrameLayout>
