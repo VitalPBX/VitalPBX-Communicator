@@ -57,9 +57,13 @@
     <application
         android:allowBackup="false"
         android:icon="@mipmap/vitalpbx_launcher_icon"
+        android:usesCleartextTraffic="true"
         android:label="@string/app_name"
         android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round">
+        <!-- TODO: usesClearTextTraffic is enabled to allow adding remote phonebook -->
+        <!-- this could potentially increase threats, but VitalPBX has validation methods to ensure
+             security -->
 
         <activity
             android:name=".LinphoneLauncherActivity"

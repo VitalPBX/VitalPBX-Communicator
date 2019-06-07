@@ -90,6 +90,7 @@ import org.linphone.contacts.ContactEditorFragment;
 import org.linphone.contacts.ContactsFragment;
 import org.linphone.contacts.ContactsManager;
 import org.linphone.contacts.LinphoneContact;
+import org.linphone.contacts.LinphoneNumberOrAddress;
 import org.linphone.core.Address;
 import org.linphone.core.AuthInfo;
 import org.linphone.core.Call;
@@ -1482,6 +1483,35 @@ public class LinphoneActivity extends LinphoneGenericActivity
         extras.putSerializable("NewSipAdress", sipUri);
         extras.putSerializable("NewDisplayName", displayName);
         changeCurrentFragment(FragmentsAvailable.CONTACT_EDITOR, extras);
+    }
+
+    // used for asynchronously add contacts from phonebook URL
+    public void asyncAddContact(String displayName, String number) {
+        Bundle extras = new Bundle();
+        LinphoneContact contact;
+
+        extras.putSerializable("NewDisplayName", displayName);
+        extras.putSerializable("NewSipAddress", number);
+
+        LinphoneNumberOrAddress numberOrAddress;
+
+        // if number is greater than 7 digits, then it is not SIP
+        if (number.length() > 7) {
+            numberOrAddress = new LinphoneNumberOrAddress(number, false);
+        } else numberOrAddress = new LinphoneNumberOrAddress(number, true);
+
+        contact = LinphoneContact.createContact();
+
+        // VitalPBX phonebooks currently have one name only - leave last name blank
+        contact.setFirstNameAndLastName(displayName, "", true);
+
+        if (numberOrAddress.getValue() != null) {
+            numberOrAddress.setValue(
+                    LinphoneUtils.getFullAddressFromUsername(numberOrAddress.getValue()));
+        }
+        contact.addOrUpdateNumberOrAddress(numberOrAddress);
+
+        contact.save();
     }
 
     public void editContact(LinphoneContact contact, String sipUri) {
