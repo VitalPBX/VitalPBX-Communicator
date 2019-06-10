@@ -15,7 +15,6 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import org.linphone.LinphoneActivity;
 import org.linphone.R;
-import org.linphone.contacts.ContactsManager;
 import org.linphone.contacts.RemotePhonebookParser;
 import org.linphone.fragments.FragmentsAvailable;
 import org.w3c.dom.Document;
@@ -32,8 +31,6 @@ public class RemotePhonebookSettingsFragment extends Fragment {
     private EditText urlEditText;
     private Button retrieveButton;
 
-    protected ContactsManager contactsManager;
-    protected RemotePhonebookParser phonebookParser;
     protected AsyncTask<Void, Void, Void> asyncTask;
 
     @Nullable
@@ -45,8 +42,6 @@ public class RemotePhonebookSettingsFragment extends Fragment {
 
         urlEditText = mRootView.findViewById(R.id.urlEditText);
         retrieveButton = mRootView.findViewById(R.id.retrieveButton);
-
-        // phonebookParser = new RemotePhonebookParser();
 
         retrieveButton.setOnClickListener(
                 new View.OnClickListener() {

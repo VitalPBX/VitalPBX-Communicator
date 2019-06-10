@@ -1,6 +1,7 @@
 package org.linphone.contacts;
 
 import android.os.AsyncTask;
+import java.net.HttpURLConnection;
 import java.net.URL;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -15,23 +16,29 @@ public class RemotePhonebookParser extends AsyncTask<Void, Void, Void> {
 
     @Override
     protected Void doInBackground(Void... voids) {
-        // create strings to test results
         String name;
         String sipNumber;
 
-        ContactsManager contactsManager;
-        LinphoneNumberOrAddress numberOrAddress;
         try {
 
             URL url = new URL("http://192.168.26.10/phonebook.php?pb=EdRbklpGk");
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+
             // TODO: url would be retrieved from textEdit
+
+            // set up header for authentication
+            connection.setDoOutput(true);
+            connection.setRequestProperty("User-Agent", "vpbxCommunicator");
+            connection.getRequestMethod();
 
             DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
             DocumentBuilder db = dbf.newDocumentBuilder();
-            Document doc = db.parse(new InputSource(url.openStream()));
+            Document doc =
+                    db.parse(new InputSource(connection.getInputStream())); // url.openStream()
+
             doc.getDocumentElement().normalize();
 
-            NodeList nodeList = doc.getElementsByTagName("Contact"); // TODO
+            NodeList nodeList = doc.getElementsByTagName("Contact");
 
             System.out.println("-----------------------------");
 
