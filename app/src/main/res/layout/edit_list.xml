@@ -51,6 +51,6 @@
         android:background="?attr/button_background_drawable"
         android:contentDescription="@string/content_description_delete_selection"
         android:padding="15dp"
-        android:src="@drawable/delete" />
+        android:src="@drawable/trash_icon" />
 
 </LinearLayout>

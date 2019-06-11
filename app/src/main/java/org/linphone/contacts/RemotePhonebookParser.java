@@ -1,26 +1,28 @@
 package org.linphone.contacts;
 
 import android.os.AsyncTask;
+import android.widget.Toast;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import org.linphone.LinphoneActivity;
+import org.linphone.settings.RemotePhonebookSettingsFragment;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 
-public class RemotePhonebookParser extends AsyncTask<Void, Void, Void> {
+public class RemotePhonebookParser extends AsyncTask<Void, Void, Boolean> {
 
     private String url;
 
     private String enteredURL;
-    public boolean successfulParse;
+    private boolean successfulParse;
 
     @Override
-    protected Void doInBackground(Void... voids) {
+    protected Boolean doInBackground(Void... voids) {
         String name;
         String sipNumber;
 
@@ -61,15 +63,45 @@ public class RemotePhonebookParser extends AsyncTask<Void, Void, Void> {
                 }
             }
 
-            successfulParse = true;
+            // successfulParse = true;
+            return true;
 
         } catch (Exception e) {
             System.out.println("XML parser exception: " + e);
 
-            successfulParse = false;
+            // successfulParse = false;
+            return false;
         }
 
-        return null;
+        // return null;
+    }
+
+    @Override
+    protected void onPostExecute(Boolean success) {
+        if (success) {
+            // launch contacts list and refresh
+            Toast.makeText(
+                            RemotePhonebookSettingsFragment.mContext,
+                            "Successful Sync!",
+                            Toast.LENGTH_LONG)
+                    .show();
+
+            LinphoneActivity.instance().displayContacts(true);
+            ContactsManager.getInstance().fetchContactsAsync();
+
+        } else if (url.matches("")) { // url field remained empty
+            Toast.makeText(
+                            RemotePhonebookSettingsFragment.mContext,
+                            "URL field is empty",
+                            Toast.LENGTH_LONG)
+                    .show();
+        } else { // success is false
+            Toast.makeText(
+                            RemotePhonebookSettingsFragment.mContext,
+                            "There was an error while syncing contacts",
+                            Toast.LENGTH_LONG)
+                    .show();
+        }
     }
 
     // used to get specific attributes for each XML tag

@@ -24,7 +24,7 @@ public class RemotePhonebookSettingsFragment extends Fragment {
     private EditText urlEditText;
     private Button retrieveButton;
 
-    protected AsyncTask<Void, Void, Void> asyncTask;
+    protected AsyncTask<Void, Void, Boolean> asyncTask;
 
     @Nullable
     @Override
