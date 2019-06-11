@@ -14,6 +14,11 @@ import org.xml.sax.InputSource;
 
 public class RemotePhonebookParser extends AsyncTask<Void, Void, Void> {
 
+    private String url;
+
+    private String enteredURL;
+    public boolean successfulParse;
+
     @Override
     protected Void doInBackground(Void... voids) {
         String name;
@@ -21,10 +26,10 @@ public class RemotePhonebookParser extends AsyncTask<Void, Void, Void> {
 
         try {
 
-            URL url = new URL("http://192.168.26.10/phonebook.php?pb=EdRbklpGk");
-            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            System.out.println("ENTERED URL IS -----------> " + url);
 
-            // TODO: url would be retrieved from textEdit
+            URL enteredURL = new URL(url);
+            HttpURLConnection connection = (HttpURLConnection) enteredURL.openConnection();
 
             // set up header for authentication
             connection.setDoOutput(true);
@@ -33,8 +38,7 @@ public class RemotePhonebookParser extends AsyncTask<Void, Void, Void> {
 
             DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
             DocumentBuilder db = dbf.newDocumentBuilder();
-            Document doc =
-                    db.parse(new InputSource(connection.getInputStream())); // url.openStream()
+            Document doc = db.parse(new InputSource(connection.getInputStream()));
 
             doc.getDocumentElement().normalize();
 
@@ -57,8 +61,12 @@ public class RemotePhonebookParser extends AsyncTask<Void, Void, Void> {
                 }
             }
 
+            successfulParse = true;
+
         } catch (Exception e) {
             System.out.println("XML parser exception: " + e);
+
+            successfulParse = false;
         }
 
         return null;
@@ -73,19 +81,16 @@ public class RemotePhonebookParser extends AsyncTask<Void, Void, Void> {
         return node.getNodeValue();
     }
 
-    // use HttpURLConnection to create an advanced request
-    // i.e; specify the type of header to retrieve remote phonebook
-    /*private HttpURLConnection httpURLConnectionSetter(URL url) {
-        HttpURLConnection connection;
+    // retrieve url from edittext in RemotePhonebookSettingsFragment
+    public void setURL(String enteredURL) {
+        url = enteredURL;
+    }
 
-        try {
+    public String getURL() {
+        return url;
+    }
 
-            connection = (HttpURLConnection) url.openConnection();
-
-        } catch (Exception e) {
-            System.out.println("URL connection exception: " + e);
-        }
-
-        return connection;
-    }*/
+    public boolean successfulParse() {
+        return successfulParse;
+    }
 }

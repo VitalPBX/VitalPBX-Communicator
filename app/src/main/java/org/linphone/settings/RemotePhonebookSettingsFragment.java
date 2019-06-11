@@ -9,19 +9,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 import androidx.annotation.Nullable;
-import java.net.URL;
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
 import org.linphone.LinphoneActivity;
 import org.linphone.R;
 import org.linphone.contacts.RemotePhonebookParser;
 import org.linphone.fragments.FragmentsAvailable;
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
-import org.xml.sax.InputSource;
 
 public class RemotePhonebookSettingsFragment extends Fragment {
     protected View mRootView;
@@ -42,12 +35,13 @@ public class RemotePhonebookSettingsFragment extends Fragment {
 
         urlEditText = mRootView.findViewById(R.id.urlEditText);
         retrieveButton = mRootView.findViewById(R.id.retrieveButton);
+        // parser = new RemotePhonebookParser();
 
         retrieveButton.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        asyncTask = new RemotePhonebookParser().execute();
+                        onGetClick();
                     }
                 });
 
@@ -66,43 +60,15 @@ public class RemotePhonebookSettingsFragment extends Fragment {
         }
     }
 
-    private void addRemoteContacts() {
-        // create strings to test results
-        String name;
-        String sipNumber;
+    private void onGetClick() {
+        String enteredURL = urlEditText.getText().toString();
+        RemotePhonebookParser phonebookParser = new RemotePhonebookParser();
 
-        try {
-
-            URL url = new URL("http://192.168.25.12/phonebook.php?pb=huKpGJToE");
-            // TODO: url would be retrieved from textEdit
-
-            DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-            DocumentBuilder db = dbf.newDocumentBuilder();
-            Document doc = db.parse(new InputSource(url.openStream()));
-            doc.getDocumentElement().normalize();
-
-            NodeList nodeList = doc.getElementsByTagName("VCommunicatorPhoneDirectory"); // TODO
-
-            System.out.println("-----------------------------");
-
-            for (int i = 0; i < nodeList.getLength(); i++) {
-
-                Node node = nodeList.item(i);
-
-                System.out.println("Current item: " + node.getNodeName());
-
-                if (node.getNodeType() == Node.ELEMENT_NODE) {
-                    Element element = (Element) node;
-                    name = element.getAttribute("Name");
-                    sipNumber = element.getAttribute("Telephone");
-
-                    System.out.println("Current contact name: " + name);
-                    System.out.println("Current contact phone: " + sipNumber);
-                }
-            }
-
-        } catch (Exception e) {
-            System.out.println("XML parser exception: " + e);
+        if (enteredURL.matches("")) {
+            Toast.makeText(mContext, "No URL entered", Toast.LENGTH_LONG).show();
         }
+
+        phonebookParser.setURL(enteredURL);
+        asyncTask = phonebookParser.execute();
     }
 }
