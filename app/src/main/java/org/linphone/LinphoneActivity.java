@@ -1485,20 +1485,26 @@ public class LinphoneActivity extends LinphoneGenericActivity
         changeCurrentFragment(FragmentsAvailable.CONTACT_EDITOR, extras);
     }
 
-    // used for asynchronously add contacts from phonebook URL
+    // used for asynchronously adding contacts from phonebook URL
     public void asyncAddContact(String displayName, String number) {
         Bundle extras = new Bundle();
         LinphoneContact contact;
 
+        // use cero to assume the first account in the list is the one that counts for sip addresses
+        String domain = LinphonePreferences.instance().getAccountDomain(0);
+        String sip = number + "@" + domain; // form sip address
+
         extras.putSerializable("NewDisplayName", displayName);
         extras.putSerializable("NewSipAddress", number);
 
+        // strictly retrieved from the XML. This is assumed to be not SIP most of the times
         LinphoneNumberOrAddress numberOrAddress;
 
-        // if number is greater than 7 digits, then it is not SIP
-        if (number.length() > 7) {
-            numberOrAddress = new LinphoneNumberOrAddress(number, false);
-        } else numberOrAddress = new LinphoneNumberOrAddress(number, true);
+        // using SIP builder so we can add both telephone and sip addresses
+        LinphoneNumberOrAddress sipAddress;
+
+        numberOrAddress = new LinphoneNumberOrAddress(number, false);
+        sipAddress = new LinphoneNumberOrAddress(sip, true);
 
         contact = LinphoneContact.createContact();
 
@@ -1509,7 +1515,13 @@ public class LinphoneActivity extends LinphoneGenericActivity
             numberOrAddress.setValue(
                     LinphoneUtils.getFullAddressFromUsername(numberOrAddress.getValue()));
         }
-        contact.addOrUpdateNumberOrAddress(numberOrAddress);
+
+        if (sipAddress.getValue() != null) {
+            sipAddress.setValue(LinphoneUtils.getFullAddressFromUsername(sip));
+        }
+
+        contact.addOrUpdateNumberOrAddress(numberOrAddress); // add telephone number
+        contact.addOrUpdateNumberOrAddress(sipAddress); // add sip address
 
         contact.save();
     }
