@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 import androidx.annotation.Nullable;
 import org.linphone.LinphoneActivity;
 import org.linphone.R;
@@ -63,10 +62,6 @@ public class RemotePhonebookSettingsFragment extends Fragment {
     private void onGetClick() {
         String enteredURL = urlEditText.getText().toString();
         RemotePhonebookParser phonebookParser = new RemotePhonebookParser();
-
-        if (enteredURL.matches("")) {
-            Toast.makeText(mContext, "No URL entered", Toast.LENGTH_LONG).show();
-        }
 
         phonebookParser.setURL(enteredURL);
         asyncTask = phonebookParser.execute();

@@ -9,7 +9,7 @@
         android:id="@+id/enterURLstring"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Enter Phonebook URL:"
+        android:text="@string/pref_enter_url"
         android:textColor="@color/black_color"
         android:layout_marginTop="20dp"
         android:layout_marginStart="10dp"

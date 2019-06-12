@@ -134,6 +134,7 @@
   <string name="pref_display_name">Nombre a mostrar</string>
   <string name="pref_help_display_name">Introduzca el nombre a mostrar (opcional)</string>
   <string name="pref_prefix">Prefijo</string>
+  <string name="pref_enter_url">Ingrese el URL</string>
   <string name="pref_transport">Transporte</string>
   <string name="pref_transport_udp">UDP</string>
   <string name="pref_transport_tcp">TCP</string>
