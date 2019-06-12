@@ -1,5 +1,6 @@
 package org.linphone.contacts;
 
+import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.widget.Toast;
 import java.net.HttpURLConnection;
@@ -21,15 +22,20 @@ public class RemotePhonebookParser extends AsyncTask<Void, Void, Boolean> {
     private String enteredURL;
     private boolean successfulParse;
 
+    private ProgressDialog waitDialog = new ProgressDialog(LinphoneActivity.instance());
+
+    @Override
+    protected void onPreExecute() {
+        this.waitDialog.setMessage("Syncing Contacts");
+        this.waitDialog.show();
+    }
+
     @Override
     protected Boolean doInBackground(Void... voids) {
         String name;
         String sipNumber;
 
         try {
-
-            System.out.println("ENTERED URL IS -----------> " + url);
-
             URL enteredURL = new URL(url);
             HttpURLConnection connection = (HttpURLConnection) enteredURL.openConnection();
 
@@ -78,6 +84,10 @@ public class RemotePhonebookParser extends AsyncTask<Void, Void, Boolean> {
 
     @Override
     protected void onPostExecute(Boolean success) {
+        if (waitDialog.isShowing()) {
+            waitDialog.dismiss();
+        }
+
         if (success) {
             // launch contacts list and refresh
             Toast.makeText(
