@@ -58,6 +58,9 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="20dp"
             android:gravity="center_vertical"
             android:src="@drawable/voicemail"
             android:visibility="gone" />

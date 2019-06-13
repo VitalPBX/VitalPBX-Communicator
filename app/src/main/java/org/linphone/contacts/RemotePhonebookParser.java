@@ -15,13 +15,12 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 
+/*
+ * Written by Farhat Samara */
+
 public class RemotePhonebookParser extends AsyncTask<Void, Void, Boolean> {
 
     private String url;
-
-    private String enteredURL;
-    private boolean successfulParse;
-
     private ProgressDialog waitDialog = new ProgressDialog(LinphoneActivity.instance());
 
     @Override
@@ -69,13 +68,10 @@ public class RemotePhonebookParser extends AsyncTask<Void, Void, Boolean> {
                 }
             }
 
-            // successfulParse = true;
             return true;
 
         } catch (Exception e) {
             System.out.println("XML parser exception: " + e);
-
-            // successfulParse = false;
             return false;
         }
 
@@ -130,9 +126,5 @@ public class RemotePhonebookParser extends AsyncTask<Void, Void, Boolean> {
 
     public String getURL() {
         return url;
-    }
-
-    public boolean successfulParse() {
-        return successfulParse;
     }
 }

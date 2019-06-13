@@ -28,6 +28,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+import org.linphone.LinphoneActivity;
 import org.linphone.LinphoneManager;
 import org.linphone.LinphoneService;
 import org.linphone.R;
@@ -260,7 +261,13 @@ public class Digit extends Button implements AddressAware {
             if (id == R.id.Digit1 && lc.getCalls().length == 0) {
                 String voiceMail = LinphonePreferences.instance().getVoiceMailUri();
                 mAddress.getEditableText().clear();
-                if (voiceMail != null) {
+                if (voiceMail == null) {
+                    Toast.makeText(
+                                    LinphoneActivity.instance(),
+                                    "Set Up Voicemail URI in Call Settings",
+                                    Toast.LENGTH_LONG)
+                            .show();
+                } else {
                     mAddress.getEditableText().append(voiceMail);
                     LinphoneManager.getInstance().newOutgoingCall(mAddress);
                 }

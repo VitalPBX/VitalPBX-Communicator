@@ -335,6 +335,7 @@
     <string name="error_bad_credentials">Bad credentials</string>
     <string name="error_unauthorized">Unauthorized</string>
     <string name="error_io_error">Network error</string>
+    <string name="error_voicemail_setup">Set Up Voicemail URI in Preferences</string>
     <string name="download_image_failed">Download failed. Please check your network connection or try again later.</string>
     <string name="remote_provisioning_failure">Failed to download or apply remote provisioning profile…</string>
     <string name="remote_provisioning_again_title">Remote provisioning</string>

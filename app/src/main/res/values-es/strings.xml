@@ -109,6 +109,7 @@
   <string name="error_unknown">Error desconocido</string>
   <string name="error_call_declined">Llamada rechazada</string>
   <string name="error_user_not_found">Usuario no encontrado</string>
+  <string name="error_voicemail_setup">Establecer URI del Buzón de Voz en Preferencias</string>
   <string name="error_network_unreachable">Red inalcanzable</string>
   <string name="error_unauthorized">No autorizado</string>
   <string name="error_io_error">Error de red</string>

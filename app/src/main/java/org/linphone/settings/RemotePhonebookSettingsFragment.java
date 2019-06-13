@@ -15,6 +15,9 @@ import org.linphone.R;
 import org.linphone.contacts.RemotePhonebookParser;
 import org.linphone.fragments.FragmentsAvailable;
 
+/*
+ * Written by Farhat Samara */
+
 public class RemotePhonebookSettingsFragment extends Fragment {
     protected View mRootView;
     protected LinphonePreferences mPrefs;
