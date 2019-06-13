@@ -161,7 +161,7 @@
     <string name="inapp_notification_account_expire">The subscription period expires on %s</string>
 
     <!-- Dailer -->
-    <string name="address_bar_hint"><font size="25">Enter a number or an address</font></string>
+    <string name="address_bar_hint"><font size="20">Enter a number or an address</font></string>
 
     <!-- History -->
     <string name="no_call_history">No call in your history</string>
