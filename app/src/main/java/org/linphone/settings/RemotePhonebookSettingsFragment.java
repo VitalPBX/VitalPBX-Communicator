@@ -37,7 +37,6 @@ public class RemotePhonebookSettingsFragment extends Fragment {
 
         urlEditText = mRootView.findViewById(R.id.urlEditText);
         retrieveButton = mRootView.findViewById(R.id.retrieveButton);
-        // parser = new RemotePhonebookParser();
 
         retrieveButton.setOnClickListener(
                 new View.OnClickListener() {

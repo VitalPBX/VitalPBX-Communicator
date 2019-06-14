@@ -172,6 +172,8 @@ public class LinphoneActivity extends LinphoneGenericActivity
     private boolean mIsOnBackground = false;
     private int mAlwaysChangingPhoneAngle = -1;
 
+    public List<LinphoneContact> remotePhonebookContacts = new ArrayList<>();
+
     public static boolean isInstanciated() {
         return sInstance != null;
     }
@@ -1524,6 +1526,16 @@ public class LinphoneActivity extends LinphoneGenericActivity
         contact.addOrUpdateNumberOrAddress(sipAddress); // add sip address
 
         contact.save();
+
+        remotePhonebookContacts.add(contact);
+    }
+
+    public void clearRemotePhonebookContacts() {
+        for (int i = 0; i < remotePhonebookContacts.size(); i++) {
+            LinphoneContact currentContact = remotePhonebookContacts.get(i);
+
+            currentContact.delete();
+        }
     }
 
     public void editContact(LinphoneContact contact, String sipUri) {

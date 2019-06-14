@@ -5,6 +5,8 @@ import android.os.AsyncTask;
 import android.widget.Toast;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import org.linphone.LinphoneActivity;
@@ -23,6 +25,9 @@ public class RemotePhonebookParser extends AsyncTask<Void, Void, Boolean> {
     private String url;
     private ProgressDialog waitDialog = new ProgressDialog(LinphoneActivity.instance());
 
+    // keep a list of contacts added through remote phonebook
+    public List<LinphoneContact> contactList = new ArrayList<>();
+
     @Override
     protected void onPreExecute() {
         this.waitDialog.setMessage("Syncing Contacts");
@@ -33,6 +38,15 @@ public class RemotePhonebookParser extends AsyncTask<Void, Void, Boolean> {
     protected Boolean doInBackground(Void... voids) {
         String name;
         String sipNumber;
+
+        // clear contacts that were added through a phonebook sync previously
+        List<LinphoneContact> remotePhonebookContacts =
+                LinphoneActivity.instance().remotePhonebookContacts;
+
+        if (remotePhonebookContacts.size() > 0) {
+            // clear list of remote phonebook contacts added previously
+            LinphoneActivity.instance().clearRemotePhonebookContacts();
+        }
 
         try {
             URL enteredURL = new URL(url);
@@ -74,8 +88,6 @@ public class RemotePhonebookParser extends AsyncTask<Void, Void, Boolean> {
             System.out.println("XML parser exception: " + e);
             return false;
         }
-
-        // return null;
     }
 
     @Override

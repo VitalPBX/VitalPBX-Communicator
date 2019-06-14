@@ -37,12 +37,12 @@
 
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toEndOf="@id/enterURLstring"
+        android:layout_alignParentRight="true"
         android:layout_below="@id/editTextLayout"
         android:layout_marginEnd="10dp"
-        android:gravity="center">
+        android:gravity="right">
 
         <!--<Button-->
             <!--android:id="@+id/goBackButton"-->
@@ -54,7 +54,9 @@
 
         <Button
             android:id="@+id/retrieveButton"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:textColorHint="@color/black_color"
+            android:backgroundTint="@color/primary_color"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"

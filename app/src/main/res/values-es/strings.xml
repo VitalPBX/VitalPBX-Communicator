@@ -69,6 +69,7 @@
   <string name="sip_address">Dirección SIP</string>
   <string name="contact_first_name">Nombre</string>
   <string name="contact_last_name">Apellido</string>
+  <string name="delete_text">¿Está seguro que quiere eliminar su selección?</string>
   <string name="contact_organization">Organización</string>
   <!--Chat-->
   <string name="share_picture_size_small">Pequeño</string>
