@@ -29,6 +29,7 @@ import android.app.FragmentTransaction;
 import android.app.KeyguardManager;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.graphics.drawable.ColorDrawable;
@@ -64,6 +65,9 @@ import androidx.annotation.Nullable;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import java.lang.reflect.Type;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -172,7 +176,7 @@ public class LinphoneActivity extends LinphoneGenericActivity
     private boolean mIsOnBackground = false;
     private int mAlwaysChangingPhoneAngle = -1;
 
-    public List<LinphoneContact> remotePhonebookContacts = new ArrayList<>();
+    public List<LinphoneContact> remotePhonebookContacts;
 
     public static boolean isInstanciated() {
         return sInstance != null;
@@ -336,6 +340,12 @@ public class LinphoneActivity extends LinphoneGenericActivity
             LinphoneManager.getLc().setDeviceRotation(rotation);
             onNewIntent(getIntent());
         }
+
+        // Remote Phonebook stuff
+        // remotePhonebookContacts = new ArrayList<>();
+
+        // retrieve remote phonebook contacts list
+        loadSavedData();
     }
 
     // Function to hide keyboard on focus change
@@ -1525,16 +1535,43 @@ public class LinphoneActivity extends LinphoneGenericActivity
         contact.addOrUpdateNumberOrAddress(numberOrAddress); // add telephone number
         contact.addOrUpdateNumberOrAddress(sipAddress); // add sip address
 
-        contact.save();
-
         remotePhonebookContacts.add(contact);
+
+        saveRemotePhonebookContactData();
+
+        contact.save();
     }
 
     public void clearRemotePhonebookContacts() {
+        LinphoneContact currentContact;
         for (int i = 0; i < remotePhonebookContacts.size(); i++) {
-            LinphoneContact currentContact = remotePhonebookContacts.get(i);
-
+            currentContact = remotePhonebookContacts.get(i);
             currentContact.delete();
+        }
+        remotePhonebookContacts.clear();
+    }
+
+    public void saveRemotePhonebookContactData() {
+        SharedPreferences sharedPreferences =
+                getSharedPreferences("shared preferences", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        Gson gson = new Gson();
+        String json = gson.toJson(remotePhonebookContacts);
+        editor.putString("contacts", json);
+        editor.apply();
+    }
+
+    public void loadSavedData() {
+        SharedPreferences sharedPreferences =
+                getSharedPreferences("shared preferences", MODE_PRIVATE);
+        Gson gson = new Gson();
+        String json = sharedPreferences.getString("contacts", null);
+        Type type = new TypeToken<ArrayList<LinphoneContact>>() {}.getType();
+
+        remotePhonebookContacts = gson.fromJson(json, type);
+
+        if (remotePhonebookContacts == null) {
+            remotePhonebookContacts = new ArrayList<>();
         }
     }
 

@@ -67,6 +67,7 @@
 
         <activity
             android:name=".LinphoneLauncherActivity"
+            android:screenOrientation="portrait"
             android:exported="true"
             android:label="VitalPBX Communicator"
             android:launchMode="singleTask"
@@ -81,6 +82,7 @@
         </activity>
         <activity
             android:name=".LinphoneActivity"
+            android:screenOrientation="portrait"
             android:launchMode="singleTask"
             android:theme="@style/LinphoneStyleLight">
             <intent-filter>
@@ -136,6 +138,7 @@
         </activity>
         <activity
             android:name=".call.CallIncomingActivity"
+            android:screenOrientation="portrait"
             android:launchMode="singleTop"
             android:noHistory="true"
             android:showWhenLocked="true"
@@ -147,6 +150,7 @@
         </activity>
         <activity
             android:name=".call.CallOutgoingActivity"
+            android:screenOrientation="portrait"
             android:launchMode="singleTop"
             android:noHistory="true"
             android:theme="@style/LinphoneStyleLight">
@@ -157,6 +161,7 @@
         <activity
             android:name=".call.CallActivity"
             android:launchMode="singleTop"
+            android:screenOrientation="portrait"
             android:noHistory="true"
             android:showWhenLocked="true"
             android:theme="@style/LinphoneStyleLight">

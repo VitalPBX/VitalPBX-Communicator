@@ -55,12 +55,12 @@
         <Button
             android:id="@+id/retrieveButton"
             android:layout_width="0dp"
-            android:textColorHint="@color/black_color"
+            android:textColorHint="@color/dark_grey_color"
             android:backgroundTint="@color/primary_color"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:hint="Get" />
+            android:hint="Sync" />
 
     </LinearLayout>
 

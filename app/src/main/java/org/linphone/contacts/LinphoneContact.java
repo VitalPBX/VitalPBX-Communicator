@@ -69,6 +69,13 @@ public class LinphoneContact extends AndroidContact
         return contact;
     }
 
+    public static LinphoneContact createLocalContact() {
+        LinphoneContact contact = new LinphoneContact();
+        contact.createFriend();
+
+        return contact;
+    }
+
     @Override
     public int compareTo(LinphoneContact contact) {
         String fullName =

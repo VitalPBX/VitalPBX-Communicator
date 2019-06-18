@@ -39,14 +39,7 @@ public class RemotePhonebookParser extends AsyncTask<Void, Void, Boolean> {
         String name;
         String sipNumber;
 
-        // clear contacts that were added through a phonebook sync previously
-        List<LinphoneContact> remotePhonebookContacts =
-                LinphoneActivity.instance().remotePhonebookContacts;
-
-        if (remotePhonebookContacts.size() > 0) {
-            // clear list of remote phonebook contacts added previously
-            LinphoneActivity.instance().clearRemotePhonebookContacts();
-        }
+        LinphoneActivity.instance().clearRemotePhonebookContacts();
 
         try {
             URL enteredURL = new URL(url);
@@ -67,6 +60,9 @@ public class RemotePhonebookParser extends AsyncTask<Void, Void, Boolean> {
 
             System.out.println("-----------------------------");
 
+            // clear list of remote phonebook contacts added previously
+            // LinphoneActivity.instance().clearRemotePhonebookContacts();
+
             for (int i = 0; i < nodeList.getLength(); i++) {
 
                 Node node = nodeList.item(i);
@@ -81,7 +77,6 @@ public class RemotePhonebookParser extends AsyncTask<Void, Void, Boolean> {
                     LinphoneActivity.instance().asyncAddContact(name, sipNumber);
                 }
             }
-
             return true;
 
         } catch (Exception e) {
@@ -104,8 +99,13 @@ public class RemotePhonebookParser extends AsyncTask<Void, Void, Boolean> {
                             Toast.LENGTH_LONG)
                     .show();
 
-            LinphoneActivity.instance().displayContacts(true);
-            ContactsManager.getInstance().fetchContactsAsync();
+            // TODO: there might be a more efficient way to approach this
+            // the following operations are used for ContactsManager to delete every contact
+            // cached. this avoids duplicates
+            ContactsManager.getInstance().destroy();
+            ContactsManager.getInstance().initializeContactManager(LinphoneActivity.instance());
+
+            LinphoneActivity.instance().displayContacts(false);
 
         } else if (url.matches("")) { // url field remained empty
             Toast.makeText(
