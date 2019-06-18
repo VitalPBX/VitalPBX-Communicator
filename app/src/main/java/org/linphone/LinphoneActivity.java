@@ -341,9 +341,6 @@ public class LinphoneActivity extends LinphoneGenericActivity
             onNewIntent(getIntent());
         }
 
-        // Remote Phonebook stuff
-        // remotePhonebookContacts = new ArrayList<>();
-
         // retrieve remote phonebook contacts list
         loadSavedData();
     }

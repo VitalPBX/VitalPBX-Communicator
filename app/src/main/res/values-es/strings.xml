@@ -71,6 +71,13 @@
   <string name="contact_last_name">Apellido</string>
   <string name="delete_text">¿Está seguro que quiere eliminar su selección?</string>
   <string name="contact_organization">Organización</string>
+
+  <!-- Remote Phonebook -->
+  <string name="successful_sync">Sincronización Finalizada!</string>
+  <string name="empty_url">Campo de URL vacío</string>
+  <string name="sync_error">Hubo un error durante la sincronización de contactos</string>
+  <string name="sync_in_process">Sincronizando Contactos</string>
+
   <!--Chat-->
   <string name="share_picture_size_small">Pequeño</string>
   <string name="share_picture_size_medium">Mediano</string>
@@ -86,8 +93,14 @@
   <string name="download_file">Descargar</string>
   <!--Status Bar-->
   <string name="voicemail_unread">mensajes sin leer</string>
+
   <!--Side Menu-->
   <string name="menu_settings">Configuración</string>
+  <string name="menu_assistant">Asistente</string>
+  <string name="menu_recordings">Grabaciones</string>
+  <string name="menu_about">Acerca De</string>
+  <string name="quit">Cerrar</string>
+
   <!--Call-->
   <string name="add_video_dialog">A su interlocutor le gustaría que active el vídeo</string>
   <string name="unknown_incoming_call_name">Desconocido</string>
@@ -98,7 +111,11 @@
   <string name="call_stats_download">Ancho de banda de bajada:</string>
   <string name="call_stats_ice">Conectividad ICE</string>
   <string name="call">Llamar</string>
+
   <!--Recordings-->
+  <string name="no_recordings">No se encuentran grabaciones</string>
+  <string name="recordings_delete_dialog">¿Desea eliminar las grabaciones seleccionadas?</string>
+
   <!--About-->
   <string name="menu_send_log">Enviar registro</string>
   <string name="menu_reset_log">Reiniciar registro</string>

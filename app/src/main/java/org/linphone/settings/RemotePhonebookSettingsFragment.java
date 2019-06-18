@@ -10,10 +10,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import androidx.annotation.Nullable;
-import java.util.List;
 import org.linphone.LinphoneActivity;
 import org.linphone.R;
-import org.linphone.contacts.LinphoneContact;
 import org.linphone.contacts.RemotePhonebookParser;
 import org.linphone.fragments.FragmentsAvailable;
 

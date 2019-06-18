@@ -10,6 +10,7 @@ import java.util.List;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import org.linphone.LinphoneActivity;
+import org.linphone.R;
 import org.linphone.settings.RemotePhonebookSettingsFragment;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -58,16 +59,9 @@ public class RemotePhonebookParser extends AsyncTask<Void, Void, Boolean> {
 
             NodeList nodeList = doc.getElementsByTagName("Contact");
 
-            System.out.println("-----------------------------");
-
-            // clear list of remote phonebook contacts added previously
-            // LinphoneActivity.instance().clearRemotePhonebookContacts();
-
             for (int i = 0; i < nodeList.getLength(); i++) {
 
                 Node node = nodeList.item(i);
-
-                System.out.println("Current item: " + node.getNodeName());
 
                 if (node.getNodeType() == Node.ELEMENT_NODE) {
                     Element element = (Element) node;
@@ -95,7 +89,9 @@ public class RemotePhonebookParser extends AsyncTask<Void, Void, Boolean> {
             // launch contacts list and refresh
             Toast.makeText(
                             RemotePhonebookSettingsFragment.mContext,
-                            "Successful Sync!",
+                            RemotePhonebookSettingsFragment.mContext
+                                    .getResources()
+                                    .getString(R.string.successful_sync),
                             Toast.LENGTH_LONG)
                     .show();
 
@@ -110,13 +106,17 @@ public class RemotePhonebookParser extends AsyncTask<Void, Void, Boolean> {
         } else if (url.matches("")) { // url field remained empty
             Toast.makeText(
                             RemotePhonebookSettingsFragment.mContext,
-                            "URL field is empty",
+                            RemotePhonebookSettingsFragment.mContext
+                                    .getResources()
+                                    .getString(R.string.empty_url),
                             Toast.LENGTH_LONG)
                     .show();
         } else { // success is false
             Toast.makeText(
                             RemotePhonebookSettingsFragment.mContext,
-                            "There was an error while syncing contacts",
+                            RemotePhonebookSettingsFragment.mContext
+                                    .getResources()
+                                    .getString(R.string.sync_error),
                             Toast.LENGTH_LONG)
                     .show();
         }
