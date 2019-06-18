@@ -1827,7 +1827,6 @@ public class LinphoneActivity extends LinphoneGenericActivity
                     }
                 });
 
-        // TODO: there is probably a better way to do this
         mSettings.setOnClickListener(
                 new OnClickListener() {
 

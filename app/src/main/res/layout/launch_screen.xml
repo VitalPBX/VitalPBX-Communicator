@@ -5,15 +5,21 @@
     android:background="@color/white_color">
 
 
-    <ImageView
-        android:id="@+id/splashscreen_top_graphics"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_margin="0dp"
-        android:backgroundTint="@color/primary_color"
         android:layout_height="79dp"
-        android:src="@drawable/splashscreen_top" />
-    <!-- having the hight at 79 instead of 80 eliminates the problem of a thin white line
-         showing in the top/bottom graphics -->
+        android:layout_margin="0dp">
+
+        <ImageView
+            android:id="@+id/splashscreen_top_graphics"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/primary_color"
+            android:src="@drawable/splashscreen_top" />
+        <!-- having the hight at 79 instead of 80 eliminates the problem of a thin white line
+             showing in the top/bottom graphics -->
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="300dp"
@@ -61,12 +67,22 @@
         android:layout_marginBottom="85dp" />
 
 
-    <ImageView
-        android:id="@+id/splashscreen_bottom_graphics"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="79dp"
-        android:layout_gravity="bottom"
-        android:src="@drawable/splashscreen_bottom" />
+        android:layout_margin="0dp"
+        android:layout_gravity="bottom">
+
+        <ImageView
+            android:id="@+id/splashscreen_bottom_graphics"
+            android:layout_width="match_parent"
+            android:backgroundTint="@color/primary_color"
+            android:layout_height="match_parent"
+            android:src="@drawable/splashscreen_bottom" />
+        <!-- having the hight at 79 instead of 80 eliminates the problem of a thin white line
+             showing in the top/bottom graphics -->
+
+    </LinearLayout>
 
     <!--<View-->
         <!--android:layout_width="100dp"-->
