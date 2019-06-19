@@ -278,10 +278,10 @@
 
         <org.linphone.views.AddContactButton
             android:id="@+id/add_contact_btn"
-            android:layout_width="70dp"
+            android:layout_width="wrap_content"
             android:layout_marginRight="15dp"
             style="@android:style/Animation"
-            android:layout_height="60dp"
+            android:layout_height="50dp"
             android:src="@drawable/add_contact_btn"
             android:visibility="invisible" />
 
@@ -297,7 +297,7 @@
         <org.linphone.views.EraseButton
             android:id="@+id/backspace_btn"
             android:layout_height="40dp"
-            android:layout_width="40dp"
+            android:layout_width="wrap_content"
             android:src="@drawable/backspace_btn"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="5dp"
