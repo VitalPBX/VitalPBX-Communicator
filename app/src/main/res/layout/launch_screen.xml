@@ -2,29 +2,14 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white_color">
+    android:background="@drawable/splashscreen_background">
 
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="79dp"
-        android:layout_margin="0dp">
-
-        <ImageView
-            android:id="@+id/splashscreen_top_graphics"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:backgroundTint="@color/primary_color"
-            android:src="@drawable/splashscreen_top" />
-        <!-- having the hight at 79 instead of 80 eliminates the problem of a thin white line
-             showing in the top/bottom graphics -->
-
-    </LinearLayout>
 
     <LinearLayout
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_centerInParent="true"
         android:orientation="vertical">
 
 
@@ -33,6 +18,12 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:src="@drawable/splashscreen_logo"/>
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:indeterminateTint="@color/primary_color" />
 
 
         <!--<ImageView-->
@@ -58,36 +49,5 @@
             <!--android:text="@string/app_description" />-->
 
     </LinearLayout>
-
-    <ProgressBar
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal|bottom"
-        android:indeterminateTint="@color/primary_color"
-        android:layout_marginBottom="85dp" />
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="79dp"
-        android:layout_margin="0dp"
-        android:layout_gravity="bottom">
-
-        <ImageView
-            android:id="@+id/splashscreen_bottom_graphics"
-            android:layout_width="match_parent"
-            android:backgroundTint="@color/primary_color"
-            android:layout_height="match_parent"
-            android:src="@drawable/splashscreen_bottom" />
-        <!-- having the hight at 79 instead of 80 eliminates the problem of a thin white line
-             showing in the top/bottom graphics -->
-
-    </LinearLayout>
-
-    <!--<View-->
-        <!--android:layout_width="100dp"-->
-        <!--android:layout_height="10dp"-->
-        <!--android:layout_gravity="center_horizontal|bottom"-->
-        <!--android:background="@color/primary_color" />-->
 
 </FrameLayout>

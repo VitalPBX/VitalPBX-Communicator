@@ -31,7 +31,10 @@ public class RemotePhonebookParser extends AsyncTask<Void, Void, Boolean> {
 
     @Override
     protected void onPreExecute() {
-        this.waitDialog.setMessage("Syncing Contacts");
+        this.waitDialog.setMessage(
+                RemotePhonebookSettingsFragment.mContext
+                        .getResources()
+                        .getString(R.string.sync_in_process));
         this.waitDialog.show();
     }
 

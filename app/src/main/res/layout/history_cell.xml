@@ -78,13 +78,13 @@
             <ImageView
                 android:id="@+id/icon"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="5dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
                 android:layout_toRightOf="@id/avatar"
                 android:adjustViewBounds="true"
                 android:contentDescription="@string/content_description_call_direction"
-                android:padding="7dp"
-                android:src="@drawable/call_status_incoming" />
+                android:padding="5dp"
+                android:src="@drawable/incoming_call" />
 
             <TextView
                 android:id="@+id/sip_uri"

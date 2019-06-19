@@ -188,7 +188,7 @@
     <string name="successful_sync">Successful Sync!</string>
     <string name="empty_url">URL Field is Empty</string>
     <string name="sync_error">There was an error while syncing contacts</string>
-    <string name="sync_in_process">Synchronizing Contacts</string>
+    <string name="sync_in_process">Synchronizing Contacts. This could take several minutes.</string>
 
     <!-- Chat -->
     <string name="no_chat_history">No conversations</string>

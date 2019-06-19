@@ -76,7 +76,7 @@
   <string name="successful_sync">Sincronización Finalizada!</string>
   <string name="empty_url">Campo de URL vacío</string>
   <string name="sync_error">Hubo un error durante la sincronización de contactos</string>
-  <string name="sync_in_process">Sincronizando Contactos</string>
+  <string name="sync_in_process">Sincronizando Contactos. Esto puede tomar unos minutos.</string>
 
   <!--Chat-->
   <string name="share_picture_size_small">Pequeño</string>
