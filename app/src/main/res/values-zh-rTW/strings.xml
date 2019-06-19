@@ -1,17 +1,17 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--Custom-->
-  <string name="app_name">Linphone</string>
-  <string name="service_name">Linphone 服務</string>
-  <string name="addressbook_label">Linphone</string>
-  <string name="notification_title">Linphone</string>
+  <string name="app_name">VitalPBX Communicator</string>
+  <string name="service_name">VitalPBX Communicator 服務</string>
+  <string name="addressbook_label">VitalPBX Communicator</string>
+  <string name="notification_title">VitalPBX Communicator</string>
   <string name="wait_dialog_text">啟動中</string>
   <string name="notification_registered">%s 已連線</string>
   <string name="tunnel_host"></string>
-  <string name="about_version">Linphone Android %s</string>
-  <string name="about_liblinphone_version">Linphone Core %s</string>
-  <string name="about_liblinphone_sdk_version">Linphone SDK %s</string>
-  <string name="sync_account_name">Linphone 聯絡人</string>
+  <string name="about_version">VitalPBX Communicator Android %s</string>
+  <string name="about_liblinphone_version">VitalPBX Communicator Core %s</string>
+  <string name="about_liblinphone_sdk_version">VitalPBX Communicator SDK %s</string>
+  <string name="sync_account_name">VitalPBX Communicator 聯絡人</string>
   <!--Notifications-->
   <string name="notification_reply_label">回覆</string>
   <string name="notification_replied_label">傳送回覆：%s</string>

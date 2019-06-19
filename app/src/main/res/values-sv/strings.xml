@@ -1,19 +1,19 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--Custom-->
-  <string name="app_name">Linphone</string>
-  <string name="service_name">Linphone-tjänst</string>
-  <string name="addressbook_label">Linphone</string>
-  <string name="notification_title">Linphone</string>
+  <string name="app_name">VitalPBX Communicator</string>
+  <string name="service_name">VitalPBX Communicator-tjänst</string>
+  <string name="addressbook_label">VitalPBX Communicator</string>
+  <string name="notification_title">VitalPBX Communicator</string>
   <string name="wait_dialog_text">Startar upp</string>
   <string name="notification_registered">%s ansluten</string>
   <string name="notification_register_failure">%s kunde inte ansluta</string>
   <string name="tunnel_host"></string>
-  <string name="about_version">Linphone Android %s</string>
-  <string name="about_liblinphone_version">Linphone Core %s</string>
-  <string name="about_liblinphone_sdk_version">Linphone SDK %s</string>
+  <string name="about_version">VitalPBX Communicator Android %s</string>
+  <string name="about_liblinphone_version">VitalPBX Communicator Core %s</string>
+  <string name="about_liblinphone_sdk_version">VitalPBX Communicator SDK %s</string>
   <string name="about_privacy_policy">Besök vår sekretesspolicy</string>
-  <string name="sync_account_name">linphone-kontakter</string>
+  <string name="sync_account_name">VitalPBX Communicator-kontakter</string>
   <!--Notifications-->
   <string name="notification_reply_label">Svara</string>
   <string name="notification_replied_label">Skickat svar: %s</string>

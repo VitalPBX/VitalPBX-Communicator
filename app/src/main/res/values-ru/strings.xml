@@ -1,19 +1,19 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--Custom-->
-  <string name="app_name">Linphone</string>
-  <string name="service_name">Служба Linphone</string>
-  <string name="addressbook_label">Linphone</string>
-  <string name="notification_title">Linphone</string>
+  <string name="app_name">VitalPBX Communicator</string>
+  <string name="service_name">Служба VitalPBX Communicator</string>
+  <string name="addressbook_label">VitalPBX Communicator</string>
+  <string name="notification_title">VitalPBX Communicator</string>
   <string name="wait_dialog_text">Загружается</string>
   <string name="notification_registered">%s соединено</string>
   <string name="notification_register_failure">%s соединиться не удалось</string>
   <string name="tunnel_host"></string>
-  <string name="about_version">Linphone Android %s</string>
+  <string name="about_version">VitalPBX Communicator Android %s</string>
   <string name="about_liblinphone_version">Ядро Linphone %s</string>
-  <string name="about_liblinphone_sdk_version">Linphone SDK %s</string>
+  <string name="about_liblinphone_sdk_version">VitalPBX Communicator SDK %s</string>
   <string name="about_privacy_policy">Посетите нашу политику конфиденциальности</string>
-  <string name="sync_account_name">контакты linphone</string>
+  <string name="sync_account_name">контакты VitalPBX Communicator</string>
   <!--Notifications-->
   <string name="notification_reply_label">Ответ</string>
   <string name="notification_replied_label">Отправил ответ: %s</string>

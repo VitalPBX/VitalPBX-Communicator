@@ -1,15 +1,15 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--Custom-->
-  <string name="app_name">Linphone</string>
-  <string name="service_name">Linphone服务</string>
-  <string name="addressbook_label">Linphone</string>
-  <string name="notification_title">Linphone</string>
+  <string name="app_name">VitalPBX Communicator</string>
+  <string name="service_name">VitalPBX Communicator服务</string>
+  <string name="addressbook_label">VitalPBX Communicator</string>
+  <string name="notification_title">VitalPBX Communicator</string>
   <string name="wait_dialog_text">启动</string>
   <string name="tunnel_host"></string>
-  <string name="about_version">Linphone Android%s</string>
-  <string name="about_liblinphone_version">Linphone Core%s</string>
-  <string name="sync_account_name">linphone联系人</string>
+  <string name="about_version">VitalPBX Communicator Android%s</string>
+  <string name="about_liblinphone_version">VitalPBX Communicator Core%s</string>
+  <string name="sync_account_name">VitalPBX Communicator联系人</string>
   <!--Notifications-->
   <!--Common-->
   <string name="username">用户名</string>
