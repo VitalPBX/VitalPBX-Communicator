@@ -2,17 +2,17 @@
 <resources>
 
     <!-- Custom -->
-    <string name="app_name">Linphone</string>
-    <string name="service_name">Linphone Service</string>
-    <string name="addressbook_label">Linphone</string>
-    <string name="notification_title">Linphone</string>
+    <string name="app_name">VitalPBX Communicator</string>
+    <string name="service_name">VitalPBX Service</string>
+    <string name="addressbook_label">VitalPBX</string>
+    <string name="notification_title">VitalPBX</string>
     <string name="wait_dialog_text">Starting up</string>
     <string name="notification_registered">%s connected</string>
     <string name="notification_register_failure">%s failed to connect</string>
     <string name="tunnel_host"></string>
-    <string name="about_version">Linphone Android %s</string>
-    <string name="about_liblinphone_version">Linphone Core %s</string>
-    <string name="about_liblinphone_sdk_version">Linphone SDK %s</string>
+    <string name="about_version">VitalPBX Android %s</string>
+    <string name="about_liblinphone_version">VitalPBX Core %s</string>
+    <string name="about_liblinphone_sdk_version">VitalPBX SDK %s</string>
     <string name="about_privacy_policy">Visit our privacy policy</string>
     <string name="sync_account_name">linphone contacts</string>
 

@@ -19,16 +19,16 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_weight="1"
-                android:background="?attr/backgroundContastColor"
+                android:background="@color/transparent_color"
                 android:gravity="center"
                 android:orientation="vertical"
                 android:padding="20dp">
 
                 <ImageView
                     android:layout_width="wrap_content"
-                    android:layout_height="80dp"
+                    android:layout_height="100dp"
                     android:layout_gravity="center"
-                    android:src="@drawable/splashscreen" />
+                    android:src="@drawable/splashscreen_logo" />
 
                 <TextView
                     android:textSize="13sp"
@@ -82,28 +82,6 @@
                     android:text="@string/about_link"
                     android:textColorLink="@color/primary_color" />
 
-                <TextView
-                    android:id="@+id/privacy_policy_link"
-                    style="@style/about_license_font"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:autoLink="web"
-                    android:paddingTop="10dp"
-                    android:gravity="center"
-                    android:text="@string/about_privacy_policy"
-                    android:textColorLink="@color/primary_color" />
-
-                <TextView
-                    android:id="@+id/about_text"
-                    style="@style/about_license_font"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="20dp"
-                    android:text="@string/about_text" />
 
                 <View
                     android:layout_width="match_parent"
