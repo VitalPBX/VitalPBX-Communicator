@@ -31,14 +31,6 @@
                     android:src="@drawable/splashscreen_logo" />
 
                 <TextView
-                    android:textSize="13sp"
-                    android:textColor="?accentColor"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/app_description" />
-
-                <TextView
                     android:id="@+id/about_android_version"
                     style="@style/about_version_font"
                     android:layout_width="wrap_content"

@@ -73,7 +73,7 @@
             android:launchMode="singleTask"
             android:noHistory="true"
             android:theme="@style/LinphoneStyleDark"
-            android:windowSoftInputMode="adjustPan|stateHidden"> <!-- TODO: move label to string.xml -->
+            android:windowSoftInputMode="adjustPan|stateHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -82,6 +82,7 @@
                 android:baselineAligned="false"
                 android:id="@+id/footer"
                 android:background="@drawable/footer_border"
+                android:backgroundTint="@color/transparent_color"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_alignParentBottom="true"

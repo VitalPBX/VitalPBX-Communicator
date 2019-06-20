@@ -67,4 +67,9 @@ public class RemotePhonebookSettingsFragment extends Fragment {
         phonebookParser.setURL(enteredURL);
         asyncTask = phonebookParser.execute();
     }
+
+    /*private void remmeberURL() {
+        SharedPreferences preferences = getSharedPreferences();
+        SharedPreferences.Editor editor = preferences.edit();
+    }*/
 }

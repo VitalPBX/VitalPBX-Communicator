@@ -14,7 +14,7 @@
     <color name="light_grey_color">#c4c4c4</color>
     <color name="white_color">#ffffff</color>
     <color name="red_color">#ff0000</color>
-    <color name="green_color">#ABD82D</color> <!-- TODO: re-define this green according to usages -->
+    <color name="green_color">#ABD82D</color>
 
     <color name="imdn_read_color">#3eb5c0</color>
     <color name="toolbar_color">#e1e1e1</color>
