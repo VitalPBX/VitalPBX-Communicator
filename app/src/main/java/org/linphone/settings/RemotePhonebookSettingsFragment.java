@@ -2,6 +2,7 @@ package org.linphone.settings;
 
 import android.app.Fragment;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -27,6 +28,7 @@ public class RemotePhonebookSettingsFragment extends Fragment {
     private Button retrieveButton;
 
     protected AsyncTask<Void, Void, Boolean> asyncTask;
+    protected String enteredURL;
 
     @Nullable
     @Override
@@ -37,6 +39,10 @@ public class RemotePhonebookSettingsFragment extends Fragment {
 
         urlEditText = mRootView.findViewById(R.id.urlEditText);
         retrieveButton = mRootView.findViewById(R.id.retrieveButton);
+
+        if (getLastURL() != null) {
+            urlEditText.setText(getLastURL());
+        }
 
         retrieveButton.setOnClickListener(
                 new View.OnClickListener() {
@@ -61,15 +67,30 @@ public class RemotePhonebookSettingsFragment extends Fragment {
     }
 
     private void onGetClick() {
-        String enteredURL = urlEditText.getText().toString();
+        enteredURL = urlEditText.getText().toString();
         RemotePhonebookParser phonebookParser = new RemotePhonebookParser();
+
+        // save URL for next time the user desires to sync phonebook
+        saveURL(enteredURL);
 
         phonebookParser.setURL(enteredURL);
         asyncTask = phonebookParser.execute();
     }
 
-    /*private void remmeberURL() {
-        SharedPreferences preferences = getSharedPreferences();
+    private void saveURL(String enteredURL) {
+        SharedPreferences preferences =
+                getActivity().getSharedPreferences("shared preferences", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = preferences.edit();
-    }*/
+
+        editor.putString("savedURL", enteredURL);
+        editor.apply();
+    }
+
+    private String getLastURL() {
+        SharedPreferences preferences =
+                getActivity().getSharedPreferences("shared preferences", Context.MODE_PRIVATE);
+        String url = preferences.getString("savedURL", null);
+
+        return url;
+    }
 }

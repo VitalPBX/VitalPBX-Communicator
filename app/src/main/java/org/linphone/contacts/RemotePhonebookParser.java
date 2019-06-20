@@ -34,7 +34,7 @@ public class RemotePhonebookParser extends AsyncTask<Void, Void, Boolean> {
         this.waitDialog.setMessage(
                 RemotePhonebookSettingsFragment.mContext
                         .getResources()
-                        .getString(R.string.sync_in_process));
+                        .getString(R.string.sync_in_progress));
         this.waitDialog.show();
     }
 
