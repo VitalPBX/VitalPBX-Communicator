@@ -1790,6 +1790,7 @@ public class LinphoneActivity extends LinphoneGenericActivity
                         } else if (selectedItem.equals(getString(R.string.menu_about))) {
                             LinphoneActivity.instance().displayAbout();
                         } else if (selectedItem.equals(getString(R.string.menu_assistant))) {
+                            // TODO: jump straight to Login Fragment
                             LinphoneActivity.instance().displayAssistant();
                         }
                         if (getResources().getBoolean(R.bool.enable_in_app_purchase)) {

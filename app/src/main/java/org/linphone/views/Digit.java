@@ -224,7 +224,7 @@ public class Digit extends Button implements AddressAware {
                     break;
 
                 case R.id.Digit0:
-                    setBackgroundResource(R.drawable.digit_0_pressed);
+                    setBackgroundResource(R.drawable.digit_zero_pressed);
                     break;
 
                 case R.id.Digit_asterisk:
