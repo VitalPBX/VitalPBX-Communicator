@@ -91,7 +91,7 @@
     <LinearLayout
         android:id="@+id/menu"
         android:layout_width="match_parent"
-        android:layout_height="110dp"
+        android:layout_height="130dp"
         android:layout_alignParentBottom="true"
         android:background="@color/transparent_color"
         android:orientation="horizontal">
@@ -100,13 +100,13 @@
             android:id="@+id/decline_button"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1" />
+            android:layout_weight="0.3" />
 
         <org.linphone.views.CallIncomingAnswerButton
             android:id="@+id/answer_button"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1" />
+            android:layout_weight="0.3" />
 
     </LinearLayout>
 

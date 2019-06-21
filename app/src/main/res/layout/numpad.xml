@@ -291,7 +291,9 @@
             android:focusable="false"
             android:focusableInTouchMode="true"
             style="@style/DialerDigit"
-            android:src="@drawable/call_button" />
+            android:background="@drawable/numeric_button"
+            android:src="@drawable/phone_outline"
+            android:padding="15dp"/>
 
 
         <org.linphone.views.EraseButton

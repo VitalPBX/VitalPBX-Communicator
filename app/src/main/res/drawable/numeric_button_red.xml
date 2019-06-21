@@ -15,8 +15,8 @@
             <padding
                 android:bottom="5dp" android:left="5dp"
                 android:right="5dp" android:top="5dp" />
-            <stroke android:color="@color/primary_color" android:width="1dp"/>
-            <solid android:color="@color/primary_color"/>
+            <stroke android:color="@color/red_color" android:width="1dp"/>
+            <solid android:color="@color/red_color"/>
         </shape>
     </item>
 </selector>

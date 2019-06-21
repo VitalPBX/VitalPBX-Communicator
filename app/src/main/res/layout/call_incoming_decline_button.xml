@@ -6,12 +6,15 @@
     android:orientation="horizontal"
     android:background="@color/transparent_color"
     android:gravity="center"
-    android:padding="15dp"
+    android:padding="10dp"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <ImageView
-        android:src="@drawable/hangup_button"
+        android:src="@drawable/horizontal_phone_outline"
         android:visibility="visible"
+        style="@style/DialerDigit"
+        android:padding="10dp"
+        android:background="@drawable/numeric_button_red"
         android:contentDescription="@string/content_description_decline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>

@@ -392,28 +392,26 @@
                         android:id="@+id/dialer"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="0.25"
+                        android:layout_weight="0.009"
                         android:background="@color/transparent_color"
                         android:contentDescription="@string/content_description_numpad"
                         android:padding="30dp"
-                        android:tint="@color/grey_color"
-                        android:src="@drawable/footer_dialer" />
+                        android:src="@drawable/footer_dialer"
+                        android:tint="@color/grey_color" />
 
                     <ImageView
                         android:id="@+id/hang_up"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_weight="0.5"
-                        android:background="@color/transparent_color"
+                        android:background="@drawable/numeric_button_red"
+                        style="@style/DialerDigit"
                         android:contentDescription="@string/content_description_hang_up"
-                        android:padding="12dp"
-                        android:src="@drawable/hangup_button" />
+                        android:padding="10dp"
+                        android:src="@drawable/horizontal_phone_outline" />
 
                     <RelativeLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.25"
+                        android:layout_weight="0.009"
                         android:background="@drawable/footer_button"
                         android:backgroundTint="@color/transparent_color">
 
@@ -426,7 +424,7 @@
                             android:contentDescription="@string/content_description_chat_button"
                             android:padding="30dp"
                             android:src="@drawable/footer_chat"
-                            android:tint="@color/grey_color"/>
+                            android:tint="@color/grey_color" />
 
                         <TextView
                             android:id="@+id/missed_chats"

@@ -6,8 +6,22 @@
     android:orientation="horizontal"
     android:background="@color/transparent_color"
     android:gravity="center"
-    android:padding="15dp"
+    android:padding="10dp"
     xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:id="@+id/acceptIcon"
+        style="@style/DialerDigit"
+        android:scaleType="fitXY"
+        android:src="@drawable/phone_outline"
+        android:visibility="visible"
+        android:padding="10dp"
+        android:background="@drawable/numeric_button"
+        android:contentDescription="@string/content_description_decline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
 
     <LinearLayout
         android:id="@+id/acceptUnlock"
@@ -42,14 +56,5 @@
         <!--android:layout_height="wrap_content"-->
         <!--style="@style/DialerDigit"-->
         <!--android:src="@drawable/call_button"/>-->
-
-    <ImageView
-        android:id="@+id/acceptIcon"
-        android:src="@drawable/call_button"
-        android:visibility="visible"
-        android:contentDescription="@string/content_description_accept"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
 
 </LinearLayout>
