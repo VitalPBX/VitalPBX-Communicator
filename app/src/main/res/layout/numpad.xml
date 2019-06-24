@@ -289,7 +289,7 @@
         <org.linphone.views.CallButton
             android:id="@+id/call_btn"
             android:focusable="false"
-            android:focusableInTouchMode="true"
+            android:focusableInTouchMode="false"
             style="@style/DialerDigit"
             android:background="@drawable/numeric_button"
             android:src="@drawable/phone_outline"

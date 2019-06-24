@@ -96,7 +96,7 @@
                 android:background="@drawable/call"
                 android:contentDescription="@string/content_description_call"
                 android:padding="12dp"
-                android:src="@drawable/call_audio_start" />
+                android:src="@drawable/phone_outline" />
         </LinearLayout>
     </RelativeLayout>
 
