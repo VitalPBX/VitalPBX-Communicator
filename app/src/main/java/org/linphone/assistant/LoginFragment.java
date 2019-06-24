@@ -47,8 +47,8 @@ public class LoginFragment extends Fragment implements OnClickListener, TextWatc
         mLogin.addTextChangedListener(this);
         mDisplayName = view.findViewById(R.id.assistant_display_name);
         mDisplayName.addTextChangedListener(this);
-        mUserid = view.findViewById(R.id.assistant_userid);
-        mUserid.addTextChangedListener(this);
+        // mUserid = view.findViewById(R.id.assistant_userid);
+        // mUserid.addTextChangedListener(this);
         mPassword = view.findViewById(R.id.assistant_password);
         mPassword.addTextChangedListener(this);
         mDomain = view.findViewById(R.id.assistant_domain);
@@ -99,7 +99,7 @@ public class LoginFragment extends Fragment implements OnClickListener, TextWatc
                 AssistantActivity.instance()
                         .genericLogIn(
                                 mLogin.getText().toString(),
-                                mUserid.getText().toString(),
+                                "", // used to be: mUserid.getText().toString()
                                 mPassword.getText().toString(),
                                 mDisplayName.getText().toString(),
                                 null,

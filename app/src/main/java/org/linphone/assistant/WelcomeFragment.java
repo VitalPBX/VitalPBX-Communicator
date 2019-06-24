@@ -30,20 +30,22 @@ import org.linphone.R;
 public class WelcomeFragment extends Fragment implements OnClickListener {
     private TextView mCreateAccount, mLogLinphoneAccount, mLogGenericAccount, mRemoteProvisioning;
 
+    // TODO: all additional options were commented out
+    // with the current iteration of VitalPBX Communicator, it is only allowed to use a sip account
     @Override
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.assistant_welcome, container, false);
 
-        mCreateAccount = view.findViewById(R.id.create_account);
-        mCreateAccount.setOnClickListener(this);
+        //        mCreateAccount = view.findViewById(R.id.create_account);
+        //        mCreateAccount.setOnClickListener(this);
 
-        mLogLinphoneAccount = view.findViewById(R.id.login_linphone);
-        if (getResources().getBoolean(R.bool.hide_linphone_accounts_in_assistant)) {
-            mLogLinphoneAccount.setVisibility(View.GONE);
-        } else {
-            mLogLinphoneAccount.setOnClickListener(this);
-        }
+        //        mLogLinphoneAccount = view.findViewById(R.id.login_linphone);
+        //        if (getResources().getBoolean(R.bool.hide_linphone_accounts_in_assistant)) {
+        //            mLogLinphoneAccount.setVisibility(View.GONE);
+        //        } else {
+        //            mLogLinphoneAccount.setOnClickListener(this);
+        //        }
 
         mLogGenericAccount = view.findViewById(R.id.login_generic);
         if (getResources().getBoolean(R.bool.hide_generic_accounts_in_assistant)) {
@@ -52,12 +54,12 @@ public class WelcomeFragment extends Fragment implements OnClickListener {
             mLogGenericAccount.setOnClickListener(this);
         }
 
-        mRemoteProvisioning = view.findViewById(R.id.remote_provisioning);
-        if (getResources().getBoolean(R.bool.hide_remote_provisioning_in_assistant)) {
-            mRemoteProvisioning.setVisibility(View.GONE);
-        } else {
-            mRemoteProvisioning.setOnClickListener(this);
-        }
+        //        mRemoteProvisioning = view.findViewById(R.id.remote_provisioning);
+        //        if (getResources().getBoolean(R.bool.hide_remote_provisioning_in_assistant)) {
+        //            mRemoteProvisioning.setVisibility(View.GONE);
+        //        } else {
+        //            mRemoteProvisioning.setOnClickListener(this);
+        //        }
 
         return view;
     }
@@ -67,12 +69,14 @@ public class WelcomeFragment extends Fragment implements OnClickListener {
         int id = v.getId();
         if (id == R.id.login_generic) {
             AssistantActivity.instance().displayLoginGeneric();
-        } else if (id == R.id.login_linphone) {
-            AssistantActivity.instance().displayLoginLinphone(null, null);
-        } else if (id == R.id.create_account) {
-            AssistantActivity.instance().displayCreateAccount();
-        } else if (id == R.id.remote_provisioning) {
-            AssistantActivity.instance().displayRemoteProvisioning("");
         }
+
+        //        else if (id == R.id.login_linphone) {
+        //            AssistantActivity.instance().displayLoginLinphone(null, null);
+        //        } else if (id == R.id.create_account) {
+        //            AssistantActivity.instance().displayCreateAccount();
+        //        } else if (id == R.id.remote_provisioning) {
+        //            AssistantActivity.instance().displayRemoteProvisioning("");
+        //        }
     }
 }

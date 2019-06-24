@@ -71,7 +71,7 @@
 
     <!-- Assistant -->
     <string name="welcome">Welcome</string>
-    <string name="assistant">Assistant</string>
+    <string name="assistant">Account Assistant</string>
     <string name="assistant_create_account">Create account</string>
     <string name="assistant_link_account">Link account</string>
     <string name="assistant_continue">Continue</string>
@@ -86,7 +86,7 @@
     <string name="transport">Transport</string>
     <string name="assistant_create_account_phone_number_address">Your SIP address is</string>
     <string name="assistant_login_linphone">Use Linphone account</string>
-    <string name="assistant_login_generic">Use SIP account</string>
+    <string name="assistant_login_generic">Create SIP account</string>
     <string name="assistant_remote_provisioning">Fetch remote configuration</string>
     <string name="assistant_create_account_part_1">Please confirm your country code and enter your phone number</string>
     <string name="assistant_create_account_part_2">We have sent you a SMS with a validation code to your phone number:</string>
@@ -267,7 +267,7 @@
 
     <!-- Side Menu -->
     <string name="menu_logout">Logout</string>
-    <string name="menu_assistant">Assistant</string>
+    <string name="menu_assistant">Account Assistant</string>
     <string name="menu_settings">Settings</string>
     <string name="menu_recordings">Recordings</string>
     <string name="menu_about">About</string>

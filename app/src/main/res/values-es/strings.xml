@@ -34,6 +34,8 @@
   <string name="link_account">Vincule su cuenta</string>
   <!--Launch screen-->
   <!--Assistant-->
+  <string name="assistant">Asistente de Cuenta</string>
+  <string name="welcome">Bienvenido/a</string>
   <string name="assistant_continue">Continuar</string>
   <string name="assistant_validate_account_2">En cuanto esté hecho, vuelva aquí y pulse el botón.</string>
   <string name="assistant_linphone_login_desc">Por favor indique su identificador de usuario y contraseña de su cuenta Linphone</string>
@@ -44,6 +46,8 @@
   <string name="assistant_account_validated">Su cuenta ha sido verificada.</string>
   <string name="assistant_error_bad_credentials">Identificador de usuario o contraseña incorrectos</string>
   <string name="wizard_failed">Ha ocurrido un error, pruebe más tarde.</string>
+  <string name="assistant_login_generic">Crear Cuenta SIP</string>
+  <string name="assistant_welcome_desc">El asistente le aydudará a configurar su cuenta SIP</string>
   <string name="wizard_username_incorrect">Su identificador de usuario no es válido</string>
   <string name="setup_confirm_username">Su identificador de usuario será %s.\r\n\r\nPuede ser diferente al que ha introducido para cumplir con los requisitos.\r\n¿Acepta?</string>
   <string name="first_launch_no_login_password">Por favor, introduzca su usuario y contraseña</string>
@@ -97,7 +101,7 @@
 
   <!--Side Menu-->
   <string name="menu_settings">Configuración</string>
-  <string name="menu_assistant">Asistente</string>
+  <string name="menu_assistant">Asistente de Cuenta</string>
   <string name="menu_recordings">Grabaciones</string>
   <string name="menu_about">Acerca De</string>
   <string name="quit">Cerrar</string>
@@ -118,6 +122,7 @@
   <string name="recordings_delete_dialog">¿Desea eliminar las grabaciones seleccionadas?</string>
 
   <!--About-->
+  <string name="about">Acerca De</string>
   <string name="menu_send_log">Enviar registro</string>
   <string name="menu_reset_log">Reiniciar registro</string>
   <!--Service-->
