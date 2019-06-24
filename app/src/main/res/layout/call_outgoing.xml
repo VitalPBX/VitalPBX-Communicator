@@ -80,11 +80,12 @@
         android:layout_height="match_parent"
         android:visibility="gone" />
 
-    <LinearLayout
+    <TableRow
         android:id="@+id/menu"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="115dp"
         android:layout_alignParentLeft="true"
+        android:layout_marginBottom="10dp"
         android:layout_alignParentBottom="true"
         android:orientation="horizontal">
 
@@ -92,32 +93,34 @@
             android:id="@+id/micro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:layout_weight="1"
-            android:background="?attr/button_background_drawable"
+            android:background="@color/transparent_color"
             android:contentDescription="@string/content_description_toggle_micro"
-            android:padding="10dp"
+            android:padding="20dp"
             android:src="@drawable/micro" />
+
+        <ImageView
+            android:id="@+id/outgoing_hang_up"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.15"
+            android:background="@drawable/numeric_button_red"
+            android:contentDescription="@string/content_description_hang_up"
+            android:padding="5dp"
+            android:src="@drawable/horizontal_phone_outline" />
 
         <ImageView
             android:id="@+id/speaker"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="?attr/button_background_drawable"
+            android:layout_weight="1.05"
+            android:background="@color/transparent_color"
             android:contentDescription="@string/content_description_toggle_speaker"
-            android:padding="15dp"
+            android:padding="20dp"
+            android:layout_marginTop="30dp"
             android:src="@drawable/speaker" />
 
-        <ImageView
-            android:id="@+id/outgoing_hang_up"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.7"
-            android:background="@drawable/hangup"
-            android:contentDescription="@string/content_description_hang_up"
-            android:padding="12dp"
-            android:src="@drawable/call_hangup" />
-
-    </LinearLayout>
+    </TableRow>
 
 </RelativeLayout>
