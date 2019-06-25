@@ -1106,7 +1106,7 @@ public class CallActivity extends LinphoneGenericActivity
         if (mNumpad.getVisibility() == View.VISIBLE) {
             hideNumpad();
         } else {
-            mDialer.setImageResource(R.drawable.dialer_alt_back);
+            mDialer.setImageResource(R.drawable.back_arrow);
             mNumpad.setVisibility(View.VISIBLE);
         }
     }

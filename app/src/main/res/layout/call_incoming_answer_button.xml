@@ -4,23 +4,40 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:layout_weight="1.2"
+    android:layout_weight="1.4"
     android:background="@color/transparent_color"
     android:gravity="center"
-    android:padding="10dp"
+    android:padding="5dp"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <ImageView
         android:id="@+id/acceptIcon"
-        style="@style/DialerDigit"
-        android:src="@drawable/phone_outline"
         android:visibility="visible"
-        android:padding="13dp"
+        android:padding="5dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/phone_outline"
         android:background="@drawable/numeric_button"
         android:contentDescription="@string/content_description_decline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
+    <!--<RelativeLayout-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:padding="5dp"-->
+        <!--&gt;-->
+        <!--<ImageView-->
+            <!--android:id="@+id/acceptIcon"-->
+            <!--android:visibility="visible"-->
+            <!--android:padding="5dp"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:src="@drawable/phone_outline"-->
+            <!--android:background="@drawable/numeric_button"-->
+            <!--android:contentDescription="@string/content_description_decline"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"/>-->
+
+    <!--</RelativeLayout>-->
 
 
     <LinearLayout

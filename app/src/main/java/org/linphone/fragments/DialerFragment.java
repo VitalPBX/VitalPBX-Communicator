@@ -200,9 +200,15 @@ public class DialerFragment extends Fragment {
             if (sIsCallTransferOngoing) {
                 mCall.setImageResource(R.drawable.call_transfer);
                 mCall.setExternalClickListener(mTransferListener);
+
+                // clear address
+                mAddress.setText("");
             } else {
                 mCall.setImageResource(R.drawable.call_add);
                 mCall.resetClickListener();
+
+                // clear address
+                mAddress.setText("");
             }
             mAddContact.setEnabled(true);
             mAddContact.setImageResource(R.drawable.call_back);
