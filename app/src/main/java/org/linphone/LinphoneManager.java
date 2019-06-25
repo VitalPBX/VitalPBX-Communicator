@@ -1158,6 +1158,7 @@ public class LinphoneManager implements CoreListener, SensorEventListener, Accou
             if (call.getReplacedCall() != null) {
                 // attended transfer
                 // it will be accepted automatically.
+                // TODO: this might be were the transfer call happens
                 return;
             }
         }

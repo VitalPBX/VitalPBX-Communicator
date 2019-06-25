@@ -212,8 +212,7 @@ public class DialerFragment extends Fragment {
             if (LinphoneManager.getLc().getVideoActivationPolicy().getAutomaticallyInitiate()) {
                 mCall.setImageResource(R.drawable.call_video_start);
             } else {
-                // mCall.setImageResource(R.drawable.numeric_button); new vector asset includes call
-                // logo
+                mCall.setImageResource(R.drawable.phone_outline);
             }
             mAddContact.setEnabled(false);
             mAddContact.setImageResource(R.drawable.add_contact_btn);
