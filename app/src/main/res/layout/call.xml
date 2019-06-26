@@ -175,12 +175,12 @@
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_alignParentLeft="true"
-                    android:layout_alignParentBottom="true"
                     android:layout_margin="20dp"
-                    android:background="@drawable/round_orange_button_background"
+                    android:background="@color/transparent_color"
                     android:contentDescription="@string/content_description_record_call"
                     android:padding="10dp"
                     android:src="@drawable/options_rec"
+                    android:tint="@color/red_color"
                     android:visibility="gone" />
 
             </RelativeLayout>
