@@ -349,7 +349,7 @@
                             android:contentDescription="@string/content_description_add_call"
                             android:padding="15dp"
                             android:tint="@color/grey_color"
-                            android:src="@drawable/options_add_call"
+                            android:src="@drawable/phone_addtocall"
                             android:visibility="gone" />
 
                         <ImageView
@@ -362,7 +362,7 @@
                             android:contentDescription="@string/content_description_transfer"
                             android:padding="15dp"
                             android:tint="@color/grey_color"
-                            android:src="@drawable/options_transfer_call"
+                            android:src="@drawable/phone_transfer_arrowright"
                             android:visibility="gone" />
 
                         <ImageView
@@ -375,7 +375,7 @@
                             android:contentDescription="@string/content_description_conference"
                             android:padding="15dp"
                             android:tint="@color/grey_color"
-                            android:src="@drawable/options_start_conference"
+                            android:src="@drawable/conference_logo"
                             android:visibility="gone" />
 
                     </RelativeLayout>

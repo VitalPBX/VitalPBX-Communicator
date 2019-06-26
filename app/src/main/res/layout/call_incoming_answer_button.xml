@@ -7,37 +7,25 @@
     android:layout_weight="1.4"
     android:background="@color/transparent_color"
     android:gravity="center"
-    android:padding="5dp"
+    android:padding="1dp"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <ImageView
         android:id="@+id/acceptIcon"
-        android:visibility="visible"
-        android:padding="5dp"
-        android:layout_centerInParent="true"
         android:src="@drawable/phone_outline"
+        android:visibility="visible"
+        android:padding="10dp"
         android:background="@drawable/numeric_button"
         android:contentDescription="@string/content_description_decline"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="match_parent"/>
 
-    <!--<RelativeLayout-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:padding="5dp"-->
-        <!--&gt;-->
-        <!--<ImageView-->
-            <!--android:id="@+id/acceptIcon"-->
-            <!--android:visibility="visible"-->
-            <!--android:padding="5dp"-->
-            <!--android:layout_centerInParent="true"-->
-            <!--android:src="@drawable/phone_outline"-->
-            <!--android:background="@drawable/numeric_button"-->
-            <!--android:contentDescription="@string/content_description_decline"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"/>-->
 
-    <!--</RelativeLayout>-->
+    <!--<ImageView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--style="@style/DialerDigit"-->
+    <!--android:src="@drawable/call_button"/>-->
 
 
     <LinearLayout
@@ -67,11 +55,5 @@
             android:layout_height="wrap_content"/>
 
     </LinearLayout>
-
-    <!--<ImageView-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--style="@style/DialerDigit"-->
-        <!--android:src="@drawable/call_button"/>-->
 
 </LinearLayout>

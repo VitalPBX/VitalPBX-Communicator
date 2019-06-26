@@ -58,7 +58,7 @@ class ApiTwentySixPlus {
     public static Notification createRepliedNotification(Context context, String reply) {
         return new Notification.Builder(
                         context, context.getString(R.string.notification_channel_id))
-                .setSmallIcon(R.drawable.topbar_chat_notification)
+                .setSmallIcon(R.drawable.chat_bubble_logo)
                 .setContentText(
                         context.getString(R.string.notification_replied_label).replace("%s", reply))
                 .build();
@@ -115,7 +115,7 @@ class ApiTwentySixPlus {
 
         return new Notification.Builder(
                         context, context.getString(R.string.notification_channel_id))
-                .setSmallIcon(R.drawable.topbar_chat_notification)
+                .setSmallIcon(R.drawable.chat_bubble_logo)
                 .setAutoCancel(true)
                 .setContentIntent(intent)
                 .setDefaults(

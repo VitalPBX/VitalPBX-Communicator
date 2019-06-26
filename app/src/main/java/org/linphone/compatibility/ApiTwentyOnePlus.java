@@ -53,7 +53,7 @@ class ApiTwentyOnePlus {
         return new Notification.Builder(context)
                 .setContentTitle(title)
                 .setContentText(msg)
-                .setSmallIcon(R.drawable.topbar_chat_notification)
+                .setSmallIcon(R.drawable.chat_bubble_logo)
                 .setAutoCancel(true)
                 .setContentIntent(intent)
                 .setDefaults(

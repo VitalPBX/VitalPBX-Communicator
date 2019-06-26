@@ -39,7 +39,7 @@
                 android:layout_marginRight="10dp"
                 android:adjustViewBounds="true"
                 android:scaleType="centerInside"
-                android:src="@drawable/linphone_user"
+                android:src="@drawable/vitalpbx_favicon"
                 android:visibility="gone" />
 
             <TextView

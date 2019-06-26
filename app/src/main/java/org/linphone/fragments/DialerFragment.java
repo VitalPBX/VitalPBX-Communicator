@@ -71,16 +71,16 @@ public class DialerFragment extends Fragment {
                 && LinphoneManager.getLcIfManagerNotDestroyedOrNull() != null
                 && LinphoneManager.getLcIfManagerNotDestroyedOrNull().getCallsNb() > 0) {
             if (sIsCallTransferOngoing) {
-                mCall.setImageResource(R.drawable.call_transfer);
+                mCall.setImageResource(R.drawable.phone_transfer_arrowright);
             } else {
-                mCall.setImageResource(R.drawable.call_add);
+                mCall.setImageResource(R.drawable.phone_addtocall);
             }
         } else {
             if (LinphoneManager.getLcIfManagerNotDestroyedOrNull() != null
                     && LinphoneManager.getLcIfManagerNotDestroyedOrNull()
                             .getVideoActivationPolicy()
                             .getAutomaticallyInitiate()) {
-                mCall.setImageResource(R.drawable.call_video_start);
+                mCall.setImageResource(R.drawable.phone_video_camera);
             } else {
                 // mCall.setImageResource(R.drawable.numeric_button); // TODO: revise this
                 // assignment
@@ -198,31 +198,38 @@ public class DialerFragment extends Fragment {
 
         if (lc.getCallsNb() > 0) {
             if (sIsCallTransferOngoing) {
-                mCall.setImageResource(R.drawable.call_transfer);
+                mCall.setImageResource(R.drawable.phone_transfer_arrowright);
                 mCall.setExternalClickListener(mTransferListener);
+
+                /*mAddContact.setEnabled(true);
+                mAddContact.setImageResource(R.drawable.back_to_call2);
+                mAddContact.setOnClickListener(mCancelListener);
+                mAddContact.setVisibility(View.VISIBLE);*/
 
                 // clear address
                 mAddress.setText("");
             } else {
-                mCall.setImageResource(R.drawable.call_add);
+                mCall.setImageResource(R.drawable.phone_addtocall);
                 mCall.resetClickListener();
 
                 // clear address
                 mAddress.setText("");
             }
             mAddContact.setEnabled(true);
-            mAddContact.setImageResource(R.drawable.call_back);
+            mAddContact.setImageResource(R.drawable.back_to_call2);
+            mAddContact.setVisibility(View.VISIBLE);
             mAddContact.setOnClickListener(mCancelListener);
         } else {
             mCall.resetClickListener();
             if (LinphoneManager.getLc().getVideoActivationPolicy().getAutomaticallyInitiate()) {
-                mCall.setImageResource(R.drawable.call_video_start);
+                mCall.setImageResource(R.drawable.phone_video_camera);
             } else {
                 mCall.setImageResource(R.drawable.phone_outline);
             }
             mAddContact.setEnabled(false);
             mAddContact.setImageResource(R.drawable.add_contact_btn);
             mAddContact.setOnClickListener(mAddContactListener);
+            mAddContact.setVisibility(View.INVISIBLE);
             enableDisableAddContact();
         }
     }

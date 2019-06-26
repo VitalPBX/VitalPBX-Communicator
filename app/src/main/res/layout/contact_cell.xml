@@ -77,7 +77,7 @@
             android:layout_toLeftOf="@id/delete"
             android:adjustViewBounds="true"
             android:scaleType="centerInside"
-            android:src="@drawable/linphone_user"
+            android:src="@drawable/vitalpbx_favicon"
             android:visibility="gone" />
 
         <RelativeLayout

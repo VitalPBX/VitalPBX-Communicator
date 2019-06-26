@@ -46,7 +46,7 @@ class ApiTwentyFourPlus {
 
     public static Notification createRepliedNotification(Context context, String reply) {
         return new Notification.Builder(context)
-                .setSmallIcon(R.drawable.topbar_chat_notification)
+                .setSmallIcon(R.drawable.chat_bubble_logo)
                 .setContentText(
                         context.getString(R.string.notification_replied_label).replace("%s", reply))
                 .build();
@@ -69,7 +69,7 @@ class ApiTwentyFourPlus {
         }
 
         return new Notification.Builder(context)
-                .setSmallIcon(R.drawable.topbar_chat_notification)
+                .setSmallIcon(R.drawable.chat_bubble_logo)
                 .setAutoCancel(true)
                 .setContentIntent(intent)
                 .setDefaults(
@@ -187,7 +187,7 @@ class ApiTwentyFourPlus {
 
         Notification.Action answerAction =
                 new Notification.Action.Builder(
-                                R.drawable.call_audio_start,
+                                R.drawable.phone_outline,
                                 context.getString(R.string.notification_call_answer_label),
                                 answerPendingIntent)
                         .build();
@@ -206,7 +206,7 @@ class ApiTwentyFourPlus {
 
         Notification.Action declineAction =
                 new Notification.Action.Builder(
-                                R.drawable.call_hangup,
+                                R.drawable.horizontal_phone_outline,
                                 context.getString(R.string.notification_call_hangup_label),
                                 hangupPendingIntent)
                         .build();

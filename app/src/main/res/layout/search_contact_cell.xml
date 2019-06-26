@@ -65,7 +65,7 @@
                 android:layout_centerVertical="true"
                 android:layout_gravity="right"
                 android:paddingRight="10dp"
-                android:src="@drawable/linphone_user" />
+                android:src="@drawable/vitalpbx_favicon" />
 
         </RelativeLayout>
 
