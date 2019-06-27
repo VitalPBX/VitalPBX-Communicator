@@ -807,6 +807,8 @@ public class CallActivity extends LinphoneGenericActivity
             pauseOrResumeCall(call);
         } else if (id == R.id.conference_pause) {
             pauseOrResumeConference();
+        } else if (id == R.id.active_call) {
+            hideOrDisplayCallOptions();
         }
     }
 
@@ -972,6 +974,17 @@ public class CallActivity extends LinphoneGenericActivity
         mIsMicMuted = !mIsMicMuted;
         lc.enableMic(!mIsMicMuted);
         mMicro.setSelected(mIsMicMuted);
+
+        if (mIsMicMuted) {
+            // set activated color
+            mMicro.setColorFilter(
+                    ContextCompat.getColor(getApplicationContext(), R.color.red_color));
+        }
+        else {
+            // set disabled color
+            mMicro.setColorFilter(
+                    ContextCompat.getColor(getApplicationContext(), R.color.grey_color));
+        }
     }
 
     private void toggleSpeaker() {
@@ -985,9 +998,17 @@ public class CallActivity extends LinphoneGenericActivity
         if (mIsSpeakerEnabled) {
             LinphoneManager.getInstance().routeAudioToSpeaker();
             LinphoneManager.getInstance().enableSpeaker(mIsSpeakerEnabled);
+
+            // set enabled color
+            mSpeaker.setColorFilter(
+                    ContextCompat.getColor(getApplicationContext(), R.color.primary_color));
         } else {
             Log.d("Toggle mSpeaker off, routing back to earpiece");
             LinphoneManager.getInstance().routeAudioToReceiver();
+
+            // set color to not enabled
+            mSpeaker.setColorFilter(
+                    ContextCompat.getColor(getApplicationContext(), R.color.grey_color));
         }
     }
 

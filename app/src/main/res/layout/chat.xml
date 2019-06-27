@@ -70,7 +70,8 @@
                 android:background="?attr/button_background_drawable"
                 android:contentDescription="@string/content_description_back_call"
                 android:padding="15dp"
-                android:src="@drawable/call_back"
+                android:src="@drawable/back_to_call"
+                android:tint="@color/grey_color"
                 android:visibility="gone" />
 
             <ImageView

@@ -34,7 +34,7 @@
                 android:background="?attr/button_background_drawable"
                 android:contentDescription="@string/content_description_new_discussion"
                 android:padding="15dp"
-                android:src="@drawable/chat_group_new" />
+                android:src="@drawable/group_chat" />
 
             <ImageView
                 android:id="@+id/back_in_call"
@@ -44,7 +44,8 @@
                 android:background="?attr/button_background_drawable"
                 android:contentDescription="@string/content_description_back_call"
                 android:padding="15dp"
-                android:src="@drawable/call_back"
+                android:src="@drawable/back_to_call"
+                android:tint="@color/grey_color"
                 android:visibility="invisible" />
 
             <View
