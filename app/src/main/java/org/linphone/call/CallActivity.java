@@ -29,6 +29,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
+import android.content.res.ColorStateList;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -132,7 +133,8 @@ public class CallActivity extends LinphoneGenericActivity
             mIsMicMuted = false,
             mIsTransferAllowed,
             mIsVideoAsk,
-            mIsRecording = false;
+            mIsRecording = false,
+            mOptionsFocus = false;
     private LinearLayout mControlsLayout;
     private Numpad mNumpad;
     private int mCameraNumber;
@@ -155,6 +157,8 @@ public class CallActivity extends LinphoneGenericActivity
     private HashMap<String, String> mDecoderTexts;
     private CallListenerStub mCallListener;
     private Call mCallDisplayedInStats;
+
+    private LinearLayout layoutMenu;
 
     private boolean mOldIsSpeakerEnabled = false;
 
@@ -738,6 +742,10 @@ public class CallActivity extends LinphoneGenericActivity
             }
         } else if (id == R.id.speaker) {
             toggleSpeaker();
+
+            if (mOptions.isEnabled()) {
+                hideCallOptions();
+            }
         } else if (id == R.id.add_call) {
             goBackToDialer();
         } else if (id == R.id.record_call) {
@@ -761,6 +769,10 @@ public class CallActivity extends LinphoneGenericActivity
             toggleCallRecording(false);
         } else if (id == R.id.pause) {
             pauseOrResumeCall(LinphoneManager.getLc().getCurrentCall());
+
+            if (mOptions.isEnabled()) {
+                hideCallOptions();
+            }
         } else if (id == R.id.hang_up) {
             hangUp();
         } else if (id == R.id.dialer) {
@@ -774,10 +786,15 @@ public class CallActivity extends LinphoneGenericActivity
             if (mVideoCallFragment != null) {
                 mVideoCallFragment.switchCamera();
             }
+
+            if (mOptions.isEnabled()) {
+                hideCallOptions();
+            }
         } else if (id == R.id.transfer) {
             goBackToDialerAndDisplayTransferButton();
         } else if (id == R.id.options) {
             hideOrDisplayCallOptions();
+            mOptionsFocus = true;
         } else if (id == R.id.audio_route) {
             hideOrDisplayAudioRoutes();
         } else if (id == R.id.route_bluetooth) {
@@ -805,10 +822,16 @@ public class CallActivity extends LinphoneGenericActivity
         } else if (id == R.id.call_pause) {
             Call call = (Call) v.getTag();
             pauseOrResumeCall(call);
+
+            if (mOptions.isEnabled()) {
+                hideCallOptions();
+            }
         } else if (id == R.id.conference_pause) {
             pauseOrResumeConference();
-        } else if (id == R.id.active_call) {
-            hideOrDisplayCallOptions();
+
+            if (mOptions.isEnabled()) {
+                hideCallOptions();
+            }
         }
     }
 
@@ -979,8 +1002,7 @@ public class CallActivity extends LinphoneGenericActivity
             // set activated color
             mMicro.setColorFilter(
                     ContextCompat.getColor(getApplicationContext(), R.color.red_color));
-        }
-        else {
+        } else {
             // set disabled color
             mMicro.setColorFilter(
                     ContextCompat.getColor(getApplicationContext(), R.color.grey_color));
@@ -1147,6 +1169,12 @@ public class CallActivity extends LinphoneGenericActivity
     }
 
     private void hideOrDisplayCallOptions() {
+        // get color state list to change tint on click
+        ColorStateList selectedColor =
+                ColorStateList.valueOf(getResources().getColor(R.color.call_settings_color));
+        ColorStateList originalColor =
+                ColorStateList.valueOf(getResources().getColor(R.color.transparent_color));
+
         // Hide mOptions
         if (mAddCall.getVisibility() == View.VISIBLE) {
             mOptions.setSelected(false);
@@ -1156,6 +1184,7 @@ public class CallActivity extends LinphoneGenericActivity
             mAddCall.setVisibility(View.INVISIBLE);
             mConference.setVisibility(View.INVISIBLE);
             mRecordCall.setVisibility(View.INVISIBLE);
+            mOptions.setBackgroundTintList(originalColor);
         } else { // Display mOptions
             if (mIsTransferAllowed) {
                 mTransfer.setVisibility(View.VISIBLE);
@@ -1164,8 +1193,18 @@ public class CallActivity extends LinphoneGenericActivity
             mConference.setVisibility(View.VISIBLE);
             mRecordCall.setVisibility(View.VISIBLE);
             mOptions.setSelected(true);
+            mOptions.setBackgroundTintList(selectedColor);
             mTransfer.setEnabled(LinphoneManager.getLc().getCurrentCall() != null);
         }
+    }
+
+    // only call if mOptions.isEnabled() == true
+    private void hideCallOptions() {
+        mAddCall.setVisibility(View.INVISIBLE);
+        mConference.setVisibility(View.INVISIBLE);
+        mRecordCall.setVisibility(View.INVISIBLE);
+        mTransfer.setVisibility(View.INVISIBLE);
+        // mOptions.setBackgroundColor(getResources().getColor(R.color.transparent_color));
     }
 
     private void goBackToDialer() {

@@ -16,6 +16,8 @@
     <color name="red_color">#ff0000</color>
     <color name="green_color">#ABD82D</color>
 
+    <color name="call_settings_color">#d7d9dd</color>
+
     <color name="imdn_read_color">#3eb5c0</color>
     <color name="toolbar_color">#e1e1e1</color>
     <color name="header_background_color">#f3f3f3</color>
