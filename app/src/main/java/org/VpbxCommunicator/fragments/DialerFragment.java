@@ -28,16 +28,15 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-
+import org.VpbxCommunicator.LinphoneActivity;
+import org.VpbxCommunicator.LinphoneManager;
 import org.VpbxCommunicator.views.AddContactButton;
 import org.VpbxCommunicator.views.AddressAware;
 import org.VpbxCommunicator.views.AddressText;
+import org.VpbxCommunicator.views.CallButton;
 import org.VpbxCommunicator.views.EraseButton;
-import org.VpbxCommunicator.LinphoneActivity;
-import org.VpbxCommunicator.LinphoneManager;
 import org.linphone.R;
 import org.linphone.core.Core;
-import org.VpbxCommunicator.views.CallButton;
 
 public class DialerFragment extends Fragment {
     private static DialerFragment sInstance;

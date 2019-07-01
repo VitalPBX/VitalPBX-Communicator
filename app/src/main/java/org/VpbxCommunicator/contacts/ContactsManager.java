@@ -40,13 +40,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
-
-import org.VpbxCommunicator.settings.LinphonePreferences;
 import org.VpbxCommunicator.LinphoneActivity;
 import org.VpbxCommunicator.LinphoneManager;
 import org.VpbxCommunicator.LinphoneService;
-import org.linphone.R;
 import org.VpbxCommunicator.compatibility.Compatibility;
+import org.VpbxCommunicator.settings.LinphonePreferences;
+import org.linphone.R;
 import org.linphone.core.Address;
 import org.linphone.core.Core;
 import org.linphone.core.Friend;

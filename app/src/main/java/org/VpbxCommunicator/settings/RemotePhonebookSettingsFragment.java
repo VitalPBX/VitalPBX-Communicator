@@ -12,9 +12,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import androidx.annotation.Nullable;
 import org.VpbxCommunicator.LinphoneActivity;
-import org.linphone.R;
 import org.VpbxCommunicator.contacts.RemotePhonebookParser;
 import org.VpbxCommunicator.fragments.FragmentsAvailable;
+import org.linphone.R;
 
 /*
  * Written by Farhat Samara */

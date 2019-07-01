@@ -33,9 +33,9 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import java.io.IOException;
 import java.lang.ref.WeakReference;
-import org.linphone.core.tools.Log;
 import org.VpbxCommunicator.utils.FileUtils;
 import org.VpbxCommunicator.utils.ImageUtils;
+import org.linphone.core.tools.Log;
 
 public class BitmapWorkerTask extends AsyncTask<String, Void, Bitmap> {
     public String path;

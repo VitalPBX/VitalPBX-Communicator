@@ -41,17 +41,17 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
-
+import org.VpbxCommunicator.LinphoneActivity;
+import org.VpbxCommunicator.LinphoneManager;
 import org.VpbxCommunicator.contacts.ContactAddress;
 import org.VpbxCommunicator.contacts.ContactsManager;
 import org.VpbxCommunicator.contacts.ContactsUpdatedListener;
 import org.VpbxCommunicator.contacts.LinphoneContact;
 import org.VpbxCommunicator.contacts.SearchContactViewHolder;
 import org.VpbxCommunicator.contacts.SearchContactsAdapter;
+import org.VpbxCommunicator.fragments.FragmentsAvailable;
 import org.VpbxCommunicator.settings.LinphonePreferences;
 import org.VpbxCommunicator.views.ContactSelectView;
-import org.VpbxCommunicator.LinphoneActivity;
-import org.VpbxCommunicator.LinphoneManager;
 import org.linphone.R;
 import org.linphone.core.Address;
 import org.linphone.core.ChatRoom;
@@ -63,12 +63,11 @@ import org.linphone.core.FriendCapability;
 import org.linphone.core.ProxyConfig;
 import org.linphone.core.SearchResult;
 import org.linphone.core.tools.Log;
-import org.VpbxCommunicator.fragments.FragmentsAvailable;
 
 public class ChatRoomCreationFragment extends Fragment
         implements View.OnClickListener,
-        SearchContactViewHolder.ClickListener,
-        ContactsUpdatedListener {
+                SearchContactViewHolder.ClickListener,
+                ContactsUpdatedListener {
     private RecyclerView mContactsList;
     private LinearLayout mContactsSelectedLayout;
     private HorizontalScrollView mContactsSelectLayout;

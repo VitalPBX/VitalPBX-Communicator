@@ -28,7 +28,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
 import org.VpbxCommunicator.LinphoneManager;
 import org.linphone.core.Player;
 import org.linphone.core.PlayerListener;

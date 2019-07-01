@@ -25,9 +25,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import java.io.IOException;
-
-import org.VpbxCommunicator.contacts.LinphoneContact;
 import org.VpbxCommunicator.LinphoneService;
+import org.VpbxCommunicator.contacts.LinphoneContact;
 import org.linphone.R;
 import org.linphone.core.ChatRoomSecurityLevel;
 import org.linphone.core.tools.Log;

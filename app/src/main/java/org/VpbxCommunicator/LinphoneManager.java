@@ -68,20 +68,23 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Timer;
 import java.util.TimerTask;
-
+import org.VpbxCommunicator.assistant.AssistantActivity;
 import org.VpbxCommunicator.call.CallActivity;
 import org.VpbxCommunicator.call.CallIncomingActivity;
+import org.VpbxCommunicator.call.CallManager;
 import org.VpbxCommunicator.contacts.ContactsManager;
 import org.VpbxCommunicator.contacts.LinphoneContact;
+import org.VpbxCommunicator.receivers.BluetoothManager;
+import org.VpbxCommunicator.receivers.HookReceiver;
+import org.VpbxCommunicator.receivers.OutgoingCallReceiver;
 import org.VpbxCommunicator.settings.LinphonePreferences;
 import org.VpbxCommunicator.utils.FileUtils;
 import org.VpbxCommunicator.utils.LinphoneUtils;
 import org.VpbxCommunicator.utils.MediaScanner;
 import org.VpbxCommunicator.utils.MediaScannerListener;
 import org.VpbxCommunicator.utils.PushNotificationUtils;
+import org.linphone.BuildConfig;
 import org.linphone.R;
-import org.VpbxCommunicator.assistant.AssistantActivity;
-import org.VpbxCommunicator.call.CallManager;
 import org.linphone.core.AccountCreator;
 import org.linphone.core.AccountCreatorListener;
 import org.linphone.core.Address;
@@ -126,9 +129,6 @@ import org.linphone.mediastream.Version;
 import org.linphone.mediastream.video.capture.hwconf.AndroidCameraConfiguration;
 import org.linphone.mediastream.video.capture.hwconf.AndroidCameraConfiguration.AndroidCamera;
 import org.linphone.mediastream.video.capture.hwconf.Hacks;
-import org.VpbxCommunicator.receivers.BluetoothManager;
-import org.VpbxCommunicator.receivers.HookReceiver;
-import org.VpbxCommunicator.receivers.OutgoingCallReceiver;
 
 /**
  * Manager of the low level LibLinphone stuff.<br>

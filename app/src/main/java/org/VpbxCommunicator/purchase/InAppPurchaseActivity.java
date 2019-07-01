@@ -31,12 +31,11 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
-
 import org.VpbxCommunicator.settings.LinphonePreferences;
-import org.linphone.R;
-import org.linphone.core.tools.Log;
 import org.VpbxCommunicator.xmlrpc.XmlRpcHelper;
 import org.VpbxCommunicator.xmlrpc.XmlRpcListenerBase;
+import org.linphone.R;
+import org.linphone.core.tools.Log;
 
 public class InAppPurchaseActivity extends Activity
         implements InAppPurchaseListener, OnClickListener {

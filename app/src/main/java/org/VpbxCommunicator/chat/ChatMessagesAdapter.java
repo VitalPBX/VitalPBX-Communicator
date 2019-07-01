@@ -28,7 +28,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-
 import org.VpbxCommunicator.contacts.ContactsManager;
 import org.VpbxCommunicator.contacts.LinphoneContact;
 import org.VpbxCommunicator.utils.LinphoneUtils;

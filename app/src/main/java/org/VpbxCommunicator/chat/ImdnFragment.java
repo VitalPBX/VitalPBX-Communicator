@@ -28,13 +28,13 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.Nullable;
-
-import org.VpbxCommunicator.contacts.ContactsManager;
-import org.VpbxCommunicator.contacts.LinphoneContact;
-import org.VpbxCommunicator.utils.LinphoneUtils;
-import org.VpbxCommunicator.views.ContactAvatar;
 import org.VpbxCommunicator.LinphoneActivity;
 import org.VpbxCommunicator.LinphoneManager;
+import org.VpbxCommunicator.contacts.ContactsManager;
+import org.VpbxCommunicator.contacts.LinphoneContact;
+import org.VpbxCommunicator.fragments.FragmentsAvailable;
+import org.VpbxCommunicator.utils.LinphoneUtils;
+import org.VpbxCommunicator.views.ContactAvatar;
 import org.linphone.R;
 import org.linphone.core.Address;
 import org.linphone.core.ChatMessage;
@@ -42,7 +42,6 @@ import org.linphone.core.ChatMessageListenerStub;
 import org.linphone.core.ChatRoom;
 import org.linphone.core.Core;
 import org.linphone.core.ParticipantImdnState;
-import org.VpbxCommunicator.fragments.FragmentsAvailable;
 
 public class ImdnFragment extends Fragment {
     private LayoutInflater mInflater;

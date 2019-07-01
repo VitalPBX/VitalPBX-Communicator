@@ -32,14 +32,13 @@ import android.view.View;
 import android.view.View.OnTouchListener;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
-
 import org.VpbxCommunicator.LinphoneManager;
-import org.VpbxCommunicator.settings.LinphonePreferences;
-import org.VpbxCommunicator.utils.LinphoneUtils;
 import org.VpbxCommunicator.LinphoneService;
-import org.linphone.R;
 import org.VpbxCommunicator.compatibility.CompatibilityScaleGestureDetector;
 import org.VpbxCommunicator.compatibility.CompatibilityScaleGestureListener;
+import org.VpbxCommunicator.settings.LinphonePreferences;
+import org.VpbxCommunicator.utils.LinphoneUtils;
+import org.linphone.R;
 import org.linphone.core.Call;
 import org.linphone.core.Core;
 import org.linphone.core.VideoDefinition;

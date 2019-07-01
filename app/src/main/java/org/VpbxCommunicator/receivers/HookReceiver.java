@@ -23,7 +23,6 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-
 import org.VpbxCommunicator.LinphoneManager;
 import org.linphone.core.tools.Log;
 

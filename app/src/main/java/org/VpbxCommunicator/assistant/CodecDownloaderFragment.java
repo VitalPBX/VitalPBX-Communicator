@@ -29,7 +29,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-
 import org.VpbxCommunicator.LinphoneManager;
 import org.linphone.R;
 import org.linphone.core.PayloadType;

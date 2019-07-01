@@ -36,16 +36,15 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.core.content.ContextCompat;
-
 import org.VpbxCommunicator.LinphoneActivity;
 import org.VpbxCommunicator.LinphoneManager;
 import org.VpbxCommunicator.LinphoneService;
 import org.VpbxCommunicator.assistant.AssistantActivity;
 import org.VpbxCommunicator.call.CallActivity;
 import org.VpbxCommunicator.call.CallIncomingActivity;
+import org.VpbxCommunicator.call.CallOutgoingActivity;
 import org.VpbxCommunicator.settings.LinphonePreferences;
 import org.linphone.R;
-import org.VpbxCommunicator.call.CallOutgoingActivity;
 import org.linphone.core.Call;
 import org.linphone.core.Content;
 import org.linphone.core.Core;

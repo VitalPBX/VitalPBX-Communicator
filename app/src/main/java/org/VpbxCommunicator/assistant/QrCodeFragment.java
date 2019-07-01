@@ -25,7 +25,6 @@ import android.view.LayoutInflater;
 import android.view.TextureView;
 import android.view.View;
 import android.view.ViewGroup;
-
 import org.VpbxCommunicator.LinphoneManager;
 import org.linphone.R;
 import org.linphone.core.Core;

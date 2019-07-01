@@ -35,10 +35,9 @@ import android.widget.CheckBox;
 import android.widget.TextView;
 import androidx.core.content.ContextCompat;
 import java.util.List;
-
+import org.VpbxCommunicator.compatibility.Compatibility;
 import org.VpbxCommunicator.settings.LinphonePreferences;
 import org.linphone.R;
-import org.VpbxCommunicator.compatibility.Compatibility;
 import org.linphone.core.tools.Log;
 
 public class DeviceUtils {

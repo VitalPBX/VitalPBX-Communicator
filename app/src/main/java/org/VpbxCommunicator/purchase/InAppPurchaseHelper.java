@@ -35,13 +35,12 @@ import android.util.Patterns;
 import com.android.vending.billing.IInAppBillingService;
 import java.util.ArrayList;
 import java.util.regex.Pattern;
-
 import org.VpbxCommunicator.settings.LinphonePreferences;
+import org.VpbxCommunicator.xmlrpc.XmlRpcHelper;
+import org.VpbxCommunicator.xmlrpc.XmlRpcListenerBase;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.linphone.core.tools.Log;
-import org.VpbxCommunicator.xmlrpc.XmlRpcHelper;
-import org.VpbxCommunicator.xmlrpc.XmlRpcListenerBase;
 
 class InAppPurchaseHelper {
     public static final int API_VERSION = 3;

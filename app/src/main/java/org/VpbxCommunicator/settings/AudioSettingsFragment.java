@@ -31,20 +31,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import androidx.annotation.Nullable;
-
-import org.VpbxCommunicator.settings.widget.ListSetting;
-import org.VpbxCommunicator.settings.widget.SwitchSetting;
 import org.VpbxCommunicator.LinphoneActivity;
 import org.VpbxCommunicator.LinphoneManager;
+import org.VpbxCommunicator.fragments.FragmentsAvailable;
+import org.VpbxCommunicator.settings.widget.BasicSetting;
+import org.VpbxCommunicator.settings.widget.ListSetting;
+import org.VpbxCommunicator.settings.widget.SettingListenerBase;
+import org.VpbxCommunicator.settings.widget.SwitchSetting;
+import org.VpbxCommunicator.settings.widget.TextSetting;
 import org.linphone.R;
 import org.linphone.core.Core;
 import org.linphone.core.CoreListenerStub;
 import org.linphone.core.EcCalibratorStatus;
 import org.linphone.core.PayloadType;
-import org.VpbxCommunicator.fragments.FragmentsAvailable;
-import org.VpbxCommunicator.settings.widget.BasicSetting;
-import org.VpbxCommunicator.settings.widget.SettingListenerBase;
-import org.VpbxCommunicator.settings.widget.TextSetting;
 
 public class AudioSettingsFragment extends Fragment {
     protected View mRootView;

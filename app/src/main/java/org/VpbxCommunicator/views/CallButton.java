@@ -25,7 +25,6 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
-
 import org.VpbxCommunicator.LinphoneManager;
 import org.VpbxCommunicator.settings.LinphonePreferences;
 import org.linphone.core.Call;

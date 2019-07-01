@@ -26,10 +26,9 @@ import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.os.Handler;
-
+import org.VpbxCommunicator.assistant.RemoteProvisioningActivity;
 import org.VpbxCommunicator.settings.LinphonePreferences;
 import org.linphone.R;
-import org.VpbxCommunicator.assistant.RemoteProvisioningActivity;
 
 /** Launch Linphone main activity when Service is ready. */
 public class LinphoneLauncherActivity extends Activity {

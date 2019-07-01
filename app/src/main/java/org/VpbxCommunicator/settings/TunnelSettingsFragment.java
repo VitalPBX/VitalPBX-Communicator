@@ -26,14 +26,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.Nullable;
-
-import org.VpbxCommunicator.settings.widget.ListSetting;
 import org.VpbxCommunicator.LinphoneActivity;
-import org.linphone.R;
-import org.linphone.core.tools.Log;
 import org.VpbxCommunicator.fragments.FragmentsAvailable;
+import org.VpbxCommunicator.settings.widget.ListSetting;
 import org.VpbxCommunicator.settings.widget.SettingListenerBase;
 import org.VpbxCommunicator.settings.widget.TextSetting;
+import org.linphone.R;
+import org.linphone.core.tools.Log;
 
 public class TunnelSettingsFragment extends Fragment {
     protected View mRootView;

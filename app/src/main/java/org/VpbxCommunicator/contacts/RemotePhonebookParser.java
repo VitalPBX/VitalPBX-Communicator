@@ -9,9 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
-
-import org.VpbxCommunicator.settings.RemotePhonebookSettingsFragment;
 import org.VpbxCommunicator.LinphoneActivity;
+import org.VpbxCommunicator.settings.RemotePhonebookSettingsFragment;
 import org.linphone.R;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;

@@ -40,13 +40,13 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
-
+import org.VpbxCommunicator.LinphoneActivity;
+import org.VpbxCommunicator.LinphoneManager;
 import org.VpbxCommunicator.contacts.ContactAddress;
 import org.VpbxCommunicator.contacts.ContactsManager;
 import org.VpbxCommunicator.contacts.LinphoneContact;
+import org.VpbxCommunicator.fragments.FragmentsAvailable;
 import org.VpbxCommunicator.utils.LinphoneUtils;
-import org.VpbxCommunicator.LinphoneActivity;
-import org.VpbxCommunicator.LinphoneManager;
 import org.linphone.R;
 import org.linphone.core.Address;
 import org.linphone.core.ChatMessage;
@@ -58,7 +58,6 @@ import org.linphone.core.Core;
 import org.linphone.core.EventLog;
 import org.linphone.core.Participant;
 import org.linphone.core.tools.Log;
-import org.VpbxCommunicator.fragments.FragmentsAvailable;
 
 public class GroupInfoFragment extends Fragment implements ChatRoomListener {
     private ImageView mBackButton, mConfirmButton, mAddParticipantsButton;

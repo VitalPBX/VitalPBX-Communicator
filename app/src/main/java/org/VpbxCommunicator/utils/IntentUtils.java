@@ -23,10 +23,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import java.util.ArrayList;
-
-import org.VpbxCommunicator.contacts.ContactsManager;
 import org.VpbxCommunicator.LinphoneActivity;
 import org.VpbxCommunicator.LinphoneManager;
+import org.VpbxCommunicator.contacts.ContactsManager;
 import org.linphone.core.tools.Log;
 
 public class IntentUtils {

@@ -56,11 +56,11 @@ import androidx.core.content.ContextCompat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
 import org.VpbxCommunicator.LinphoneActivity;
 import org.VpbxCommunicator.LinphoneLauncherActivity;
 import org.VpbxCommunicator.LinphoneManager;
 import org.VpbxCommunicator.LinphoneService;
+import org.VpbxCommunicator.fragments.StatusFragment;
 import org.VpbxCommunicator.settings.LinphonePreferences;
 import org.VpbxCommunicator.utils.LinphoneUtils;
 import org.VpbxCommunicator.utils.ThemableActivity;
@@ -79,7 +79,6 @@ import org.linphone.core.RegistrationState;
 import org.linphone.core.TransportType;
 import org.linphone.core.tools.Log;
 import org.linphone.core.tools.OpenH264DownloadHelper;
-import org.VpbxCommunicator.fragments.StatusFragment;
 import org.linphone.mediastream.Version;
 
 public class AssistantActivity extends ThemableActivity

@@ -45,14 +45,13 @@ import com.google.android.flexbox.FlexboxLayout;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
-
+import org.VpbxCommunicator.LinphoneActivity;
 import org.VpbxCommunicator.contacts.ContactsManager;
 import org.VpbxCommunicator.contacts.LinphoneContact;
 import org.VpbxCommunicator.utils.FileUtils;
 import org.VpbxCommunicator.utils.ImageUtils;
 import org.VpbxCommunicator.utils.LinphoneUtils;
 import org.VpbxCommunicator.views.ContactAvatar;
-import org.VpbxCommunicator.LinphoneActivity;
 import org.linphone.R;
 import org.linphone.core.Address;
 import org.linphone.core.ChatMessage;

@@ -40,7 +40,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import java.util.Locale;
-
 import org.VpbxCommunicator.LinphoneManager;
 import org.VpbxCommunicator.settings.LinphonePreferences;
 import org.VpbxCommunicator.utils.LinphoneUtils;

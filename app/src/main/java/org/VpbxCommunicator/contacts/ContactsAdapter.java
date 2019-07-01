@@ -30,10 +30,10 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
-import org.linphone.R;
 import org.VpbxCommunicator.utils.SelectableAdapter;
 import org.VpbxCommunicator.utils.SelectableHelper;
 import org.VpbxCommunicator.views.ContactAvatar;
+import org.linphone.R;
 
 public class ContactsAdapter extends SelectableAdapter<ContactViewHolder>
         implements SectionIndexer {

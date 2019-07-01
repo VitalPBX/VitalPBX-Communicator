@@ -30,9 +30,8 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import java.util.Locale;
-
-import org.VpbxCommunicator.settings.LinphonePreferences;
 import org.VpbxCommunicator.LinphoneManager;
+import org.VpbxCommunicator.settings.LinphonePreferences;
 import org.linphone.R;
 import org.linphone.core.ProxyConfig;
 

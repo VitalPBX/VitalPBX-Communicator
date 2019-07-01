@@ -32,7 +32,6 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 import java.util.concurrent.TimeUnit;
-
 import org.VpbxCommunicator.utils.SelectableAdapter;
 import org.VpbxCommunicator.utils.SelectableHelper;
 import org.linphone.R;

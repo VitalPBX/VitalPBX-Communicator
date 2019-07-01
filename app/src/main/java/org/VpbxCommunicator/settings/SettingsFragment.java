@@ -29,14 +29,14 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import org.VpbxCommunicator.LinphoneActivity;
 import org.VpbxCommunicator.LinphoneManager;
-import org.linphone.R;
-import org.linphone.core.Core;
-import org.linphone.core.ProxyConfig;
 import org.VpbxCommunicator.fragments.FragmentsAvailable;
 import org.VpbxCommunicator.settings.widget.BasicSetting;
 import org.VpbxCommunicator.settings.widget.LedSetting;
 import org.VpbxCommunicator.settings.widget.SettingListenerBase;
 import org.VpbxCommunicator.utils.LinphoneUtils;
+import org.linphone.R;
+import org.linphone.core.Core;
+import org.linphone.core.ProxyConfig;
 
 public class SettingsFragment extends Fragment {
     protected View mRootView;

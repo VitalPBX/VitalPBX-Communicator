@@ -43,7 +43,6 @@ import android.widget.TextView;
 import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
 import org.VpbxCommunicator.LinphoneManager;
 import org.VpbxCommunicator.settings.LinphonePreferences;
 import org.VpbxCommunicator.utils.LinphoneUtils;

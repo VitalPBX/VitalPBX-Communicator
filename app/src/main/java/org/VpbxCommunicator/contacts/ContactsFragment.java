@@ -40,9 +40,9 @@ import java.util.ArrayList;
 import java.util.List;
 import org.VpbxCommunicator.LinphoneActivity;
 import org.VpbxCommunicator.LinphoneManager;
-import org.linphone.R;
 import org.VpbxCommunicator.fragments.FragmentsAvailable;
 import org.VpbxCommunicator.utils.SelectableHelper;
+import org.linphone.R;
 
 public class ContactsFragment extends Fragment
         implements OnItemClickListener,

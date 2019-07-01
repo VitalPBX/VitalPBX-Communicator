@@ -25,7 +25,6 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import org.VpbxCommunicator.LinphoneManager;
 import org.VpbxCommunicator.settings.LinphonePreferences;
 import org.VpbxCommunicator.utils.ThemableActivity;

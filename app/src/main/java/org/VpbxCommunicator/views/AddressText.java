@@ -26,8 +26,8 @@ import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.widget.EditText;
 import org.VpbxCommunicator.LinphoneManager.AddressType;
-import org.linphone.R;
 import org.VpbxCommunicator.fragments.DialerFragment;
+import org.linphone.R;
 
 @SuppressLint("AppCompatCustomView")
 public class AddressText extends EditText implements AddressType {

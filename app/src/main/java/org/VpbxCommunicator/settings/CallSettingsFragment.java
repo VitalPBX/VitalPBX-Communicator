@@ -28,18 +28,17 @@ import android.view.ViewGroup;
 import androidx.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.List;
-
-import org.VpbxCommunicator.settings.widget.ListSetting;
-import org.VpbxCommunicator.settings.widget.SwitchSetting;
 import org.VpbxCommunicator.LinphoneActivity;
 import org.VpbxCommunicator.LinphoneManager;
+import org.VpbxCommunicator.fragments.FragmentsAvailable;
+import org.VpbxCommunicator.settings.widget.ListSetting;
+import org.VpbxCommunicator.settings.widget.SettingListenerBase;
+import org.VpbxCommunicator.settings.widget.SwitchSetting;
+import org.VpbxCommunicator.settings.widget.TextSetting;
 import org.linphone.R;
 import org.linphone.core.Core;
 import org.linphone.core.MediaEncryption;
 import org.linphone.core.tools.Log;
-import org.VpbxCommunicator.fragments.FragmentsAvailable;
-import org.VpbxCommunicator.settings.widget.SettingListenerBase;
-import org.VpbxCommunicator.settings.widget.TextSetting;
 
 public class CallSettingsFragment extends Fragment {
     protected View mRootView;

@@ -32,9 +32,10 @@ import android.os.IBinder;
 import android.provider.ContactsContract;
 import android.view.WindowManager;
 import java.util.ArrayList;
-
 import org.VpbxCommunicator.call.CallIncomingActivity;
 import org.VpbxCommunicator.contacts.ContactsManager;
+import org.VpbxCommunicator.notifications.NotificationsManager;
+import org.VpbxCommunicator.receivers.BluetoothManager;
 import org.VpbxCommunicator.settings.LinphonePreferences;
 import org.VpbxCommunicator.utils.LinphoneUtils;
 import org.VpbxCommunicator.views.LinphoneGL2JNIViewOverlay;
@@ -54,8 +55,6 @@ import org.linphone.core.ProxyConfig;
 import org.linphone.core.RegistrationState;
 import org.linphone.core.tools.Log;
 import org.linphone.mediastream.Version;
-import org.VpbxCommunicator.notifications.NotificationsManager;
-import org.VpbxCommunicator.receivers.BluetoothManager;
 
 /**
  * Linphone service, reacting to Incoming calls, ...<br>

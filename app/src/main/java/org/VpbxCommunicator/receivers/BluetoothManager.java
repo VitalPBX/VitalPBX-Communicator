@@ -29,7 +29,6 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.media.AudioManager;
 import java.util.List;
-
 import org.VpbxCommunicator.LinphoneManager;
 import org.VpbxCommunicator.LinphoneService;
 import org.VpbxCommunicator.call.CallActivity;

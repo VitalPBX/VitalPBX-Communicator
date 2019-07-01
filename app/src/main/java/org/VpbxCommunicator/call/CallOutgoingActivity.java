@@ -35,7 +35,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 import androidx.core.app.ActivityCompat;
 import java.util.ArrayList;
-
 import org.VpbxCommunicator.LinphoneActivity;
 import org.VpbxCommunicator.LinphoneManager;
 import org.VpbxCommunicator.contacts.ContactsManager;

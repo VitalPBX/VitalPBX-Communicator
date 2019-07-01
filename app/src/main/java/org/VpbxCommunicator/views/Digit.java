@@ -28,13 +28,12 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
-
-import org.VpbxCommunicator.settings.LinphonePreferences;
 import org.VpbxCommunicator.LinphoneActivity;
 import org.VpbxCommunicator.LinphoneManager;
 import org.VpbxCommunicator.LinphoneService;
-import org.linphone.R;
 import org.VpbxCommunicator.call.CallActivity;
+import org.VpbxCommunicator.settings.LinphonePreferences;
+import org.linphone.R;
 import org.linphone.core.Core;
 import org.linphone.core.tools.Log;
 

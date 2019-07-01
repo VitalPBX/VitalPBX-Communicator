@@ -28,11 +28,10 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.InstanceIdResult;
-
 import org.VpbxCommunicator.settings.LinphonePreferences;
+import org.VpbxCommunicator.utils.PushNotificationUtils;
 import org.linphone.R;
 import org.linphone.core.tools.Log;
-import org.VpbxCommunicator.utils.PushNotificationUtils;
 
 @Keep
 public class FirebasePushHelper implements PushNotificationUtils.PushHelperInterface {

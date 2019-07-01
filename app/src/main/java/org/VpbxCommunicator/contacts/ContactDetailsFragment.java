@@ -34,10 +34,12 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TableLayout;
 import android.widget.TextView;
-
-import org.VpbxCommunicator.settings.LinphonePreferences;
 import org.VpbxCommunicator.LinphoneActivity;
 import org.VpbxCommunicator.LinphoneManager;
+import org.VpbxCommunicator.fragments.FragmentsAvailable;
+import org.VpbxCommunicator.settings.LinphonePreferences;
+import org.VpbxCommunicator.utils.LinphoneUtils;
+import org.VpbxCommunicator.views.ContactAvatar;
 import org.linphone.R;
 import org.linphone.core.Address;
 import org.linphone.core.ChatRoom;
@@ -51,9 +53,6 @@ import org.linphone.core.PresenceBasicStatus;
 import org.linphone.core.PresenceModel;
 import org.linphone.core.ProxyConfig;
 import org.linphone.core.tools.Log;
-import org.VpbxCommunicator.fragments.FragmentsAvailable;
-import org.VpbxCommunicator.utils.LinphoneUtils;
-import org.VpbxCommunicator.views.ContactAvatar;
 
 public class ContactDetailsFragment extends Fragment
         implements OnClickListener, ContactsUpdatedListener {

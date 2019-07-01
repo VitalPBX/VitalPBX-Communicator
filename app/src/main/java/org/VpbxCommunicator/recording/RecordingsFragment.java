@@ -35,18 +35,17 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
 import org.VpbxCommunicator.LinphoneActivity;
 import org.VpbxCommunicator.LinphoneManager;
+import org.VpbxCommunicator.fragments.FragmentsAvailable;
 import org.VpbxCommunicator.utils.FileUtils;
 import org.VpbxCommunicator.utils.SelectableHelper;
 import org.linphone.R;
-import org.VpbxCommunicator.fragments.FragmentsAvailable;
 
 public class RecordingsFragment extends Fragment
         implements AdapterView.OnItemClickListener,
                 RecordingViewHolder.ClickListener,
-        SelectableHelper.DeleteListener {
+                SelectableHelper.DeleteListener {
     private RecyclerView mRecordingList;
     private List<Recording> mRecordings;
     private TextView mNoRecordings;

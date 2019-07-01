@@ -21,7 +21,6 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
-
 import org.VpbxCommunicator.settings.LinphonePreferences;
 import org.linphone.R;
 

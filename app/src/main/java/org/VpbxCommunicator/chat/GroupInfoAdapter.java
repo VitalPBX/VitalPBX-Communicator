@@ -26,11 +26,10 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
-
+import org.VpbxCommunicator.LinphoneActivity;
 import org.VpbxCommunicator.contacts.ContactAddress;
 import org.VpbxCommunicator.contacts.LinphoneContact;
 import org.VpbxCommunicator.views.ContactAvatar;
-import org.VpbxCommunicator.LinphoneActivity;
 import org.linphone.R;
 import org.linphone.core.ChatRoom;
 import org.linphone.core.Participant;

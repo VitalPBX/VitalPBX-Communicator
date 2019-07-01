@@ -63,18 +63,19 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
-
+import org.VpbxCommunicator.LinphoneActivity;
+import org.VpbxCommunicator.LinphoneManager;
+import org.VpbxCommunicator.compatibility.Compatibility;
 import org.VpbxCommunicator.contacts.ContactsManager;
 import org.VpbxCommunicator.contacts.LinphoneContact;
+import org.VpbxCommunicator.fragments.StatusFragment;
+import org.VpbxCommunicator.receivers.BluetoothManager;
 import org.VpbxCommunicator.settings.LinphonePreferences;
 import org.VpbxCommunicator.utils.LinphoneGenericActivity;
 import org.VpbxCommunicator.utils.LinphoneUtils;
 import org.VpbxCommunicator.views.ContactAvatar;
 import org.VpbxCommunicator.views.Numpad;
-import org.VpbxCommunicator.LinphoneActivity;
-import org.VpbxCommunicator.LinphoneManager;
 import org.linphone.R;
-import org.VpbxCommunicator.compatibility.Compatibility;
 import org.linphone.core.Address;
 import org.linphone.core.AddressFamily;
 import org.linphone.core.Call;
@@ -91,9 +92,7 @@ import org.linphone.core.PayloadType;
 import org.linphone.core.Player;
 import org.linphone.core.StreamType;
 import org.linphone.core.tools.Log;
-import org.VpbxCommunicator.fragments.StatusFragment;
 import org.linphone.mediastream.video.capture.hwconf.AndroidCameraConfiguration;
-import org.VpbxCommunicator.receivers.BluetoothManager;
 
 public class CallActivity extends LinphoneGenericActivity
         implements OnClickListener, ActivityCompat.OnRequestPermissionsResultCallback {

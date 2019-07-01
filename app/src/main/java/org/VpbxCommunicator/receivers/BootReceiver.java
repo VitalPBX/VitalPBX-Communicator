@@ -22,7 +22,6 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-
 import org.VpbxCommunicator.LinphoneManager;
 import org.VpbxCommunicator.LinphoneService;
 import org.VpbxCommunicator.compatibility.Compatibility;

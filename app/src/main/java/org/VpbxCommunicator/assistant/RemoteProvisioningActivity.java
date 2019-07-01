@@ -29,7 +29,6 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
-
 import org.VpbxCommunicator.LinphoneLauncherActivity;
 import org.VpbxCommunicator.LinphoneManager;
 import org.VpbxCommunicator.LinphoneService;

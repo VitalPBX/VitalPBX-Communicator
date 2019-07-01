@@ -34,26 +34,25 @@ import android.widget.TextView;
 import android.widget.Toast;
 import androidx.core.app.ActivityCompat;
 import java.util.ArrayList;
-
+import org.VpbxCommunicator.LinphoneActivity;
+import org.VpbxCommunicator.LinphoneManager;
+import org.VpbxCommunicator.compatibility.Compatibility;
 import org.VpbxCommunicator.contacts.ContactsManager;
 import org.VpbxCommunicator.contacts.LinphoneContact;
 import org.VpbxCommunicator.settings.LinphonePreferences;
 import org.VpbxCommunicator.utils.LinphoneGenericActivity;
 import org.VpbxCommunicator.utils.LinphoneUtils;
+import org.VpbxCommunicator.views.CallIncomingAnswerButton;
 import org.VpbxCommunicator.views.CallIncomingButtonListener;
+import org.VpbxCommunicator.views.CallIncomingDeclineButton;
 import org.VpbxCommunicator.views.ContactAvatar;
-import org.VpbxCommunicator.LinphoneActivity;
-import org.VpbxCommunicator.LinphoneManager;
 import org.linphone.R;
-import org.VpbxCommunicator.compatibility.Compatibility;
 import org.linphone.core.Address;
 import org.linphone.core.Call;
 import org.linphone.core.Call.State;
 import org.linphone.core.Core;
 import org.linphone.core.CoreListenerStub;
 import org.linphone.core.tools.Log;
-import org.VpbxCommunicator.views.CallIncomingAnswerButton;
-import org.VpbxCommunicator.views.CallIncomingDeclineButton;
 
 public class CallIncomingActivity extends LinphoneGenericActivity {
     private static CallIncomingActivity sInstance;

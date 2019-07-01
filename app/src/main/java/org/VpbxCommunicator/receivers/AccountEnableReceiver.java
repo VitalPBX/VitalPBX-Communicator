@@ -23,7 +23,6 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
-
 import org.VpbxCommunicator.settings.LinphonePreferences;
 
 public class AccountEnableReceiver extends BroadcastReceiver {

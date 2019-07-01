@@ -19,8 +19,8 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 */
 
-import org.VpbxCommunicator.settings.LinphonePreferences;
 import org.VpbxCommunicator.LinphoneManager;
+import org.VpbxCommunicator.settings.LinphonePreferences;
 import org.linphone.core.XmlRpcArgType;
 import org.linphone.core.XmlRpcRequest;
 import org.linphone.core.XmlRpcRequestListener;

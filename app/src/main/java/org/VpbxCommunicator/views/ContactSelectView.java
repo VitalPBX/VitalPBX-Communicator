@@ -24,9 +24,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import org.VpbxCommunicator.contacts.ContactAddress;
 import org.VpbxCommunicator.LinphoneManager;
+import org.VpbxCommunicator.contacts.ContactAddress;
 import org.linphone.R;
 
 public class ContactSelectView extends View {

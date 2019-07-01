@@ -31,12 +31,14 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import java.util.Arrays;
 import java.util.List;
-
-import org.VpbxCommunicator.contacts.ContactsManager;
-import org.VpbxCommunicator.contacts.LinphoneContact;
-import org.VpbxCommunicator.settings.LinphonePreferences;
 import org.VpbxCommunicator.LinphoneActivity;
 import org.VpbxCommunicator.LinphoneManager;
+import org.VpbxCommunicator.contacts.ContactsManager;
+import org.VpbxCommunicator.contacts.LinphoneContact;
+import org.VpbxCommunicator.fragments.FragmentsAvailable;
+import org.VpbxCommunicator.settings.LinphonePreferences;
+import org.VpbxCommunicator.utils.LinphoneUtils;
+import org.VpbxCommunicator.views.ContactAvatar;
 import org.linphone.R;
 import org.linphone.core.Address;
 import org.linphone.core.CallLog;
@@ -49,9 +51,6 @@ import org.linphone.core.Factory;
 import org.linphone.core.FriendCapability;
 import org.linphone.core.ProxyConfig;
 import org.linphone.core.tools.Log;
-import org.VpbxCommunicator.fragments.FragmentsAvailable;
-import org.VpbxCommunicator.utils.LinphoneUtils;
-import org.VpbxCommunicator.views.ContactAvatar;
 
 public class HistoryDetailFragment extends Fragment implements OnClickListener {
     private ImageView mDialBack, mChat, mAddToContacts, mGoToContact, mBack;

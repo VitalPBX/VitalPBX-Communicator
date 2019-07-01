@@ -27,11 +27,10 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
-
+import org.VpbxCommunicator.LinphoneManager;
 import org.VpbxCommunicator.utils.LinphoneUtils;
 import org.VpbxCommunicator.utils.SelectableAdapter;
 import org.VpbxCommunicator.utils.SelectableHelper;
-import org.VpbxCommunicator.LinphoneManager;
 import org.linphone.R;
 import org.linphone.core.ChatRoom;
 

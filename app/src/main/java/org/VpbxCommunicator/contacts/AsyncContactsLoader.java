@@ -28,10 +28,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
-
-import org.VpbxCommunicator.settings.LinphonePreferences;
 import org.VpbxCommunicator.LinphoneManager;
 import org.VpbxCommunicator.LinphoneService;
+import org.VpbxCommunicator.settings.LinphonePreferences;
+import org.VpbxCommunicator.utils.LinphoneUtils;
 import org.linphone.R;
 import org.linphone.core.Core;
 import org.linphone.core.Friend;
@@ -39,7 +39,6 @@ import org.linphone.core.FriendList;
 import org.linphone.core.PresenceBasicStatus;
 import org.linphone.core.PresenceModel;
 import org.linphone.core.tools.Log;
-import org.VpbxCommunicator.utils.LinphoneUtils;
 
 class AsyncContactsLoader extends AsyncTask<Void, Void, AsyncContactsLoader.AsyncContactsData> {
     @SuppressLint("InlinedApi")

@@ -26,7 +26,6 @@ import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import java.util.ArrayList;
 import java.util.List;
-
 import org.VpbxCommunicator.contacts.ContactsManager;
 import org.VpbxCommunicator.contacts.LinphoneContact;
 import org.VpbxCommunicator.utils.LinphoneUtils;

@@ -32,10 +32,10 @@ import androidx.annotation.Nullable;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.List;
+import org.VpbxCommunicator.utils.LinphoneUtils;
 import org.linphone.R;
 import org.linphone.core.Call;
 import org.linphone.core.CallLog;
-import org.VpbxCommunicator.utils.LinphoneUtils;
 
 class HistoryLogAdapter extends ArrayAdapter<CallLog> {
     private Context mContext;

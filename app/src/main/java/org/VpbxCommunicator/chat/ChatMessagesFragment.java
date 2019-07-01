@@ -61,7 +61,10 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
+import org.VpbxCommunicator.LinphoneActivity;
+import org.VpbxCommunicator.LinphoneManager;
+import org.VpbxCommunicator.LinphoneService;
+import org.VpbxCommunicator.call.CallManager;
 import org.VpbxCommunicator.contacts.ContactAddress;
 import org.VpbxCommunicator.contacts.ContactsManager;
 import org.VpbxCommunicator.contacts.ContactsUpdatedListener;
@@ -71,11 +74,7 @@ import org.VpbxCommunicator.utils.FileUtils;
 import org.VpbxCommunicator.utils.LinphoneUtils;
 import org.VpbxCommunicator.utils.SelectableHelper;
 import org.VpbxCommunicator.views.RichEditText;
-import org.VpbxCommunicator.LinphoneActivity;
-import org.VpbxCommunicator.LinphoneManager;
-import org.VpbxCommunicator.LinphoneService;
 import org.linphone.R;
-import org.VpbxCommunicator.call.CallManager;
 import org.linphone.core.Address;
 import org.linphone.core.ChatMessage;
 import org.linphone.core.ChatRoom;
@@ -94,10 +93,10 @@ import org.linphone.core.tools.Log;
 
 public class ChatMessagesFragment extends Fragment
         implements ChatRoomListener,
-        ContactsUpdatedListener,
+                ContactsUpdatedListener,
                 ChatMessageViewHolderClickListener,
-        SelectableHelper.DeleteListener,
-        RichEditText.RichInputListener {
+                SelectableHelper.DeleteListener,
+                RichEditText.RichInputListener {
     private static final int ADD_PHOTO = 1337;
     private static final int MESSAGES_PER_PAGE = 20;
     private static final String INPUT_CONTENT_INFO_KEY = "COMMIT_CONTENT_INPUT_CONTENT_INFO";

@@ -50,10 +50,9 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Locale;
 import java.util.regex.Pattern;
-
-import org.VpbxCommunicator.settings.LinphonePreferences;
 import org.VpbxCommunicator.LinphoneManager;
 import org.VpbxCommunicator.LinphoneService;
+import org.VpbxCommunicator.settings.LinphonePreferences;
 import org.linphone.R;
 import org.linphone.core.AccountCreator;
 import org.linphone.core.Address;

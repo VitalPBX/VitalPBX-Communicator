@@ -24,9 +24,8 @@ import static android.content.Intent.ACTION_MAIN;
 import android.content.Intent;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
-
-import org.VpbxCommunicator.settings.LinphonePreferences;
 import org.VpbxCommunicator.LinphoneService;
+import org.VpbxCommunicator.settings.LinphonePreferences;
 import org.VpbxCommunicator.utils.LinphoneUtils;
 
 public class FirebaseMessaging extends FirebaseMessagingService {

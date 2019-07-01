@@ -30,7 +30,6 @@ import android.app.usage.UsageStatsManager;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Icon;
-
 import org.VpbxCommunicator.notifications.Notifiable;
 import org.VpbxCommunicator.notifications.NotifiableMessage;
 import org.linphone.R;

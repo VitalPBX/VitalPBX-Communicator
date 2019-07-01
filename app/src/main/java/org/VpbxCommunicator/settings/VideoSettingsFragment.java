@@ -30,20 +30,19 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.List;
-
-import org.VpbxCommunicator.settings.widget.ListSetting;
-import org.VpbxCommunicator.settings.widget.SwitchSetting;
 import org.VpbxCommunicator.LinphoneActivity;
 import org.VpbxCommunicator.LinphoneManager;
+import org.VpbxCommunicator.fragments.FragmentsAvailable;
+import org.VpbxCommunicator.settings.widget.ListSetting;
+import org.VpbxCommunicator.settings.widget.SettingListenerBase;
+import org.VpbxCommunicator.settings.widget.SwitchSetting;
+import org.VpbxCommunicator.settings.widget.TextSetting;
 import org.linphone.R;
 import org.linphone.core.Core;
 import org.linphone.core.Factory;
 import org.linphone.core.PayloadType;
 import org.linphone.core.VideoDefinition;
 import org.linphone.core.tools.Log;
-import org.VpbxCommunicator.fragments.FragmentsAvailable;
-import org.VpbxCommunicator.settings.widget.SettingListenerBase;
-import org.VpbxCommunicator.settings.widget.TextSetting;
 
 public class VideoSettingsFragment extends Fragment {
     protected View mRootView;

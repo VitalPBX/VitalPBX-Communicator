@@ -28,6 +28,7 @@ import java.util.ArrayList;
 import java.util.List;
 import org.VpbxCommunicator.LinphoneActivity;
 import org.VpbxCommunicator.LinphoneManager;
+import org.VpbxCommunicator.views.ContactAvatar;
 import org.linphone.R;
 import org.linphone.core.Address;
 import org.linphone.core.FriendCapability;
@@ -35,7 +36,6 @@ import org.linphone.core.PresenceBasicStatus;
 import org.linphone.core.PresenceModel;
 import org.linphone.core.ProxyConfig;
 import org.linphone.core.SearchResult;
-import org.VpbxCommunicator.views.ContactAvatar;
 
 public class SearchContactsAdapter extends RecyclerView.Adapter<SearchContactViewHolder> {
     private List<SearchResult> mContacts;

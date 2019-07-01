@@ -28,18 +28,17 @@ import androidx.annotation.NonNull;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.List;
-
+import org.VpbxCommunicator.LinphoneActivity;
 import org.VpbxCommunicator.contacts.ContactsManager;
 import org.VpbxCommunicator.contacts.LinphoneContact;
-import org.VpbxCommunicator.LinphoneActivity;
-import org.linphone.R;
-import org.linphone.core.Address;
-import org.linphone.core.Call;
-import org.linphone.core.CallLog;
 import org.VpbxCommunicator.utils.LinphoneUtils;
 import org.VpbxCommunicator.utils.SelectableAdapter;
 import org.VpbxCommunicator.utils.SelectableHelper;
 import org.VpbxCommunicator.views.ContactAvatar;
+import org.linphone.R;
+import org.linphone.core.Address;
+import org.linphone.core.Call;
+import org.linphone.core.CallLog;
 
 public class HistoryAdapter extends SelectableAdapter<HistoryViewHolder> {
     private final List<CallLog> mLogs;

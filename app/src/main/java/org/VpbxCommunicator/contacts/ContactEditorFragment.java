@@ -54,12 +54,12 @@ import java.util.ArrayList;
 import java.util.List;
 import org.VpbxCommunicator.LinphoneActivity;
 import org.VpbxCommunicator.LinphoneManager;
-import org.linphone.R;
-import org.linphone.core.tools.Log;
-import org.linphone.mediastream.Version;
 import org.VpbxCommunicator.utils.FileUtils;
 import org.VpbxCommunicator.utils.LinphoneUtils;
 import org.VpbxCommunicator.views.ContactAvatar;
+import org.linphone.R;
+import org.linphone.core.tools.Log;
+import org.linphone.mediastream.Version;
 
 public class ContactEditorFragment extends Fragment {
     private static final int ADD_PHOTO = 1337;

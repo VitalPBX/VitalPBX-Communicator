@@ -29,20 +29,19 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.Nullable;
 import java.util.Arrays;
-
-import org.VpbxCommunicator.contacts.ContactsManager;
-import org.VpbxCommunicator.contacts.LinphoneContact;
-import org.VpbxCommunicator.utils.LinphoneUtils;
 import org.VpbxCommunicator.LinphoneActivity;
 import org.VpbxCommunicator.LinphoneManager;
-import org.linphone.R;
 import org.VpbxCommunicator.call.CallManager;
+import org.VpbxCommunicator.contacts.ContactsManager;
+import org.VpbxCommunicator.contacts.LinphoneContact;
+import org.VpbxCommunicator.fragments.FragmentsAvailable;
+import org.VpbxCommunicator.utils.LinphoneUtils;
+import org.linphone.R;
 import org.linphone.core.Address;
 import org.linphone.core.ChatRoom;
 import org.linphone.core.ChatRoomCapabilities;
 import org.linphone.core.Core;
 import org.linphone.core.ParticipantDevice;
-import org.VpbxCommunicator.fragments.FragmentsAvailable;
 
 public class DevicesFragment extends Fragment {
     private LayoutInflater mInflater;

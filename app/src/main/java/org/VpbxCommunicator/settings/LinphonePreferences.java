@@ -31,8 +31,10 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import org.VpbxCommunicator.LinphoneActivity;
 import org.VpbxCommunicator.LinphoneManager;
-import org.linphone.R;
 import org.VpbxCommunicator.compatibility.Compatibility;
+import org.VpbxCommunicator.purchase.Purchasable;
+import org.VpbxCommunicator.utils.LinphoneUtils;
+import org.linphone.R;
 import org.linphone.core.Address;
 import org.linphone.core.AuthInfo;
 import org.linphone.core.Config;
@@ -46,8 +48,6 @@ import org.linphone.core.Tunnel;
 import org.linphone.core.TunnelConfig;
 import org.linphone.core.VideoActivationPolicy;
 import org.linphone.core.tools.Log;
-import org.VpbxCommunicator.purchase.Purchasable;
-import org.VpbxCommunicator.utils.LinphoneUtils;
 
 public class LinphonePreferences {
     private static final int LINPHONE_CORE_RANDOM_PORT = -1;
@@ -935,9 +935,7 @@ public class LinphonePreferences {
     }
 
     public String getActivityToLaunchOnIncomingReceived() {
-        return getConfig()
-                .getString(
-                        "app", "incoming_call_activity", "CallIncomingActivity");
+        return getConfig().getString("app", "incoming_call_activity", "CallIncomingActivity");
     }
 
     public void setActivityToLaunchOnIncomingReceived(String name) {

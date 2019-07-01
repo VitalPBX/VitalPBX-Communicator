@@ -25,12 +25,11 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-
 import org.VpbxCommunicator.LinphoneActivity;
 import org.VpbxCommunicator.LinphoneManager;
 import org.VpbxCommunicator.LinphoneService;
-import org.linphone.R;
 import org.VpbxCommunicator.compatibility.Compatibility;
+import org.linphone.R;
 import org.linphone.core.Address;
 import org.linphone.core.Call;
 import org.linphone.core.ChatMessage;

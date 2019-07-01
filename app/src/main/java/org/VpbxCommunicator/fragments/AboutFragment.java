@@ -30,11 +30,10 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.TextView;
 import androidx.core.content.ContextCompat;
-
-import org.VpbxCommunicator.BuildConfig;
 import org.VpbxCommunicator.LinphoneActivity;
 import org.VpbxCommunicator.LinphoneManager;
 import org.VpbxCommunicator.settings.LinphonePreferences;
+import org.linphone.BuildConfig;
 import org.linphone.R;
 import org.linphone.core.Core;
 import org.linphone.core.Core.LogCollectionUploadState;

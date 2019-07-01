@@ -36,23 +36,22 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
-import org.VpbxCommunicator.contacts.ContactsManager;
-import org.VpbxCommunicator.contacts.ContactsUpdatedListener;
 import org.VpbxCommunicator.LinphoneActivity;
 import org.VpbxCommunicator.LinphoneManager;
+import org.VpbxCommunicator.contacts.ContactsManager;
+import org.VpbxCommunicator.contacts.ContactsUpdatedListener;
+import org.VpbxCommunicator.fragments.FragmentsAvailable;
+import org.VpbxCommunicator.utils.SelectableHelper;
 import org.linphone.R;
 import org.linphone.core.Address;
 import org.linphone.core.Call;
 import org.linphone.core.CallLog;
-import org.VpbxCommunicator.fragments.FragmentsAvailable;
-import org.VpbxCommunicator.utils.SelectableHelper;
 
 public class HistoryFragment extends Fragment
         implements OnClickListener,
                 OnItemClickListener,
                 HistoryViewHolder.ClickListener,
-        ContactsUpdatedListener,
+                ContactsUpdatedListener,
                 SelectableHelper.DeleteListener {
     private RecyclerView mHistoryList;
     private TextView mNoCallHistory, mNoMissedCallHistory;

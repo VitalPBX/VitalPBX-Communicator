@@ -37,13 +37,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.io.File;
 import java.util.Arrays;
 import java.util.List;
-
-import org.VpbxCommunicator.contacts.ContactsManager;
-import org.VpbxCommunicator.contacts.ContactsUpdatedListener;
-import org.VpbxCommunicator.utils.LinphoneUtils;
-import org.VpbxCommunicator.utils.SelectableHelper;
 import org.VpbxCommunicator.LinphoneActivity;
 import org.VpbxCommunicator.LinphoneManager;
+import org.VpbxCommunicator.contacts.ContactsManager;
+import org.VpbxCommunicator.contacts.ContactsUpdatedListener;
+import org.VpbxCommunicator.fragments.FragmentsAvailable;
+import org.VpbxCommunicator.utils.LinphoneUtils;
+import org.VpbxCommunicator.utils.SelectableHelper;
 import org.linphone.R;
 import org.linphone.core.ChatMessage;
 import org.linphone.core.ChatRoom;
@@ -53,12 +53,11 @@ import org.linphone.core.CoreListenerStub;
 import org.linphone.core.EventLog;
 import org.linphone.core.ProxyConfig;
 import org.linphone.core.tools.Log;
-import org.VpbxCommunicator.fragments.FragmentsAvailable;
 
 public class ChatRoomsFragment extends Fragment
         implements ContactsUpdatedListener,
                 ChatRoomViewHolder.ClickListener,
-        SelectableHelper.DeleteListener {
+                SelectableHelper.DeleteListener {
 
     private RecyclerView mChatRoomsList;
     private ImageView mNewDiscussionButton, mNewGroupDiscussionButton, mBackToCallButton;

@@ -36,7 +36,6 @@ import android.content.ContentProviderClient;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
-
 import org.VpbxCommunicator.notifications.Notifiable;
 import org.VpbxCommunicator.notifications.NotifiableMessage;
 import org.VpbxCommunicator.notifications.NotificationBroadcastReceiver;

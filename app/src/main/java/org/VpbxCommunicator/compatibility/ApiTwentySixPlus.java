@@ -33,7 +33,6 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Build;
 import android.provider.Settings;
-
 import org.VpbxCommunicator.notifications.Notifiable;
 import org.VpbxCommunicator.notifications.NotifiableMessage;
 import org.linphone.R;

@@ -30,7 +30,6 @@ import android.graphics.Bitmap;
 import android.os.Build;
 import android.provider.Settings;
 import android.widget.TextView;
-
 import org.VpbxCommunicator.notifications.Notifiable;
 import org.linphone.mediastream.Version;
 

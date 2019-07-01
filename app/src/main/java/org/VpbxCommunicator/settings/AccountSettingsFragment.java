@@ -29,13 +29,17 @@ import android.view.ViewGroup;
 import androidx.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.List;
-
-import org.VpbxCommunicator.settings.widget.ListSetting;
-import org.VpbxCommunicator.settings.widget.SwitchSetting;
 import org.VpbxCommunicator.LinphoneActivity;
 import org.VpbxCommunicator.LinphoneManager;
-import org.linphone.R;
 import org.VpbxCommunicator.assistant.AssistantActivity;
+import org.VpbxCommunicator.fragments.FragmentsAvailable;
+import org.VpbxCommunicator.settings.widget.BasicSetting;
+import org.VpbxCommunicator.settings.widget.ListSetting;
+import org.VpbxCommunicator.settings.widget.SettingListenerBase;
+import org.VpbxCommunicator.settings.widget.SwitchSetting;
+import org.VpbxCommunicator.settings.widget.TextSetting;
+import org.VpbxCommunicator.utils.PushNotificationUtils;
+import org.linphone.R;
 import org.linphone.core.AVPFMode;
 import org.linphone.core.Address;
 import org.linphone.core.AuthInfo;
@@ -45,11 +49,6 @@ import org.linphone.core.NatPolicy;
 import org.linphone.core.ProxyConfig;
 import org.linphone.core.TransportType;
 import org.linphone.core.tools.Log;
-import org.VpbxCommunicator.fragments.FragmentsAvailable;
-import org.VpbxCommunicator.settings.widget.BasicSetting;
-import org.VpbxCommunicator.settings.widget.SettingListenerBase;
-import org.VpbxCommunicator.settings.widget.TextSetting;
-import org.VpbxCommunicator.utils.PushNotificationUtils;
 
 public class AccountSettingsFragment extends Fragment {
     protected View mRootView;
