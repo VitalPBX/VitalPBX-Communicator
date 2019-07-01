@@ -474,7 +474,7 @@
                 android:focusable="true"
                 android:layout_marginBottom="100dp">
 
-                <org.linphone.views.Numpad
+                <org.VpbxCommunicator.views.Numpad
                     android:id="@+id/numpad"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -507,7 +507,7 @@
 
     <fragment
         android:id="@+id/status"
-        android:name="org.linphone.fragments.StatusFragment"
+        android:name="org.VpbxCommunicator.fragments.StatusFragment"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         tools:layout="@layout/status" />

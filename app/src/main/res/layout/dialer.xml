@@ -20,7 +20,7 @@
         android:layout_alignParentTop="true"
         android:background="?attr/backgroundColor">
 
-        <org.linphone.views.AddressText
+        <org.VpbxCommunicator.views.AddressText
             android:id="@+id/address"
             style="@style/numpad_composed_number_font"
             android:layout_width="wrap_content"
@@ -40,7 +40,7 @@
 
     </RelativeLayout>
 
-    <org.linphone.views.Numpad
+    <org.VpbxCommunicator.views.Numpad
         android:id="@+id/numpad"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

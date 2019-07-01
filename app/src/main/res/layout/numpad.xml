@@ -13,7 +13,7 @@
         android:orientation="vertical">
 
 
-        <org.linphone.views.Digit
+        <org.VpbxCommunicator.views.Digit
             android:id="@+id/Digit1"
             style="@style/DialerDigit"
             android:background="@drawable/digit_1"
@@ -31,16 +31,16 @@
             <!--android:layout_height="wrap_content"-->
             <!--android:text=""-->
             <!--android:textAppearance="?android:attr/textAppearanceSmall" />-->
-        </org.linphone.views.Digit>
+        </org.VpbxCommunicator.views.Digit>
 
-        <org.linphone.views.Digit
+        <org.VpbxCommunicator.views.Digit
             android:id="@+id/Digit2"
             style="@style/DialerDigit"
             android:background="@drawable/digit_2"
             android:soundEffectsEnabled="true"
             android:text="2" />
 
-        <org.linphone.views.Digit
+        <org.VpbxCommunicator.views.Digit
             android:id="@+id/Digit3"
             style="@style/DialerDigit"
             android:background="@drawable/digit_3"
@@ -59,7 +59,7 @@
             <!--android:layout_height="wrap_content"-->
             <!--android:text="DEF"-->
             <!--android:textAppearance="?android:attr/textAppearanceSmall" />-->
-        </org.linphone.views.Digit>
+        </org.VpbxCommunicator.views.Digit>
 
 
     </TableRow>
@@ -71,7 +71,7 @@
         android:layout_weight="0.3"
         android:gravity="center">
 
-        <org.linphone.views.Digit
+        <org.VpbxCommunicator.views.Digit
             android:id="@+id/Digit4"
             style="@style/DialerDigit"
             android:background="@drawable/digit_4"
@@ -89,9 +89,9 @@
             <!--android:layout_height="wrap_content"-->
             <!--android:text="GHI"-->
             <!--android:textAppearance="?android:attr/textAppearanceSmall" />-->
-        </org.linphone.views.Digit>
+        </org.VpbxCommunicator.views.Digit>
 
-        <org.linphone.views.Digit
+        <org.VpbxCommunicator.views.Digit
             android:id="@+id/Digit5"
             style="@style/DialerDigit"
             android:background="@drawable/digit_5"
@@ -109,9 +109,9 @@
             <!--android:layout_height="wrap_content"-->
             <!--android:text="JKL"-->
             <!--android:textAppearance="?android:attr/textAppearanceSmall" />-->
-        </org.linphone.views.Digit>
+        </org.VpbxCommunicator.views.Digit>
 
-        <org.linphone.views.Digit
+        <org.VpbxCommunicator.views.Digit
             android:id="@+id/Digit6"
             style="@style/DialerDigit"
             android:background="@drawable/digit_6"
@@ -129,7 +129,7 @@
             <!--android:layout_height="wrap_content"-->
             <!--android:text="MNO"-->
             <!--android:textAppearance="?android:attr/textAppearanceSmall" />-->
-        </org.linphone.views.Digit>
+        </org.VpbxCommunicator.views.Digit>
 
     </TableRow>
 
@@ -139,7 +139,7 @@
         android:layout_weight="0.3"
         android:gravity="center">
 
-        <org.linphone.views.Digit
+        <org.VpbxCommunicator.views.Digit
             android:id="@+id/Digit7"
             style="@style/DialerDigit"
             android:background="@drawable/digit_7"
@@ -157,9 +157,9 @@
             <!--android:layout_height="wrap_content"-->
             <!--android:text="PQRS"-->
             <!--android:textAppearance="?android:attr/textAppearanceSmall" />-->
-        </org.linphone.views.Digit>
+        </org.VpbxCommunicator.views.Digit>
 
-        <org.linphone.views.Digit
+        <org.VpbxCommunicator.views.Digit
             android:id="@+id/Digit8"
             style="@style/DialerDigit"
             android:background="@drawable/digit_8"
@@ -177,9 +177,9 @@
             <!--android:layout_height="wrap_content"-->
             <!--android:text="TUV"-->
             <!--android:textAppearance="?android:attr/textAppearanceSmall" />-->
-        </org.linphone.views.Digit>
+        </org.VpbxCommunicator.views.Digit>
 
-        <org.linphone.views.Digit
+        <org.VpbxCommunicator.views.Digit
             android:id="@+id/Digit9"
             style="@style/DialerDigit"
             android:background="@drawable/digit_9"
@@ -197,7 +197,7 @@
             <!--android:layout_height="wrap_content"-->
             <!--android:text="WXYZ"-->
             <!--android:textAppearance="?android:attr/textAppearanceSmall" />-->
-        </org.linphone.views.Digit>
+        </org.VpbxCommunicator.views.Digit>
 
 
     </TableRow>
@@ -208,7 +208,7 @@
         android:layout_weight="0.3"
         android:gravity="center">
 
-        <org.linphone.views.Digit
+        <org.VpbxCommunicator.views.Digit
             android:id="@+id/Digit_asterisk"
             style="@style/DialerDigit"
             android:background="@drawable/digit_asterisk"
@@ -226,9 +226,9 @@
             <!--android:layout_height="wrap_content"-->
             <!--android:text=""-->
             <!--android:textAppearance="?android:attr/textAppearanceSmall" />-->
-        </org.linphone.views.Digit>
+        </org.VpbxCommunicator.views.Digit>
 
-        <org.linphone.views.Digit
+        <org.VpbxCommunicator.views.Digit
             android:id="@+id/Digit0"
             style="@style/DialerDigit"
             android:background="@drawable/digit_zero"
@@ -246,9 +246,9 @@
             <!--android:layout_height="wrap_content"-->
             <!--android:text="+"-->
             <!--android:textAppearance="?android:attr/textAppearanceSmall" />-->
-        </org.linphone.views.Digit>
+        </org.VpbxCommunicator.views.Digit>
 
-        <org.linphone.views.Digit
+        <org.VpbxCommunicator.views.Digit
             android:id="@+id/Digit_hashtag"
             style="@style/DialerDigit"
             android:background="@drawable/digit_hashtag"
@@ -266,7 +266,7 @@
             <!--android:layout_height="wrap_content"-->
             <!--android:text=""-->
             <!--android:textAppearance="?android:attr/textAppearanceSmall" />-->
-        </org.linphone.views.Digit>
+        </org.VpbxCommunicator.views.Digit>
 
     </TableRow>
 
@@ -276,7 +276,7 @@
         android:layout_weight="0.3"
         android:gravity="center">
 
-        <org.linphone.views.AddContactButton
+        <org.VpbxCommunicator.views.AddContactButton
             android:id="@+id/add_contact_btn"
             android:layout_width="wrap_content"
             android:layout_marginRight="15dp"
@@ -286,7 +286,7 @@
             android:visibility="invisible" />
 
 
-        <org.linphone.views.CallButton
+        <org.VpbxCommunicator.views.CallButton
             android:id="@+id/call_btn"
             android:focusable="false"
             android:focusableInTouchMode="false"
@@ -296,7 +296,7 @@
             android:padding="15dp"/>
 
 
-        <org.linphone.views.EraseButton
+        <org.VpbxCommunicator.views.EraseButton
             android:id="@+id/backspace_btn"
             android:layout_height="40dp"
             android:layout_width="wrap_content"

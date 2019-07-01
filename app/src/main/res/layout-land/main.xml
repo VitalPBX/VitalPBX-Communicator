@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/status"
-        android:name="org.linphone.fragments.StatusFragment"
+        android:name="org.VpbxCommunicator.fragments.StatusFragment"
         android:layout_width="match_parent"
         android:layout_height="35dp"
         tools:layout="@layout/status" />

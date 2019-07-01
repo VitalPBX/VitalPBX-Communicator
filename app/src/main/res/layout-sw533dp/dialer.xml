@@ -27,7 +27,7 @@
             android:layout_marginBottom="10dp"
             android:background="?attr/lighToolbarBackgroundColor">
 
-            <org.linphone.views.EraseButton
+            <org.VpbxCommunicator.views.EraseButton
                 android:id="@+id/erase"
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
@@ -38,7 +38,7 @@
                 android:contentDescription="@string/content_description_backspace"
                 android:src="@drawable/backspace" />
 
-            <org.linphone.views.AddressText
+            <org.VpbxCommunicator.views.AddressText
                 android:id="@+id/address"
                 style="@style/numpad_composed_number_font"
                 android:layout_width="wrap_content"
@@ -54,7 +54,7 @@
 
         </RelativeLayout>
 
-        <org.linphone.views.Numpad
+        <org.VpbxCommunicator.views.Numpad
             android:id="@+id/numpad"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -88,7 +88,7 @@
 
             </RelativeLayout>
 
-            <org.linphone.views.CallButton
+            <org.VpbxCommunicator.views.CallButton
                 android:id="@+id/call"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
