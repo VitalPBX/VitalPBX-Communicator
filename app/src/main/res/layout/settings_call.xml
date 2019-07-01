@@ -12,57 +12,57 @@
         android:paddingBottom="5dp"
         android:orientation="vertical">
 
-        <org.VpbxCommunicator.settings.widget.SwitchSetting
+        <org.linphone.settings.widget.SwitchSetting
             android:id="@+id/pref_device_ringtone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             linphone:title="@string/pref_device_ringtone" />
 
-        <org.VpbxCommunicator.settings.widget.SwitchSetting
+        <org.linphone.settings.widget.SwitchSetting
             android:id="@+id/pref_vibrate_on_incoming_calls"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             linphone:title="@string/pref_vibrate_on_incoming_calls" />
 
-        <org.VpbxCommunicator.settings.widget.ListSetting
+        <org.linphone.settings.widget.ListSetting
             android:id="@+id/pref_media_encryption"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             linphone:title="@string/pref_media_encryption" />
 
-        <org.VpbxCommunicator.settings.widget.SwitchSetting
+        <org.linphone.settings.widget.SwitchSetting
             android:id="@+id/pref_sipinfo_dtmf"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             linphone:title="@string/pref_sipinfo_dtmf" />
 
-        <org.VpbxCommunicator.settings.widget.SwitchSetting
+        <org.linphone.settings.widget.SwitchSetting
             android:id="@+id/pref_rfc2833_dtmf"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             linphone:title="@string/pref_rfc2833_dtmf" />
 
-        <org.VpbxCommunicator.settings.widget.SwitchSetting
+        <org.linphone.settings.widget.SwitchSetting
             android:id="@+id/pref_auto_answer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             linphone:title="@string/pref_auto_answer" />
 
-        <org.VpbxCommunicator.settings.widget.TextSetting
+        <org.linphone.settings.widget.TextSetting
             android:id="@+id/pref_auto_answer_time"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             linphone:hint="@string/pref_auto_answer_time"
             linphone:title="@string/pref_auto_answer_time" />
 
-        <org.VpbxCommunicator.settings.widget.TextSetting
+        <org.linphone.settings.widget.TextSetting
             android:id="@+id/pref_incoming_call_timeout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             linphone:hint="@string/pref_incoming_call_timeout_title"
             linphone:title="@string/pref_incoming_call_timeout_title" />
 
-        <org.VpbxCommunicator.settings.widget.TextSetting
+        <org.linphone.settings.widget.TextSetting
             android:id="@+id/pref_voice_mail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
