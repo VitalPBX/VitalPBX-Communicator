@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.linphone"
+    package="org.vpbxcommunicator"
     android:installLocation="auto">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -66,7 +66,7 @@
              security -->
 
         <activity
-            android:name=".LinphoneLauncherActivity"
+            android:name="org.vpbxcommunicator.LinphoneLauncherActivity"
             android:screenOrientation="portrait"
             android:exported="true"
             android:label="@string/app_name"
@@ -81,7 +81,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".LinphoneActivity"
+            android:name="org.vpbxcommunicator.LinphoneActivity"
             android:screenOrientation="portrait"
             android:launchMode="singleTask"
             android:theme="@style/LinphoneStyleLight">
@@ -137,7 +137,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".call.CallIncomingActivity"
+            android:name="org.vpbxcommunicator.call.CallIncomingActivity"
             android:screenOrientation="portrait"
             android:launchMode="singleTop"
             android:noHistory="true"
@@ -149,7 +149,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".call.CallOutgoingActivity"
+            android:name="org.vpbxcommunicator.call.CallOutgoingActivity"
             android:screenOrientation="portrait"
             android:launchMode="singleTop"
             android:noHistory="true"
@@ -159,7 +159,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".call.CallActivity"
+            android:name="org.vpbxcommunicator.call.CallActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:noHistory="true"
@@ -178,7 +178,7 @@
             -->
         </activity>
         <activity
-            android:name=".assistant.AssistantActivity"
+            android:name="org.vpbxcommunicator.assistant.AssistantActivity"
             android:screenOrientation="behind"
             android:theme="@style/LinphoneStyleLight">
             <intent-filter>
@@ -186,7 +186,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".purchase.InAppPurchaseActivity"
+            android:name="org.vpbxcommunicator.purchase.InAppPurchaseActivity"
             android:screenOrientation="nosensor"
             android:theme="@style/LinphoneStyleLight">
             <intent-filter>
@@ -194,7 +194,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".assistant.RemoteProvisioningLoginActivity"
+            android:name="org.vpbxcommunicator.assistant.RemoteProvisioningLoginActivity"
             android:screenOrientation="nosensor"
             android:theme="@style/LinphoneStyleLight">
             <intent-filter>
@@ -202,7 +202,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".assistant.RemoteProvisioningActivity"
+            android:name="org.vpbxcommunicator.assistant.RemoteProvisioningActivity"
             android:screenOrientation="nosensor"
             android:theme="@style/LinphoneStyleLight">
             <intent-filter>
@@ -218,10 +218,10 @@
         </activity>
 
         <service
-            android:name=".LinphoneService"
+            android:name="org.vpbxcommunicator.LinphoneService"
             android:label="@string/service_name" />
         <service
-            android:name=".sync.SyncService"
+            android:name="org.vpbxcommunicator.sync.SyncService"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.content.SyncAdapter" />
@@ -234,7 +234,7 @@
                 android:name="android.provider.CONTACTS_STRUCTURE"
                 android:resource="@xml/contacts" />
         </service>
-        <service android:name=".sync.AuthenticationService">
+        <service android:name="org.vpbxcommunicator.sync.AuthenticationService">
             <intent-filter>
                 <action android:name="android.accounts.AccountAuthenticator" />
             </intent-filter>
@@ -245,9 +245,9 @@
         </service>
 
         <receiver
-            android:name=".receivers.BluetoothManager"
+            android:name="org.vpbxcommunicator.receivers.BluetoothManager"
             android:enabled="false"/>
-        <receiver android:name=".receivers.BootReceiver">
+        <receiver android:name="org.vpbxcommunicator.receivers.BootReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
@@ -255,13 +255,13 @@
                 <action android:name="android.intent.action.ACTION_SHUTDOWN" />
             </intent-filter>
         </receiver>
-        <receiver android:name=".receivers.PhoneStateChangedReceiver">
+        <receiver android:name="org.vpbxcommunicator.receivers.PhoneStateChangedReceiver">
             <intent-filter android:priority="999">
                 <action android:name="android.intent.action.PHONE_STATE" />
             </intent-filter>
         </receiver>
 
-        <receiver android:name=".receivers.HookReceiver">
+        <receiver android:name="org.vpbxcommunicator.receivers.HookReceiver">
             <intent-filter>
                 <action android:name="com.base.module.phone.HOOKEVENT" />
             </intent-filter>
@@ -276,14 +276,14 @@
         </receiver>-->
 
         <receiver
-            android:name=".receivers.AccountEnableReceiver"
+            android:name="org.vpbxcommunicator.receivers.AccountEnableReceiver"
             android:permission="android.permission.USE_SIP">
             <intent-filter>
                 <action android:name="org.VpbxCommunicator.intent.ACCOUNTACTIVATE" />
             </intent-filter>
         </receiver>
 
-        <service android:name=".firebase.FirebaseMessaging">
+        <service android:name="org.vpbxcommunicator.firebase.FirebaseMessaging">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
@@ -299,10 +299,10 @@
                 android:resource="@xml/provider_paths" />
         </provider>
 
-        <activity android:name=".utils.LinphoneGenericActivity" />
+        <activity android:name="org.vpbxcommunicator.utils.LinphoneGenericActivity" />
 
         <receiver
-            android:name=".notifications.NotificationBroadcastReceiver"
+            android:name="org.vpbxcommunicator.notifications.NotificationBroadcastReceiver"
             android:enabled="true"
             android:exported="false" />
 

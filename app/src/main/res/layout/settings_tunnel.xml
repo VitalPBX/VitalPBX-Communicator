@@ -12,21 +12,21 @@
         android:paddingBottom="5dp"
         android:orientation="vertical">
 
-        <org.linphone.settings.widget.TextSetting
+        <org.vpbxcommunicator.settings.widget.TextSetting
             android:id="@+id/pref_tunnel_host"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             linphone:hint="@string/pref_tunnel_host"
             linphone:title="@string/pref_tunnel_host" />
 
-        <org.linphone.settings.widget.TextSetting
+        <org.vpbxcommunicator.settings.widget.TextSetting
             android:id="@+id/pref_tunnel_port"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             linphone:hint="@string/pref_tunnel_port"
             linphone:title="@string/pref_tunnel_port" />
 
-        <org.linphone.settings.widget.ListSetting
+        <org.vpbxcommunicator.settings.widget.ListSetting
             android:id="@+id/pref_tunnel_mode"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

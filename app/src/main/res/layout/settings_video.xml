@@ -12,40 +12,40 @@
         android:paddingBottom="5dp"
         android:orientation="vertical">
 
-        <org.linphone.settings.widget.SwitchSetting
+        <org.vpbxcommunicator.settings.widget.SwitchSetting
             android:id="@+id/pref_video_enable"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             linphone:title="@string/pref_video_enable_title" />
 
-        <org.linphone.settings.widget.SwitchSetting
+        <org.vpbxcommunicator.settings.widget.SwitchSetting
             android:id="@+id/pref_video_initiate_call_with_video"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             linphone:subtitle="@string/pref_video_initiate_call_with_video"
             linphone:title="@string/pref_video_initiate_call_with_video_title" />
 
-        <org.linphone.settings.widget.SwitchSetting
+        <org.vpbxcommunicator.settings.widget.SwitchSetting
             android:id="@+id/pref_video_automatically_accept_video"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             linphone:subtitle="@string/pref_video_automatically_accept_video"
             linphone:title="@string/pref_video_automatically_accept_video_title" />
 
-        <org.linphone.settings.widget.SwitchSetting
+        <org.vpbxcommunicator.settings.widget.SwitchSetting
             android:id="@+id/pref_overlay"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             linphone:subtitle="@string/pref_overlay_summary"
             linphone:title="@string/pref_overlay" />
 
-        <org.linphone.settings.widget.ListSetting
+        <org.vpbxcommunicator.settings.widget.ListSetting
             android:id="@+id/pref_preferred_video_size"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             linphone:title="@string/pref_preferred_video_size" />
 
-        <org.linphone.settings.widget.ListSetting
+        <org.vpbxcommunicator.settings.widget.ListSetting
             android:id="@+id/pref_video_preset"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -53,13 +53,13 @@
             linphone:list_items_values="@array/video_preset_entries"
             linphone:title="@string/pref_video_preset" />
 
-        <org.linphone.settings.widget.ListSetting
+        <org.vpbxcommunicator.settings.widget.ListSetting
             android:id="@+id/pref_preferred_fps"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             linphone:title="@string/pref_preferred_fps" />
 
-        <org.linphone.settings.widget.TextSetting
+        <org.vpbxcommunicator.settings.widget.TextSetting
             android:id="@+id/pref_bandwidth_limit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

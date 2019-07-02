@@ -8,7 +8,7 @@
 
     <fragment
         android:id="@+id/status"
-        android:name="org.linphone.fragments.StatusFragment"
+        android:name="org.vpbxcommunicator.fragments.StatusFragment"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         tools:layout="@layout/status" />
@@ -96,14 +96,14 @@
         android:background="@color/transparent_color"
         android:orientation="horizontal">
 
-        <org.linphone.views.CallIncomingDeclineButton
+        <org.vpbxcommunicator.views.CallIncomingDeclineButton
             android:id="@+id/decline_button"
             style="@style/DialerDigit"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1" />
 
-        <org.linphone.views.CallIncomingAnswerButton
+        <org.vpbxcommunicator.views.CallIncomingAnswerButton
             android:id="@+id/answer_button"
             android:layout_width="0dp"
             style="@style/DialerDigit"
