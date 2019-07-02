@@ -37,11 +37,10 @@ import org.vpbxcommunicator.BuildConfig;
 import org.vpbxcommunicator.LinphoneActivity;
 import org.vpbxcommunicator.LinphoneManager;
 import org.vpbxcommunicator.R;
-import org.vpbxcommunicator.settings.LinphonePreferences;
 
 public class AboutFragment extends Fragment implements OnClickListener {
-    private View mSendLogButton = null;
-    private View mResetLogButton = null;
+    //    private View mSendLogButton = null;
+    //    private View mResetLogButton = null;
     private CoreListenerStub mListener;
     private ProgressDialog mProgress;
     private boolean mUploadInProgress;
@@ -66,15 +65,17 @@ public class AboutFragment extends Fragment implements OnClickListener {
                         getString(R.string.about_version),
                         BuildConfig.VERSION_NAME + " (" + BuildConfig.VERSION_CODE + ")"));
 
-        mSendLogButton = view.findViewById(R.id.send_log);
-        mSendLogButton.setOnClickListener(this);
-        mSendLogButton.setVisibility(
-                LinphonePreferences.instance().isDebugEnabled() ? View.VISIBLE : View.GONE);
-
-        mResetLogButton = view.findViewById(R.id.reset_log);
-        mResetLogButton.setOnClickListener(this);
-        mResetLogButton.setVisibility(
-                LinphonePreferences.instance().isDebugEnabled() ? View.VISIBLE : View.GONE);
+        //        mSendLogButton = view.findViewById(R.id.send_log);
+        //        mSendLogButton.setOnClickListener(this);
+        //        mSendLogButton.setVisibility(
+        //                LinphonePreferences.instance().isDebugEnabled() ? View.VISIBLE :
+        // View.GONE);
+        //
+        //        mResetLogButton = view.findViewById(R.id.reset_log);
+        //        mResetLogButton.setOnClickListener(this);
+        //        mResetLogButton.setVisibility(
+        //                LinphonePreferences.instance().isDebugEnabled() ? View.VISIBLE :
+        // View.GONE);
 
         mListener =
                 new CoreListenerStub() {
@@ -144,17 +145,17 @@ public class AboutFragment extends Fragment implements OnClickListener {
 
     @Override
     public void onClick(View v) {
-        if (LinphoneActivity.isInstanciated()) {
-            Core lc = LinphoneManager.getLcIfManagerNotDestroyedOrNull();
-            if (v == mSendLogButton) {
-                if (lc != null) {
-                    lc.uploadLogCollection();
-                }
-            } else if (v == mResetLogButton) {
-                if (lc != null) {
-                    lc.resetLogCollection();
-                }
-            }
-        }
+        //        if (LinphoneActivity.isInstanciated()) {
+        //            Core lc = LinphoneManager.getLcIfManagerNotDestroyedOrNull();
+        //            if (v == mSendLogButton) {
+        //                if (lc != null) {
+        //                    lc.uploadLogCollection();
+        //                }
+        //            } else if (v == mResetLogButton) {
+        //                if (lc != null) {
+        //                    lc.resetLogCollection();
+        //                }
+        //            }
+        //        }
     }
 }

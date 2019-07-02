@@ -32,7 +32,6 @@ import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.ContentResolver;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.res.Resources;
@@ -1678,24 +1677,33 @@ public class LinphoneManager implements CoreListener, SensorEventListener, Accou
                     new Runnable() {
                         @Override
                         public void run() {
-                            AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-                            builder.setMessage(
-                                    getString(R.string.update_available) + ": " + versionAv);
-                            builder.setCancelable(false);
-                            builder.setNeutralButton(
-                                    getString(R.string.ok),
-                                    new DialogInterface.OnClickListener() {
-                                        @Override
-                                        public void onClick(
-                                                DialogInterface dialogInterface, int i) {
-                                            if (urlToUse != null) {
-                                                Intent urlIntent = new Intent(Intent.ACTION_VIEW);
-                                                urlIntent.setData(Uri.parse(urlToUse));
-                                                getContext().startActivity(urlIntent);
-                                            }
-                                        }
-                                    });
-                            builder.show();
+                            // TODO: this was commented since we are not checking for future
+                            // versions yet
+                            //                            AlertDialog.Builder builder = new
+                            // AlertDialog.Builder(getContext());
+                            //                            builder.setMessage(
+                            //
+                            // getString(R.string.update_available) + ": " + versionAv);
+                            //                            builder.setCancelable(false);
+                            //                            builder.setNeutralButton(
+                            //                                    getString(R.string.ok),
+                            //                                    new
+                            // DialogInterface.OnClickListener() {
+                            //                                        @Override
+                            //                                        public void onClick(
+                            //                                                DialogInterface
+                            // dialogInterface, int i) {
+                            //                                            if (urlToUse != null) {
+                            //                                                Intent urlIntent = new
+                            // Intent(Intent.ACTION_VIEW);
+                            //
+                            // urlIntent.setData(Uri.parse(urlToUse));
+                            //
+                            // getContext().startActivity(urlIntent);
+                            //                                            }
+                            //                                        }
+                            //                                    });
+                            //                            builder.show();
                         }
                     },
                     1000);

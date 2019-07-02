@@ -12,7 +12,7 @@
     <string name="tunnel_host"></string>
     <string name="about_version">VitalPBX Android %s</string>
     <string name="about_liblinphone_version">VitalPBX Core %s</string>
-    <string name="about_liblinphone_sdk_version">VitalPBX SDK %s</string>
+    <string name="about_liblinphone_sdk_version">Linphone SDK %s</string>
     <string name="about_privacy_policy">Visit our privacy policy</string>
     <string name="sync_account_name">linphone contacts</string>
 
