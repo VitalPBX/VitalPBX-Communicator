@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:929724111839:android:4662ea9a056188c4",
         "android_client_info": {
-          "package_name": "org.vpbxcommunicator"
+          "package_name": "org.vpbxCommunicator"
         }
       },
       "oauth_client": [
