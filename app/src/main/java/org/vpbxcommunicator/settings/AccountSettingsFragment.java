@@ -19,6 +19,7 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 */
 
+import android.app.Dialog;
 import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
@@ -26,6 +27,7 @@ import android.text.InputType;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import androidx.annotation.Nullable;
@@ -564,17 +566,39 @@ public class AccountSettingsFragment extends Fragment {
                 new SettingListenerBase() {
                     @Override
                     public void onClicked() {
-                        Core core = LinphoneManager.getLcIfManagerNotDestroyedOrNull();
-                        if (core != null) {
-                            if (mProxyConfig != null) {
-                                core.removeProxyConfig(mProxyConfig);
-                            }
-                            if (mAuthInfo != null) {
-                                core.removeAuthInfo(mAuthInfo);
-                            }
-                        }
-                        LinphoneActivity.instance().displaySettings();
-                        LinphoneActivity.instance().refreshAccounts();
+                        final Dialog dialog =
+                                LinphoneActivity.instance()
+                                        .displayDialog(getString(R.string.pref_delete_acc_warning));
+                        Button delete = dialog.findViewById(R.id.dialog_delete_button);
+                        Button cancel = dialog.findViewById(R.id.dialog_cancel_button);
+
+                        delete.setOnClickListener(
+                                new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View view) {
+                                        Core core =
+                                                LinphoneManager.getLcIfManagerNotDestroyedOrNull();
+                                        if (core != null) {
+                                            core.removeProxyConfig(mProxyConfig);
+                                        }
+                                        if (mAuthInfo != null) {
+                                            core.removeAuthInfo(mAuthInfo);
+                                        }
+                                        LinphoneActivity.instance().displaySettings();
+                                        LinphoneActivity.instance().refreshAccounts();
+                                        dialog.dismiss();
+                                    }
+                                });
+
+                        cancel.setOnClickListener(
+                                new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View view) {
+                                        dialog.dismiss();
+                                    }
+                                });
+
+                        dialog.show();
                     }
                 });
 

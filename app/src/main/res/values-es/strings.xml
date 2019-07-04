@@ -169,6 +169,7 @@
   <string name="pref_transport_tcp">TCP</string>
   <string name="pref_transport_tls">TLS</string>
   <string name="pref_delete_account">Borrar esta cuenta</string>
+  <string name="pref_delete_acc_warning">¿Está seguro que desea eliminar esta cuenta?</string>
   <string name="pref_change_password">Cambiar contraseña</string>
   <string name="pref_default_account">Usar como predeterminada</string>
   <string name="pref_password_changed">Contraseña cambiada</string>
