@@ -36,6 +36,13 @@
             linphone:hint="@string/pref_passwd"
             linphone:title="@string/pref_passwd" />
 
+        <CheckBox
+            android:id="@+id/showPasswordBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/assistant_show_password"
+            />
+
         <org.vpbxcommunicator.settings.widget.TextSetting
             android:id="@+id/pref_domain"
             android:layout_width="match_parent"

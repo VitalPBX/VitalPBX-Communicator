@@ -26,6 +26,9 @@ import android.text.InputType;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.text.InputType;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import androidx.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.List;
@@ -77,6 +80,7 @@ public class AccountSettingsFragment extends Fragment {
             mPush;
     private BasicSetting mChangePassword, mDeleteAccount, mLinkAccount;
     private ListSetting mTransport;
+    private CheckBox passwordCheckBox;
 
     @Nullable
     @Override
@@ -103,6 +107,26 @@ public class AccountSettingsFragment extends Fragment {
                 Log.e("[Account Settings] Proxy config not found !");
             }
         }
+
+        passwordCheckBox.setOnCheckedChangeListener(
+                new CompoundButton.OnCheckedChangeListener() {
+                    @Override
+                    public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                        if (!passwordCheckBox.isChecked()) {
+                            mPassword.setInputType(129);
+                            // 129 refers to the XML attribute for passwords (showing dots
+                            // instead of letters)
+
+                            // prevent cursor from going to the beginning of the edittext
+                            // mPassword.setSelection(mPassword.getText().length());
+                        } else {
+                            mPassword.setInputType(InputType.TYPE_TEXT_VARIATION_PASSWORD);
+
+                            // prevent cursor from going to the beginning of the edittext
+                            // mPassword.setSelection(mPassword.getText().length());
+                        }
+                    }
+                });
 
         return mRootView;
     }
@@ -195,6 +219,8 @@ public class AccountSettingsFragment extends Fragment {
         mLinkAccount = mRootView.findViewById(R.id.pref_link_account);
 
         mTransport = mRootView.findViewById(R.id.pref_transport);
+
+        passwordCheckBox = mRootView.findViewById(R.id.showPasswordBox);
         initTransportList();
     }
 
