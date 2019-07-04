@@ -43,6 +43,7 @@
   <string name="transport">Transporte</string>
   <string name="assistant_create_account_part_email">Por favor introduzca un identificador de usuario y contraseña para su cuenta Linphone</string>
   <string name="assistant_account_not_validated">Su cuenta aún no ha sido verificada.</string>
+  <string name="assistant_show_password">Mostrar Contraseña</string>
   <string name="assistant_account_validated">Su cuenta ha sido verificada.</string>
   <string name="assistant_error_bad_credentials">Identificador de usuario o contraseña incorrectos</string>
   <string name="wizard_failed">Ha ocurrido un error, pruebe más tarde.</string>

@@ -76,6 +76,7 @@
     <string name="assistant_link_account">Link account</string>
     <string name="assistant_continue">Continue</string>
     <string name="assistant_activate">Activate your account</string>
+    <string name="assistant_show_password">Show Password</string>
     <string name="assistant_finish">Finish configuration</string>
     <string name="assistant_validate_account_1">Your account is created. Please check your mails to validate your account:</string>
     <string name="assistant_validate_account_2">Once it is done, come back here and click on the button.</string>

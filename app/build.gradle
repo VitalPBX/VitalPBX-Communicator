@@ -43,7 +43,10 @@ def gitVersion = new ByteArrayOutputStream()
 
 task getGitVersion {
     exec {
-        commandLine 'cmd', 'git', 'submodule', '--always'
+        /* commandLine:
+            For Mac: 'git', 'describe', '--always'
+            For Windows:  ‘cmd’, ‘git’, ‘submodule’, ‘—always’ */
+        commandLine 'git', 'describe', '--always'
         standardOutput = gitVersion
     }
     doLast {

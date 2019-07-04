@@ -21,12 +21,15 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 import android.app.Fragment;
 import android.os.Bundle;
 import android.text.Editable;
+import android.text.InputType;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.Toast;
@@ -35,6 +38,7 @@ import org.vpbxcommunicator.R;
 
 public class LoginFragment extends Fragment implements OnClickListener, TextWatcher {
     private EditText mLogin, mUserid, mPassword, mDomain, mDisplayName;
+    private CheckBox passwordCheckBox;
     private RadioGroup mTransports;
     private Button mApply;
 
@@ -57,6 +61,40 @@ public class LoginFragment extends Fragment implements OnClickListener, TextWatc
         mApply = view.findViewById(R.id.assistant_apply);
         mApply.setEnabled(false);
         mApply.setOnClickListener(this);
+
+        passwordCheckBox = view.findViewById(R.id.showPasswordBox);
+        passwordCheckBox.addTextChangedListener(this); // might not be needed
+
+        /*passwordCheckBox.setOnClickListener(
+        new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (passwordCheckBox.isChecked()) {
+                    mPassword.setInputType(InputType.TYPE_CLASS_TEXT);
+                } else {
+                    mPassword.setInputType(InputType.TYPE_TEXT_VARIATION_PASSWORD);
+                }
+            }
+        });*/
+        passwordCheckBox.setOnCheckedChangeListener(
+                new CompoundButton.OnCheckedChangeListener() {
+                    @Override
+                    public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                        if (!passwordCheckBox.isChecked()) {
+                            mPassword.setInputType(129);
+                            // 129 refers to the XML attribute for passwords (showing dots
+                            // instead of letters)
+
+                            // prevent cursor from going to the beginning of the edittext
+                            mPassword.setSelection(mPassword.getText().length());
+                        } else {
+                            mPassword.setInputType(InputType.TYPE_TEXT_VARIATION_PASSWORD);
+
+                            // prevent cursor from going to the beginning of the edittext
+                            mPassword.setSelection(mPassword.getText().length());
+                        }
+                    }
+                });
 
         return view;
     }

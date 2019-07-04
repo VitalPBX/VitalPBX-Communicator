@@ -89,6 +89,13 @@
                 android:hint="@string/password"
                 android:textColor="@color/black_color" />
 
+            <CheckBox
+                android:id="@+id/showPasswordBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:text="@string/assistant_show_password"/>
+
             <TextView
                 style="@style/assistant_input_field_header_font"
                 android:layout_width="match_parent"
