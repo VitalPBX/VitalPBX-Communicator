@@ -64,18 +64,7 @@ public class LoginFragment extends Fragment implements OnClickListener, TextWatc
 
         passwordCheckBox = view.findViewById(R.id.showPasswordBox);
         passwordCheckBox.addTextChangedListener(this); // might not be needed
-
-        /*passwordCheckBox.setOnClickListener(
-        new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (passwordCheckBox.isChecked()) {
-                    mPassword.setInputType(InputType.TYPE_CLASS_TEXT);
-                } else {
-                    mPassword.setInputType(InputType.TYPE_TEXT_VARIATION_PASSWORD);
-                }
-            }
-        });*/
+        
         passwordCheckBox.setOnCheckedChangeListener(
                 new CompoundButton.OnCheckedChangeListener() {
                     @Override
