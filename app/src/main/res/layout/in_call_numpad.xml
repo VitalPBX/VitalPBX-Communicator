@@ -45,57 +45,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/address_bar"
-        android:layout_above="@id/dialpadControls"
         android:layout_centerInParent="true"
         android:padding="10dp"
         android:orientation="vertical"
         android:weightSum="60"/>
-
-
-    <TableLayout
-        android:id="@+id/dialpadControls"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true">
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:weightSum="40"
-            android:layout_weight="0.3"
-            android:layout_alignParentBottom="true"
-            android:gravity="center">
-
-            <org.vpbxcommunicator.views.AddContactButton
-                android:id="@+id/add_contact_btn"
-                android:layout_width="50dp"
-                android:layout_marginRight="15dp"
-                style="@android:style/Animation"
-                android:layout_height="50dp"
-                android:src="@drawable/add_contact_btn"
-                android:visibility="invisible" />
-
-
-            <org.vpbxcommunicator.views.CallButton
-                android:id="@+id/call_btn"
-                android:focusable="false"
-                android:focusableInTouchMode="false"
-                style="@style/DialerDigit"
-                android:background="@drawable/numeric_button"
-                android:src="@drawable/phone_outline"
-                android:padding="15dp"/>
-
-
-            <org.vpbxcommunicator.views.EraseButton
-                android:id="@+id/backspace_btn"
-                android:layout_height="40dp"
-                android:layout_width="50dp"
-                android:src="@drawable/backspace_btn"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="5dp"
-                android:visibility="invisible"
-                />
-        </TableRow>
-    </TableLayout>
 
 </RelativeLayout>
