@@ -21,7 +21,6 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
 import android.app.Dialog;
 import android.app.Fragment;
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.LayoutInflater;
@@ -45,7 +44,6 @@ import org.linphone.core.tools.Log;
 import org.vpbxcommunicator.LinphoneActivity;
 import org.vpbxcommunicator.LinphoneManager;
 import org.vpbxcommunicator.R;
-import org.vpbxcommunicator.assistant.AssistantActivity;
 import org.vpbxcommunicator.fragments.FragmentsAvailable;
 import org.vpbxcommunicator.settings.widget.BasicSetting;
 import org.vpbxcommunicator.settings.widget.ListSetting;
@@ -217,7 +215,7 @@ public class AccountSettingsFragment extends Fragment {
 
         mDeleteAccount = mRootView.findViewById(R.id.pref_delete_account);
 
-        mLinkAccount = mRootView.findViewById(R.id.pref_link_account);
+        // mLinkAccount = mRootView.findViewById(R.id.pref_link_account);
 
         mTransport = mRootView.findViewById(R.id.pref_transport);
 
@@ -602,18 +600,18 @@ public class AccountSettingsFragment extends Fragment {
                     }
                 });
 
-        mLinkAccount.setListener(
-                new SettingListenerBase() {
-                    @Override
-                    public void onClicked() {
-                        Intent assistant = new Intent();
-                        assistant.setClass(LinphoneActivity.instance(), AssistantActivity.class);
-                        assistant.putExtra("LinkPhoneNumber", true);
-                        assistant.putExtra("FromPref", true);
-                        assistant.putExtra("AccountNumber", mAccountIndex);
-                        startActivity(assistant);
-                    }
-                });
+        /*        mLinkAccount.setListener(
+        new SettingListenerBase() {
+            @Override
+            public void onClicked() {
+                Intent assistant = new Intent();
+                assistant.setClass(LinphoneActivity.instance(), AssistantActivity.class);
+                assistant.putExtra("LinkPhoneNumber", true);
+                assistant.putExtra("FromPref", true);
+                assistant.putExtra("AccountNumber", mAccountIndex);
+                startActivity(assistant);
+            }
+        });*/
 
         mTransport.setListener(
                 new SettingListenerBase() {
