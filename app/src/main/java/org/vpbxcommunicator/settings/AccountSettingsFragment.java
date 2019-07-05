@@ -577,11 +577,24 @@ public class AccountSettingsFragment extends Fragment {
                                         Core core =
                                                 LinphoneManager.getLcIfManagerNotDestroyedOrNull();
                                         if (core != null) {
-                                            core.removeProxyConfig(mProxyConfig);
+                                            // core.removeProxyConfig(mProxyConfig);
+                                            if (mProxyConfig != null) {
+                                                core.removeProxyConfig(mProxyConfig);
+                                            }
+                                            if (mAuthInfo != null) {
+                                                core.removeAuthInfo(mAuthInfo);
+                                            }
                                         }
-                                        if (mAuthInfo != null) {
-                                            core.removeAuthInfo(mAuthInfo);
+
+                                        // set a new default proxy config if the current one
+                                        // has been removed
+                                        if (core != null && core.getDefaultProxyConfig() == null) {
+                                            ProxyConfig[] proxyConfigs = core.getProxyConfigList();
+                                            if (proxyConfigs.length > 0) {
+                                                core.setDefaultProxyConfig(proxyConfigs[0]);
+                                            }
                                         }
+
                                         LinphoneActivity.instance().displaySettings();
                                         LinphoneActivity.instance().refreshAccounts();
                                         dialog.dismiss();
