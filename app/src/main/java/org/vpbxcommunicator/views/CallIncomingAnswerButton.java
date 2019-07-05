@@ -89,17 +89,26 @@ public class CallIncomingAnswerButton extends LinearLayout
             switch (motionEvent.getAction()) {
                 case MotionEvent.ACTION_DOWN:
                     mDeclineButton.setVisibility(View.GONE);
-                    mAnswerX = motionEvent.getX() - mRoot.getWidth();
+                    // mAnswerX = motionEvent.getX() - mRoot.getWidth();
+                    // this was commented out to avoid call button moving drastically when the user
+                    // first presses the screen (before sliding)
                     mBegin = true;
                     mOldSize = 0;
                     break;
                 case MotionEvent.ACTION_MOVE:
-                    curX = motionEvent.getX() - mRoot.getWidth();
+                    /*                    curX = motionEvent.getX() - mRoot.getWidth();
                     view.scrollBy((int) (mAnswerX - curX), view.getScrollY());
                     mOldSize -= mAnswerX - curX;
                     mAnswerX = curX;
                     if (mOldSize < -25) mBegin = false;
                     if (curX < (mScreenWidth / 4) - mRoot.getWidth() && !mBegin) {
+                        performClick();
+                        return true;
+                    }*/
+                    curX = motionEvent.getX();
+                    view.scrollBy((int) (mAnswerX - curX), view.getScrollY());
+                    mAnswerX = curX;
+                    if (curX > (3 * mScreenWidth / 4)) {
                         performClick();
                         return true;
                     }

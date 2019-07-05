@@ -36,6 +36,8 @@ public class CallIncomingDeclineButton extends LinearLayout
 
     private int mScreenWidth;
     private float mDeclineX;
+    private float mOldSize;
+    private boolean mBegin;
 
     public CallIncomingDeclineButton(Context context) {
         super(context);
@@ -88,13 +90,23 @@ public class CallIncomingDeclineButton extends LinearLayout
             switch (motionEvent.getAction()) {
                 case MotionEvent.ACTION_DOWN:
                     mAnswerButton.setVisibility(View.GONE);
-                    mDeclineX = motionEvent.getX();
+                    // mDeclineX = motionEvent.getX();
                     break;
                 case MotionEvent.ACTION_MOVE:
-                    curX = motionEvent.getX();
+                    /*curX = motionEvent.getX();
                     view.scrollBy((int) (mDeclineX - curX), view.getScrollY());
                     mDeclineX = curX;
                     if (curX > (3 * mScreenWidth / 4)) {
+                        performClick();
+                        return true;
+                    }*/
+
+                    curX = motionEvent.getX() - mRoot.getWidth();
+                    view.scrollBy((int) (mDeclineX - curX), view.getScrollY());
+                    mOldSize -= mDeclineX - curX;
+                    mDeclineX = curX;
+                    if (mOldSize < -25) mBegin = false;
+                    if (curX < (mScreenWidth / 4) - mRoot.getWidth() && !mBegin) {
                         performClick();
                         return true;
                     }

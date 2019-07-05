@@ -96,17 +96,15 @@
         android:background="@color/transparent_color"
         android:orientation="horizontal">
 
-        <org.vpbxcommunicator.views.CallIncomingDeclineButton
-            android:id="@+id/decline_button"
-            style="@style/DialerDigit"
+        <org.vpbxcommunicator.views.CallIncomingAnswerButton
+            android:id="@+id/answer_button"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1" />
 
-        <org.vpbxcommunicator.views.CallIncomingAnswerButton
-            android:id="@+id/answer_button"
+        <org.vpbxcommunicator.views.CallIncomingDeclineButton
+            android:id="@+id/decline_button"
             android:layout_width="0dp"
-            style="@style/DialerDigit"
             android:layout_height="match_parent"
             android:layout_weight="1" />
 

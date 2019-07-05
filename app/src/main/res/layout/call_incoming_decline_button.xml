@@ -10,6 +10,59 @@
     android:padding="1dp"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
+
+    <LinearLayout
+        android:id="@+id/declineUnlock"
+        android:visibility="gone"
+        android:layout_width="0dp"
+        style="@style/DialerDigit"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+<!--                <ImageView
+                    android:id="@+id/arrow_hangup"
+                    android:src="@drawable/arrow_hangup"
+                    android:tint="@color/grey_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"/>
+
+                <ImageView
+                    android:src="@drawable/arrow_hangup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:tint="@color/grey_color"
+                    android:alpha="0.6"/>
+
+                <ImageView
+                    android:src="@drawable/arrow_hangup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:tint="@color/grey_color"
+                    android:alpha="0.4"/>-->
+                <ImageView
+                    android:src="@drawable/arrow_accept"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:tint="@color/grey_color"
+                    android:alpha="0.4"/>
+
+                <ImageView
+                    android:src="@drawable/arrow_accept"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:tint="@color/grey_color"
+                    android:alpha="0.6"/>
+
+                <ImageView
+                    android:src="@drawable/arrow_accept"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:tint="@color/grey_color"/>
+
+    </LinearLayout>
+
     <ImageView
         android:src="@drawable/horizontal_phone_outline"
         android:visibility="visible"
@@ -25,33 +78,6 @@
         <!--style="@style/DialerDigit"-->
         <!--android:src="@drawable/hangup_button"/>-->
 
-    <LinearLayout
-        android:id="@+id/declineUnlock"
-        android:visibility="gone"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:orientation="horizontal">
 
-        <ImageView
-            android:id="@+id/arrow_hangup"
-            android:src="@drawable/arrow_hangup"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <ImageView
-            android:src="@drawable/arrow_hangup"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:alpha="0.6"/>
-
-        <ImageView
-            android:src="@drawable/arrow_hangup"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:alpha="0.4"/>
-
-    </LinearLayout>
 
 </LinearLayout>

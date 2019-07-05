@@ -23,7 +23,6 @@ import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.app.Fragment;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -275,9 +274,11 @@ public class ContactDetailsFragment extends Fragment
                                     @Override
                                     public void onClick(View v) {
                                         String number = (String) v.getTag();
-                                        Intent smsIntent = new Intent(Intent.ACTION_SENDTO);
+                                        Intent smsIntent =
+                                                new Intent(Intent.ACTION_VIEW); // ACTION_SENDTO
+                                        smsIntent.setType("vnd.android-dir/mms-sms");
                                         smsIntent.putExtra("address", number);
-                                        smsIntent.setData(Uri.parse("smsto:" + number));
+                                        // smsIntent.setData(Uri.parse("smsto:" + number));
                                         String text =
                                                 getString(R.string.invite_friend_text)
                                                         .replace(

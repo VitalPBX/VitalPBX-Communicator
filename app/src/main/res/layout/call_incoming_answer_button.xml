@@ -13,10 +13,11 @@
     <ImageView
         android:id="@+id/acceptIcon"
         android:src="@drawable/phone_outline"
+        style="@style/DialerDigit"
         android:visibility="visible"
         android:padding="10dp"
         android:background="@drawable/numeric_button"
-        android:contentDescription="@string/content_description_decline"
+        android:contentDescription="@string/content_description_accept"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"/>
 
@@ -32,27 +33,51 @@
         android:id="@+id/acceptUnlock"
         android:visibility="gone"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_weight="1"
         android:gravity="center"
         android:orientation="horizontal">
 
-        <ImageView
+<!--        <ImageView
             android:src="@drawable/arrow_accept"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:tint="@color/grey_color"
             android:alpha="0.4"/>
 
         <ImageView
             android:src="@drawable/arrow_accept"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:tint="@color/grey_color"
             android:alpha="0.6"/>
 
         <ImageView
             android:src="@drawable/arrow_accept"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="match_parent"
+            android:tint="@color/grey_color"/>-->
+
+        <ImageView
+            android:id="@+id/arrow_hangup"
+            android:src="@drawable/arrow_hangup"
+            android:tint="@color/grey_color"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"/>
+
+        <ImageView
+            android:src="@drawable/arrow_hangup"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:tint="@color/grey_color"
+            android:alpha="0.6"/>
+
+        <ImageView
+            android:src="@drawable/arrow_hangup"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:tint="@color/grey_color"
+            android:alpha="0.4"/>
 
     </LinearLayout>
 
