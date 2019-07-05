@@ -15,7 +15,6 @@
         android:id="@+id/declineUnlock"
         android:visibility="gone"
         android:layout_width="0dp"
-        style="@style/DialerDigit"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:gravity="center"
