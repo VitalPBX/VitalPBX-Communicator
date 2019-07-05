@@ -154,6 +154,7 @@
   <string name="pref_help_domain">sip.ejemplo.org si su cuenta es john@sip.ejemplo.org</string>
   <string name="pref_help_password">Debe volver a introducir su contraseña si modifica su identificador de usuario y/o el dominio</string>
   <string name="pref_expire_title">Caducidad</string>
+  <string name="pref_manage_title">Administrar</string>
   <string name="pref_avpf">AVPF</string>
   <string name="pref_avpf_rr_interval">AVPT intervalo RTCP regular en segundos (entre 1 y 5)</string>
   <string name="pref_escape_plus">Sustituir + por 00</string>

@@ -22,7 +22,6 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.app.Fragment;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -262,7 +261,7 @@ public class ContactDetailsFragment extends Fragment
                 }
             }
 
-            v.findViewById(R.id.inviteFriend).setVisibility(View.GONE);
+            /*v.findViewById(R.id.inviteFriend).setVisibility(View.GONE);
             if (!noa.isSIPAddress()
                     && v.findViewById(R.id.friendLinphone).getVisibility() == View.GONE
                     && !getResources().getBoolean(R.bool.hide_invite_contact)) {
@@ -288,7 +287,7 @@ public class ContactDetailsFragment extends Fragment
                                         startActivity(smsIntent);
                                     }
                                 });
-            }
+            }*/
 
             String contactAddress = mContact.getContactFromPresenceModelForUriOrTel(noa.getValue());
             if (!mDisplayChatAddressOnly) {

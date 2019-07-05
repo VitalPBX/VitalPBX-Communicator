@@ -21,6 +21,23 @@
             linphone:title="@string/pref_username" />
 
         <org.vpbxcommunicator.settings.widget.TextSetting
+            android:id="@+id/pref_display_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            linphone:subtitle="@string/pref_help_display_name"
+            linphone:hint="@string/pref_display_name"
+            linphone:title="@string/pref_display_name" />
+
+        <org.vpbxcommunicator.settings.widget.TextSetting
+            android:id="@+id/pref_domain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            linphone:subtitle="@string/pref_help_domain"
+            linphone:hint="@string/pref_domain"
+            linphone:title="@string/pref_domain" />
+
+
+        <org.vpbxcommunicator.settings.widget.TextSetting
             android:id="@+id/pref_auth_userid"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -42,22 +59,6 @@
             android:layout_height="wrap_content"
             android:text="@string/assistant_show_password"
             />
-
-        <org.vpbxcommunicator.settings.widget.TextSetting
-            android:id="@+id/pref_domain"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            linphone:subtitle="@string/pref_help_domain"
-            linphone:hint="@string/pref_domain"
-            linphone:title="@string/pref_domain" />
-
-        <org.vpbxcommunicator.settings.widget.TextSetting
-            android:id="@+id/pref_display_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            linphone:subtitle="@string/pref_help_display_name"
-            linphone:hint="@string/pref_display_name"
-            linphone:title="@string/pref_display_name" />
 
         <TextView
             style="@style/settings_category_font"
