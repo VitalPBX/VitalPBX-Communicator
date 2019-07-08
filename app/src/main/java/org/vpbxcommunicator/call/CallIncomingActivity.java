@@ -103,6 +103,7 @@ public class CallIncomingActivity extends LinphoneGenericActivity {
                 && LinphonePreferences.instance().shouldAutomaticallyAcceptVideoRequests()
                 && mCall.getRemoteParams().videoEnabled()) {
             mAcceptIcon.setImageResource(R.drawable.phone_video_camera);
+            mAcceptIcon.setCropToPadding(true);
         }
         mKeyguardManager = (KeyguardManager) getSystemService(Context.KEYGUARD_SERVICE);
         boolean doNotUseSliders =
