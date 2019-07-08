@@ -27,6 +27,8 @@ import android.graphics.Paint;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 import android.graphics.Rect;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.provider.MediaStore;
 import android.util.DisplayMetrics;
@@ -44,10 +46,14 @@ public class ImageUtils {
                         MediaStore.Images.Media.getBitmap(
                                 context.getContentResolver(), fromPictureUri);
             } catch (Exception e) {
-                bm = BitmapFactory.decodeResource(context.getResources(), R.drawable.topbar_avatar);
+                bm = BitmapFactory.decodeResource(context.getResources(), R.drawable.contact);
             }
         } else {
-            bm = BitmapFactory.decodeResource(context.getResources(), R.drawable.topbar_avatar);
+            // bm = BitmapFactory.decodeResource(context.getResources(), R.drawable.contact);
+            Drawable contactDrawable = context.getResources().getDrawable(R.drawable.contact);
+            contactDrawable.setTint(context.getResources().getColor(R.color.grey_color));
+
+            bm = drawableToBitmap(contactDrawable);
         }
         if (bm != null) {
             roundBm = getRoundBitmap(bm);
@@ -88,5 +94,26 @@ public class ImageUtils {
         return pixels
                 / ((float) context.getResources().getDisplayMetrics().densityDpi
                         / DisplayMetrics.DENSITY_DEFAULT);
+    }
+
+    /**
+     * used to convert contact icon (drawable resource) into bitmap that way it can be used to put
+     * it in a notification
+     */
+    public static Bitmap drawableToBitmap(Drawable drawable) {
+        if (drawable instanceof BitmapDrawable) {
+            return ((BitmapDrawable) drawable).getBitmap();
+        }
+
+        Bitmap bitmap =
+                Bitmap.createBitmap(
+                        drawable.getIntrinsicWidth(),
+                        drawable.getIntrinsicHeight(),
+                        Bitmap.Config.ARGB_8888);
+        Canvas canvas = new Canvas(bitmap);
+        drawable.setBounds(0, 0, canvas.getWidth(), canvas.getHeight());
+        drawable.draw(canvas);
+
+        return bitmap;
     }
 }

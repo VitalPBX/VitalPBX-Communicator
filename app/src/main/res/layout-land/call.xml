@@ -397,7 +397,8 @@
                             android:background="?attr/button_background_drawable"
                             android:contentDescription="@string/content_description_transfer"
                             android:padding="15dp"
-                            android:src="@drawable/options_transfer_call"
+                            android:src="@drawable/phone_transfer_arrowright"
+                            android:tint="@color/grey_color"
                             android:visibility="gone" />
 
                         <ImageView

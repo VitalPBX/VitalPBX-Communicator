@@ -159,7 +159,7 @@ class ApiTwentyOnePlus {
         return new Notification.Builder(context)
                 .setContentTitle(title)
                 .setContentText(text)
-                .setSmallIcon(R.drawable.call_status_missed)
+                .setSmallIcon(R.drawable.lost_calls)
                 .setAutoCancel(true)
                 .setContentIntent(intent)
                 .setDefaults(Notification.DEFAULT_SOUND | Notification.DEFAULT_VIBRATE)

@@ -75,7 +75,9 @@ public class NotificationsManager {
 
         Bitmap bm = null;
         try {
-            bm = BitmapFactory.decodeResource(mContext.getResources(), R.mipmap.ic_launcher);
+            bm =
+                    BitmapFactory.decodeResource(
+                            mContext.getResources(), R.mipmap.vpbx_launcher_green_round);
         } catch (Exception e) {
             Log.e(e);
         }
@@ -92,7 +94,7 @@ public class NotificationsManager {
                         mContext.getString(R.string.service_name),
                         "",
                         R.drawable.vitalpbx_favicon,
-                        R.mipmap.ic_launcher,
+                        R.mipmap.vpbx_launcher_green_round,
                         bm,
                         pendingIntent,
                         Notification.PRIORITY_MIN);
@@ -336,19 +338,19 @@ public class NotificationsManager {
             case Paused:
             case PausedByRemote:
             case Pausing:
-                iconId = R.drawable.topbar_call_notification;
+                iconId = R.drawable.phone_outline;
                 notificationTextId = R.string.incall_notif_paused;
                 break;
             case IncomingEarlyMedia:
             case IncomingReceived:
-                iconId = R.drawable.topbar_call_notification;
+                iconId = R.drawable.phone_outline;
                 notificationTextId = R.string.incall_notif_incoming;
                 break;
             case OutgoingEarlyMedia:
             case OutgoingInit:
             case OutgoingProgress:
             case OutgoingRinging:
-                iconId = R.drawable.topbar_call_notification;
+                iconId = R.drawable.phone_outline;
                 notificationTextId = R.string.incall_notif_outgoing;
                 break;
             default:
@@ -356,7 +358,7 @@ public class NotificationsManager {
                     iconId = R.drawable.topbar_videocall_notification;
                     notificationTextId = R.string.incall_notif_video;
                 } else {
-                    iconId = R.drawable.topbar_call_notification;
+                    iconId = R.drawable.phone_outline;
                     notificationTextId = R.string.incall_notif_active;
                 }
                 break;

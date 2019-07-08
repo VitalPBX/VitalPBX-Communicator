@@ -6,9 +6,9 @@
 
     <ImageView
         android:layout_width="400dp"
-        android:layout_height="wrap_content"
+        android:layout_height="400dp"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/dialer_background" />
+        android:src="@drawable/vpbx_tablet_icon" />
 
     <RelativeLayout
         android:id="@+id/dialer"
@@ -84,7 +84,7 @@
                     android:background="?attr/button_background_drawable"
                     android:contentDescription="@string/content_description_add_contact"
                     android:padding="15dp"
-                    android:src="@drawable/contact_add" />
+                    android:src="@drawable/add_contact_btn" />
 
             </RelativeLayout>
 

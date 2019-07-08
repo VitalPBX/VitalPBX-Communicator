@@ -63,7 +63,7 @@
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/dialer_background" />
+        android:src="@drawable/vpbx_tablet_icon" />
 
     <LinearLayout
         android:id="@+id/controls"
@@ -86,7 +86,7 @@
                 android:background="?attr/button_background_drawable"
                 android:contentDescription="@string/content_description_add_contact"
                 android:padding="15dp"
-                android:src="@drawable/contact_add" />
+                android:src="@drawable/add_contact_btn" />
 
         </RelativeLayout>
 
