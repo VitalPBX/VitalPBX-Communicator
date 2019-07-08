@@ -75,8 +75,8 @@ android {
     defaultConfig {
         minSdkVersion 21
         targetSdkVersion 28
-        versionCode 1001
-        versionName "1.0.1"
+        versionCode 1002
+        versionName "1.0.2"
         applicationId getPackageName()
         multiDexEnabled true
         manifestPlaceholders = [linphone_address_mime_type: "vnd.android.cursor.item/vnd." + getPackageName() + ".provider.sip_address"]
