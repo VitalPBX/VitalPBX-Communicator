@@ -11,8 +11,15 @@
         android:layout_alignParentLeft="true"
         android:padding="10dp"
         android:adjustViewBounds="true"
-        android:src="@drawable/contact"
-        android:tint="@color/dark_grey_color"/>
+        android:src="@drawable/contact" />
+
+    <ImageView
+        android:id="@+id/generated_avatar_background"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentLeft="true"
+        android:adjustViewBounds="true"
+        android:src="@drawable/generated_avatar_bg"/>
 
     <TextView
         android:id="@+id/generated_avatar"
@@ -20,18 +27,8 @@
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_alignParentLeft="true"
-        android:background="@drawable/generated_avatar_bg"
         android:gravity="center"
         android:maxLines="1" />
-
-    <ImageView
-        android:id="@+id/mask"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_alignParentLeft="true"
-        android:adjustViewBounds="true"
-        android:src="@drawable/avatar_mask"
-        android:tint="@color/transparent_color" />
 
     <ImageView
         android:id="@+id/border"

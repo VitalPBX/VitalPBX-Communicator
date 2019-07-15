@@ -21,7 +21,6 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.PorterDuff;
@@ -33,12 +32,11 @@ import android.net.Uri;
 import android.provider.MediaStore;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
-import org.vpbxcommunicator.R;
 
 public class ImageUtils {
 
     public static Bitmap getRoundBitmapFromUri(Context context, Uri fromPictureUri) {
-        Bitmap bm;
+        Bitmap bm = null;
         Bitmap roundBm;
         if (fromPictureUri != null) {
             try {
@@ -46,15 +44,16 @@ public class ImageUtils {
                         MediaStore.Images.Media.getBitmap(
                                 context.getContentResolver(), fromPictureUri);
             } catch (Exception e) {
-                bm = BitmapFactory.decodeResource(context.getResources(), R.drawable.contact);
+                // bm = BitmapFactory.decodeResource(context.getResources(), R.drawable.contact);
+                return null;
             }
-        } else {
-            // bm = BitmapFactory.decodeResource(context.getResources(), R.drawable.contact);
-            Drawable contactDrawable = context.getResources().getDrawable(R.drawable.contact);
-            contactDrawable.setTint(context.getResources().getColor(R.color.grey_color));
+        } /*else {
+              // bm = BitmapFactory.decodeResource(context.getResources(), R.drawable.contact);
+              Drawable contactDrawable = context.getResources().getDrawable(R.drawable.contact);
+              contactDrawable.setTint(context.getResources().getColor(R.color.grey_color));
 
-            bm = drawableToBitmap(contactDrawable);
-        }
+              bm = drawableToBitmap(contactDrawable);
+          }*/
         if (bm != null) {
             roundBm = getRoundBitmap(bm);
             if (roundBm != null) {
