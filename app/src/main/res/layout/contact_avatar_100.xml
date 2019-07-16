@@ -13,7 +13,8 @@
         android:layout_centerVertical="true"
         android:padding="10dp"
         android:adjustViewBounds="true"
-        android:src="@drawable/contact" />
+        android:src="@drawable/contact"
+        android:tint="@color/dark_grey_color"/>
 
     <ImageView
         android:id="@+id/generated_avatar_background"

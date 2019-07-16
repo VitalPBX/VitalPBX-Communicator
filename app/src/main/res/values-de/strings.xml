@@ -10,7 +10,7 @@
   <string name="tunnel_host"></string>
   <string name="about_version">VitalPBX Communicator Android %s</string>
   <string name="about_liblinphone_version">VitalPBX Communicator-Kern %s</string>
-  <string name="about_liblinphone_sdk_version">VitalPBX Communicator SDK %s</string>
+  <string name="about_liblinphone_sdk_version">Linphone SDK %s</string>
   <string name="sync_account_name">VitalPBX Communicator-Kontakte</string>
   <!--Notifications-->
   <string name="notification_call_hangup_label">Auflegen</string>

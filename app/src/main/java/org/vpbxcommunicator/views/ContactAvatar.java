@@ -50,6 +50,10 @@ class ContactAvatarHolder {
         securityLevel.setVisibility(View.GONE);
         avatarBorder.setVisibility(View.GONE);
     }
+
+    public void removePictureTint() {
+        contactPicture.setImageTintList(null);
+    }
 }
 
 public class ContactAvatar {
@@ -206,5 +210,10 @@ public class ContactAvatar {
     public static void displayGroupChatAvatar(ChatRoomSecurityLevel level, View v) {
         displayGroupChatAvatar(v);
         setSecurityLevel(level, v);
+    }
+
+    public static void removePictureTintList(View v) {
+        ContactAvatarHolder holder = new ContactAvatarHolder(v);
+        holder.removePictureTint();
     }
 }

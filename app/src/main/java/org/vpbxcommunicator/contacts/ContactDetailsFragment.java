@@ -219,6 +219,11 @@ public class ContactDetailsFragment extends Fragment
 
         TableLayout controls = view.findViewById(R.id.controls);
         controls.removeAllViews();
+
+        if (mContact.hasPhoto()) {
+            ContactAvatar.removePictureTintList(view);
+        }
+
         for (LinphoneNumberOrAddress noa : mContact.getNumbersOrAddresses()) {
             boolean skip = false;
             View v = inflater.inflate(R.layout.contact_control_row, null);

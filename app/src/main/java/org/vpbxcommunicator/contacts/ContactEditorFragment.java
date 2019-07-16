@@ -472,6 +472,10 @@ public class ContactEditorFragment extends Fragment {
         ByteArrayOutputStream stream = new ByteArrayOutputStream();
         scaledPhoto.compress(Bitmap.CompressFormat.PNG, 0, stream);
         mContactPicture.setImageBitmap(scaledPhoto);
+
+        // remove tint if picture was selected
+        removePictureTint();
+
         mPhotoToAdd = stream.toByteArray();
     }
 
@@ -672,5 +676,10 @@ public class ContactEditorFragment extends Fragment {
                 });
 
         controls.addView(view);
+    }
+
+    // this is used to remove contact's tint whenever a photo is being used for the current contact
+    public void removePictureTint() {
+        mContactPicture.setImageTintList(null);
     }
 }
