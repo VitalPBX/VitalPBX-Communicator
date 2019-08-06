@@ -26,6 +26,8 @@
     <!-- Push notification settings -->
     <bool name="enable_push_id">true</bool>
     <string name="push_type" translatable="false">firebase</string>
+    <!-- adding based on wiki.linphone.org Flexisip config -->
+    <string name="push_sender_id" translatable="false">1086821610456</string>
 
     <!-- UI config -->
     <bool name="orientation_portrait_only">false</bool>

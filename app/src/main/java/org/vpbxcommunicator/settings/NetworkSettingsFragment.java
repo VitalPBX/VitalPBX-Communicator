@@ -36,7 +36,6 @@ import org.vpbxcommunicator.settings.widget.SettingListenerBase;
 import org.vpbxcommunicator.settings.widget.SwitchSetting;
 import org.vpbxcommunicator.settings.widget.TextSetting;
 import org.vpbxcommunicator.utils.DeviceUtils;
-import org.vpbxcommunicator.utils.PushNotificationUtils;
 
 public class NetworkSettingsFragment extends Fragment {
     protected View mRootView;
@@ -221,8 +220,7 @@ public class NetworkSettingsFragment extends Fragment {
         mIpv6.setChecked(mPrefs.isUsingIpv6());
 
         mPush.setChecked(mPrefs.isPushNotificationEnabled());
-        mPush.setVisibility(
-                PushNotificationUtils.isAvailable(getActivity()) ? View.VISIBLE : View.GONE);
+        mPush.setVisibility(mPrefs.isPushNotificationEnabled() ? View.VISIBLE : View.GONE);
 
         mRandomPorts.setChecked(mPrefs.isUsingRandomPort());
 

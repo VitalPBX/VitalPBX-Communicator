@@ -669,7 +669,10 @@ public class LinphonePreferences {
         if (getConfig() == null) return;
         Log.i("[Push Notification] New token received: " + regId);
         getConfig().setString("app", "push_notification_regid", (regId != null) ? regId : "");
-        setPushNotificationEnabled(isPushNotificationEnabled());
+        // setPushNotificationEnabled(isPushNotificationEnabled());
+
+        // For testing purposes, set push notifications to true for default
+        setPushNotificationEnabled(true);
     }
 
     public void useIpv6(Boolean enable) {

@@ -56,6 +56,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.Toast;
+import androidx.annotation.NonNull;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.firebase.iid.InstanceIdResult;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -125,7 +130,6 @@ import org.vpbxcommunicator.utils.FileUtils;
 import org.vpbxcommunicator.utils.LinphoneUtils;
 import org.vpbxcommunicator.utils.MediaScanner;
 import org.vpbxcommunicator.utils.MediaScannerListener;
-import org.vpbxcommunicator.utils.PushNotificationUtils;
 
 /**
  * Manager of the low level LibLinphone stuff.<br>
@@ -721,7 +725,48 @@ public class LinphoneManager implements CoreListener, SensorEventListener, Accou
     }
 
     private void initPushNotificationsService() {
-        PushNotificationUtils.init(mServiceContext);
+        if (getString(R.string.push_type).equals("firebase")) {
+            Log.i(
+                    "[Manager][Push Notification] firebase push sender id "
+                            + getString(R.string.gcm_defaultSenderId));
+
+            try {
+                FirebaseInstanceId.getInstance()
+                        .getInstanceId()
+                        .addOnCompleteListener(
+                                new OnCompleteListener<InstanceIdResult>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<InstanceIdResult> task) {
+                                        if (!task.isSuccessful()) {
+                                            Log.e(
+                                                    "[Manager][Push Notification] firebase getInstanceId failed: "
+                                                            + task.getException());
+                                            return;
+                                        }
+
+                                        String token = task.getResult().getToken();
+
+                                        String instanceID = task.getResult().getId();
+                                        Log.i(
+                                                "[Manager][Push Notification] firebase token is: "
+                                                        + instanceID);
+                                        LinphonePreferences.instance()
+                                                .setPushNotificationRegistrationID(token);
+                                        LinphonePreferences.instance()
+                                                .setPushNotificationEnabled(true);
+                                    }
+                                });
+            } catch (Exception e) {
+                Log.e("[Manager][Push Notification] firebase not available.");
+            }
+        }
+
+        System.out.println(
+                "FIREBASE TESTING - BOOLEAN = "
+                        + LinphonePreferences.instance().isPushNotificationEnabled());
+        System.out.println(
+                "FIREBASE TESTING - TOKEN = " + FirebaseInstanceId.getInstance().getToken());
+        // PushNotificationUtils.init(mServiceContext);
     }
 
     private synchronized void initLiblinphone(Core lc) {
@@ -905,6 +950,16 @@ public class LinphoneManager implements CoreListener, SensorEventListener, Accou
                 mProximityWakelock.release();
             }
         }
+    }
+
+    public static synchronized Core getCore() {
+        if (getInstance().sExited) {
+            // Can occur if the UI thread play a posted event but in the meantime the
+            // LinphoneManager was destroyed
+            // Ex: stop call and quickly terminate application.
+            return null;
+        }
+        return getInstance().mCore;
     }
 
     @Override
@@ -1648,7 +1703,10 @@ public class LinphoneManager implements CoreListener, SensorEventListener, Accou
                 Address addr = proxyConfig.getIdentityAddress();
                 wizardLoginViewDomain = addr.getDomain();
             }
-            prefs.setPushNotificationEnabled(prefs.isPushNotificationEnabled());
+            // prefs.setPushNotificationEnabled(prefs.isPushNotificationEnabled());
+
+            // For testing purposes, set push notifications to true for default
+            prefs.setPushNotificationEnabled(true);
         }
     }
 

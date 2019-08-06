@@ -65,6 +65,12 @@
         <!-- this could potentially increase threats, but VitalPBX has validation methods to ensure
              security -->
 
+        <!-- Firebase related -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/vitalpbx_favicon" />
+
+
         <activity
             android:name="org.vpbxcommunicator.LinphoneLauncherActivity"
             android:screenOrientation="portrait"
@@ -168,6 +174,11 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
+
+            <intent-filter>
+                <action android:name="OPEN_INCOMING_CALL" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
             <!--
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -184,6 +195,11 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
+            <!-- DEBUGGING -->
+<!--            <intent-filter>
+                <action android:name="OPEN_ASSISTANTACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>-->
         </activity>
         <activity
             android:name="org.vpbxcommunicator.purchase.InAppPurchaseActivity"
@@ -283,9 +299,19 @@
             </intent-filter>
         </receiver>
 
-        <service android:name="org.vpbxcommunicator.firebase.FirebaseMessaging">
+        <!--<service android:name=".firebase.FirebaseMessaging"
+            android:enabled="true"
+            android:exported="true">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>-->
+
+        <!-- based on fcm tutorial -->
+        <service android:name=".firebase.FirebaseNotificationHelper"
+                 android:stopWithTask="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
             </intent-filter>
         </service>
 

@@ -62,7 +62,7 @@ class ApiTwentyOnePlus {
                                 | Notification.DEFAULT_LIGHTS)
                 .setLargeIcon(contactIcon)
                 .setLights(
-                        ContextCompat.getColor(context, R.color.notification_led_color),
+                        ContextCompat.getColor(context, R.color.black_color),
                         context.getResources().getInteger(R.integer.notification_ms_on),
                         context.getResources().getInteger(R.integer.notification_ms_off))
                 .setCategory(Notification.CATEGORY_MESSAGE)
@@ -93,7 +93,7 @@ class ApiTwentyOnePlus {
                 .setVisibility(Notification.VISIBILITY_PUBLIC)
                 .setPriority(Notification.PRIORITY_HIGH)
                 .setLights(
-                        ContextCompat.getColor(context, R.color.notification_led_color),
+                        ContextCompat.getColor(context, R.color.black_color),
                         context.getResources().getInteger(R.integer.notification_ms_on),
                         context.getResources().getInteger(R.integer.notification_ms_off))
                 .setShowWhen(true)
@@ -122,7 +122,7 @@ class ApiTwentyOnePlus {
                             .setCategory(Notification.CATEGORY_SERVICE)
                             .setVisibility(Notification.VISIBILITY_SECRET)
                             .setLights(
-                                    ContextCompat.getColor(context, R.color.notification_led_color),
+                                    ContextCompat.getColor(context, R.color.black_color),
                                     context.getResources().getInteger(R.integer.notification_ms_on),
                                     context.getResources()
                                             .getInteger(R.integer.notification_ms_off))
@@ -140,7 +140,7 @@ class ApiTwentyOnePlus {
                             .setCategory(Notification.CATEGORY_SERVICE)
                             .setVisibility(Notification.VISIBILITY_SECRET)
                             .setLights(
-                                    ContextCompat.getColor(context, R.color.notification_led_color),
+                                    ContextCompat.getColor(context, R.color.black_color),
                                     context.getResources().getInteger(R.integer.notification_ms_on),
                                     context.getResources()
                                             .getInteger(R.integer.notification_ms_off))
@@ -166,7 +166,7 @@ class ApiTwentyOnePlus {
                 .setCategory(Notification.CATEGORY_EVENT)
                 .setVisibility(Notification.VISIBILITY_PRIVATE)
                 .setLights(
-                        ContextCompat.getColor(context, R.color.notification_led_color),
+                        ContextCompat.getColor(context, R.color.black_color),
                         context.getResources().getInteger(R.integer.notification_ms_on),
                         context.getResources().getInteger(R.integer.notification_ms_off))
                 .setPriority(Notification.PRIORITY_HIGH)
@@ -181,14 +181,14 @@ class ApiTwentyOnePlus {
         return new Notification.Builder(context)
                 .setContentTitle(title)
                 .setContentText(text)
-                .setSmallIcon(R.drawable.linphone_logo)
+                .setSmallIcon(R.drawable.vitalpbx_favicon)
                 .setAutoCancel(true)
                 .setContentIntent(intent)
                 .setDefaults(Notification.DEFAULT_SOUND | Notification.DEFAULT_VIBRATE)
                 .setCategory(Notification.CATEGORY_MESSAGE)
                 .setVisibility(Notification.VISIBILITY_PRIVATE)
                 .setLights(
-                        ContextCompat.getColor(context, R.color.notification_led_color),
+                        ContextCompat.getColor(context, R.color.black_color),
                         context.getResources().getInteger(R.integer.notification_ms_on),
                         context.getResources().getInteger(R.integer.notification_ms_off))
                 .setWhen(System.currentTimeMillis())

@@ -97,7 +97,7 @@ public class NotificationsManager {
                         R.mipmap.vpbx_launcher_green_round,
                         bm,
                         pendingIntent,
-                        Notification.PRIORITY_MIN);
+                        Notification.PRIORITY_HIGH);
 
         if (isServiceNotificationDisplayed()) {
             startForeground();

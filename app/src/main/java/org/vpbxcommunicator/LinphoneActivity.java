@@ -65,6 +65,7 @@ import androidx.annotation.Nullable;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import com.google.firebase.FirebaseApp;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
@@ -340,6 +341,8 @@ public class LinphoneActivity extends LinphoneGenericActivity
             onNewIntent(getIntent());
         }
 
+        FirebaseApp.initializeApp(this);
+
         // retrieve remote phonebook contacts list
         loadSavedData();
     }
@@ -576,7 +579,9 @@ public class LinphoneActivity extends LinphoneGenericActivity
         Bundle extras = intent.getExtras();
         mCallTransfer = false;
         if (extras != null) {
-            if (extras.getBoolean("GoToChat", false)) {
+            if (extras.getBoolean("FirebaseText", true)) {
+                goToChatList();
+            } else if (extras.getBoolean("GoToChat", false)) {
                 String localSipUri = extras.getString("LocalSipUri");
                 String remoteSipUri = extras.getString("ChatContactSipUri");
                 Log.i(

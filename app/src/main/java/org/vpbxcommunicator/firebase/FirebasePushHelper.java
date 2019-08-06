@@ -21,16 +21,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
 import android.content.Context;
 import androidx.annotation.Keep;
-import androidx.annotation.NonNull;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.iid.FirebaseInstanceId;
-import com.google.firebase.iid.InstanceIdResult;
-import org.linphone.core.tools.Log;
-import org.vpbxcommunicator.R;
-import org.vpbxcommunicator.settings.LinphonePreferences;
 import org.vpbxcommunicator.utils.PushNotificationUtils;
 
 @Keep
@@ -39,7 +31,7 @@ public class FirebasePushHelper implements PushNotificationUtils.PushHelperInter
 
     @Override
     public void init(Context context) {
-        Log.i(
+        /*Log.i(
                 "[Push Notification] firebase push sender id "
                         + context.getString(R.string.gcm_defaultSenderId));
         try {
@@ -63,7 +55,7 @@ public class FirebasePushHelper implements PushNotificationUtils.PushHelperInter
                             });
         } catch (Exception e) {
             Log.e("[Push Notification] firebase not available.");
-        }
+        }*/
     }
 
     @Override

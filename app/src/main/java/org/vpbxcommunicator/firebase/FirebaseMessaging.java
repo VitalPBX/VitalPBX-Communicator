@@ -19,21 +19,15 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 */
 
-import static android.content.Intent.ACTION_MAIN;
-
-import android.content.Intent;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
-import org.vpbxcommunicator.LinphoneService;
-import org.vpbxcommunicator.settings.LinphonePreferences;
-import org.vpbxcommunicator.utils.LinphoneUtils;
 
 public class FirebaseMessaging extends FirebaseMessagingService {
     public FirebaseMessaging() {}
 
     @Override
     public void onNewToken(final String token) {
-        android.util.Log.i("FirebaseIdService", "[Push Notification] Refreshed token: " + token);
+        /*android.util.Log.i("FirebaseIdService", "[Push Notification] Refreshed token: " + token);
 
         LinphoneUtils.dispatchOnUIThread(
                 new Runnable() {
@@ -41,12 +35,12 @@ public class FirebaseMessaging extends FirebaseMessagingService {
                     public void run() {
                         LinphonePreferences.instance().setPushNotificationRegistrationID(token);
                     }
-                });
+                });*/
     }
 
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
-        android.util.Log.i("FirebaseMessaging", "[Push Notification] Received");
+        /*android.util.Log.i("FirebaseMessaging", "[Push Notification] Received");
 
         if (!LinphoneService.isReady()) {
             android.util.Log.i("FirebaseMessaging", "[Push Notification] Starting Service");
@@ -54,6 +48,6 @@ public class FirebaseMessaging extends FirebaseMessagingService {
             intent.setClass(this, LinphoneService.class);
             intent.putExtra("PushNotification", true);
             startService(intent);
-        }
+        }*/
     }
 }

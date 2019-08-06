@@ -75,7 +75,7 @@ class ApiTwentyFourPlus {
                 .setNumber(notif.getMessages().size())
                 .setWhen(System.currentTimeMillis())
                 .setShowWhen(true)
-                .setColor(context.getColor(R.color.notification_led_color))
+                .setColor(context.getColor(R.color.black_color))
                 .setStyle(style)
                 .addAction(getReplyMessageAction(context, notif))
                 .addAction(getMarkMessageAsReadAction(context, notif))

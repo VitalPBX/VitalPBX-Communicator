@@ -32,7 +32,7 @@ public class PushNotificationUtils {
         String push_type = context.getString(R.string.push_type);
 
         if (push_type.equals("firebase")) {
-            String className = "FirebasePushHelper";
+            String className = "org.vpbxcommunicator.firebase.FirebasePushHelper";
             try {
                 Class pushHelper = Class.forName(className);
                 Class[] types = {};
@@ -42,6 +42,7 @@ public class PushNotificationUtils {
                 mHelper.init(context);
             } catch (NoSuchMethodException e) {
                 Log.w("[Push Utils] Couldn't get push helper constructor");
+
             } catch (ClassNotFoundException e) {
                 Log.w("[Push Utils] Couldn't find class " + className);
             } catch (Exception e) {

@@ -26,10 +26,10 @@ static def isLocalAarAvailable() {
 ///// Exclude Files /////
 
 def excludeFiles = []
-if (!firebaseEnabled()) {
-    excludeFiles.add('**/Firebase*')
-    println '[Push Notification] Firebase disabled'
-}
+//if (!firebaseEnabled()) {
+//    excludeFiles.add('**/Firebase*')
+//    println '[Push Notification] Firebase disabled'
+//}
 
 def excludePackage = []
 
@@ -112,7 +112,7 @@ android {
             resValue "string", "linphone_address_mime_type", "vnd.android.cursor.item/vnd." + getPackageName() + ".provider.sip_address"
 
             if (!firebaseEnabled()) {
-                resValue "string", "gcm_defaultSenderId", "none"
+                resValue "string", "gcm_default_SenderId", "none"
             }
         }
         debug {
@@ -126,7 +126,7 @@ android {
             resValue "string", "linphone_address_mime_type", "vnd.android.cursor.item/vnd." + getPackageName() + ".provider.sip_address"
 
             if (!firebaseEnabled()) {
-                resValue "string", "gcm_defaultSenderId", "none"
+                resValue "string", "gcm_default_SenderId", "none"
             }
         }
     }
@@ -149,9 +149,15 @@ android {
 }
 
 dependencies {
-    if (firebaseEnabled()) {
-        implementation 'com.google.firebase:firebase-messaging:17.5.0'
-    }
+    /*if (firebaseEnabled()) {
+        implementation 'com.google.firebase:firebase-messaging:19.0.1'
+        implementation 'com.google.firebase:firebase-core:17.0.1'
+    }*/
+
+    //testing
+    implementation 'com.google.firebase:firebase-core:17.0.1'
+    implementation 'com.google.firebase:firebase-messaging:19.0.1'
+
     implementation 'com.android.billingclient:billing:1.2'
     implementation 'org.apache.commons:commons-compress:1.18'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
@@ -173,10 +179,12 @@ dependencies {
     } else {
         implementation "org.linphone:linphone-sdk-android:4.2"
     }
+
+    implementation 'com.android.support:multidex:1.0.3'
 }
-if (firebaseEnabled()) {
+/*if (firebaseEnabled()) {
     apply plugin: 'com.google.gms.google-services'
-}
+}*/
 
 task generateContactsXml(type: Copy) {
     from 'contacts.xml'
@@ -200,3 +208,5 @@ spotless {
     }
 }
 project.tasks['preBuild'].dependsOn 'spotlessApply'
+
+apply plugin: 'com.google.gms.google-services'

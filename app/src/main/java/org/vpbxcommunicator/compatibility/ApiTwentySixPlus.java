@@ -90,7 +90,7 @@ class ApiTwentySixPlus {
         NotificationChannel channel =
                 new NotificationChannel(id, name, NotificationManager.IMPORTANCE_HIGH);
         channel.setDescription(description);
-        channel.setLightColor(context.getColor(R.color.notification_led_color));
+        channel.setLightColor(context.getColor(R.color.black_color));
         channel.enableLights(true);
         channel.enableVibration(true);
         channel.setShowBadge(true);
@@ -130,7 +130,7 @@ class ApiTwentySixPlus {
                 .setNumber(notif.getMessages().size())
                 .setWhen(System.currentTimeMillis())
                 .setShowWhen(true)
-                .setColor(context.getColor(R.color.notification_led_color))
+                .setColor(context.getColor(R.color.black_color))
                 .setStyle(style)
                 .addAction(ApiTwentyFourPlus.getReplyMessageAction(context, notif))
                 .addAction(ApiTwentyFourPlus.getMarkMessageAsReadAction(context, notif))
@@ -162,7 +162,7 @@ class ApiTwentySixPlus {
                         .setPriority(Notification.PRIORITY_HIGH)
                         .setWhen(System.currentTimeMillis())
                         .setShowWhen(true)
-                        .setColor(context.getColor(R.color.notification_led_color))
+                        .setColor(context.getColor(R.color.black_color))
                         .addAction(ApiTwentyFourPlus.getCallDeclineAction(context, callId));
 
         if (showAnswerAction) {
@@ -194,7 +194,7 @@ class ApiTwentySixPlus {
                     .setPriority(priority)
                     .setWhen(System.currentTimeMillis())
                     .setShowWhen(true)
-                    .setColor(context.getColor(R.color.notification_led_color))
+                    .setColor(context.getColor(R.color.black_color))
                     .build();
         } else {
             return new Notification.Builder(
@@ -208,7 +208,7 @@ class ApiTwentySixPlus {
                     .setPriority(priority)
                     .setWhen(System.currentTimeMillis())
                     .setShowWhen(true)
-                    .setColor(context.getColor(R.color.notification_led_color))
+                    .setColor(context.getColor(R.color.black_color))
                     .build();
         }
     }
@@ -228,7 +228,7 @@ class ApiTwentySixPlus {
                 .setPriority(Notification.PRIORITY_HIGH)
                 .setWhen(System.currentTimeMillis())
                 .setShowWhen(true)
-                .setColor(context.getColor(R.color.notification_led_color))
+                .setColor(context.getColor(R.color.black_color))
                 .build();
     }
 
@@ -238,7 +238,7 @@ class ApiTwentySixPlus {
                         context, context.getString(R.string.notification_channel_id))
                 .setContentTitle(title)
                 .setContentText(text)
-                .setSmallIcon(R.drawable.linphone_logo)
+                .setSmallIcon(R.drawable.vitalpbx_favicon)
                 .setAutoCancel(true)
                 .setContentIntent(intent)
                 .setDefaults(Notification.DEFAULT_SOUND | Notification.DEFAULT_VIBRATE)
@@ -248,7 +248,7 @@ class ApiTwentySixPlus {
                 .setWhen(System.currentTimeMillis())
                 .setShowWhen(true)
                 .setColorized(true)
-                .setColor(context.getColor(R.color.notification_led_color))
+                .setColor(context.getColor(R.color.black_color))
                 .build();
     }
 
