@@ -13,6 +13,7 @@ local.properties
 res/.DS_Store
 res/raw/lpconfig.xsd
 .d
+app/google-services.json
 .*clang*
 **/*.iml
 **/.classpath
