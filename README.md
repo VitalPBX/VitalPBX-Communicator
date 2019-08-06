@@ -1,6 +1,6 @@
-[![pipeline status](https://gitlab.linphone.org/BC/public/linphone-sdk/badges/master/pipeline.svg)](https://gitlab.linphone.org/BC/public/linphone-android/commits/master)
+VitalPBX Communicator is a free VoIP and video Softphone based on the SIP protocol and Linphone.
 
-Linphone is a free VoIP and video softphone based on the SIP protocol.
+Linphone Github Link: https://github.com/BelledonneCommunications/linphone-iphone
 
 # What's new
 
